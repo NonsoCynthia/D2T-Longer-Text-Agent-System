@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<benchmark>
+  <entries>
+    <entry category="Cities" eid="1" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="45">
+      <originaltripleset>
+        <otriple>Abu_Dhabi | areaTotal | 972.0</otriple>
+        <otriple>Abu_Dhabi | elevation | 27.0</otriple>
+        <otriple>Abu_Dhabi | populationTotal | 1512000</otriple>
+        <otriple>Abu_Dhabi | utcOffset | +4</otriple>
+        <otriple>Abu_Dhabi | country | United_Arab_Emirates</otriple>
+        <otriple>Abu_Dhabi | governmentType | Municipality</otriple>
+        <otriple>Abu_Dhabi | timeZone | Time_in_the_United_Arab_Emirates</otriple>
+        <otriple>Abu_Dhabi | type | Capital_city</otriple>
+        <otriple>Abu_Dhabi | type | Metropolis</otriple>
+        <otriple>Capital_Connection_(TV_programme) | location | Abu_Dhabi</otriple>
+        <otriple>Capital_Gate | location | Abu_Dhabi</otriple>
+        <otriple>Capital_Plaza | location | Abu_Dhabi</otriple>
+        <otriple>Robert_Renwick | birthPlace | Abu_Dhabi</otriple>
+        <otriple>Samir_El-Mais | birthPlace | Abu_Dhabi</otriple>
+        <otriple>Benny_Dayal | birthPlace | Abu_Dhabi</otriple>
+        <otriple>Begum_Dolly_Azad | deathPlace | Abu_Dhabi</otriple>
+        <otriple>Jouan_Salem_Al_Dhaheri | deathPlace | Abu_Dhabi</otriple>
+        <otriple>Sadiq_al-Mahdi | deathPlace | Abu_Dhabi</otriple>
+        <otriple>DHL_International_Aviation_ME | targetAirport | Abu_Dhabi</otriple>
+        <otriple>Abu_Dhabi_Urban_Planning_Council | jurisdiction | Abu_Dhabi</otriple>
+        <otriple>Mohamed_bin_Zayed_University_of_Artificial_Intelligence | state | Abu_Dhabi</otriple>
+        <otriple>United_Arab_Emirates | capital | Abu_Dhabi</otriple>
+        <otriple>Basil_Al_Bayati | award | Abu_Dhabi</otriple>
+        <otriple>Al_Ain_University | campus | Abu_Dhabi</otriple>
+        <otriple>Qatar_v_United_Arab_Emirates_(2019_AFC_Asian_Cup) | city | Abu_Dhabi</otriple>
+        <otriple>2009_FIFA_Club_World_Cup_Final | city | Abu_Dhabi</otriple>
+        <otriple>2010_FIFA_Club_World_Cup_Final | city | Abu_Dhabi</otriple>
+        <otriple>United_Arab_Emirates_Navy | garrison | Abu_Dhabi</otriple>
+        <otriple>French_Navy | garrison | Abu_Dhabi</otriple>
+        <otriple>Cabinet_of_the_United_Arab_Emirates | headquarter | Abu_Dhabi</otriple>
+        <otriple>Quest_Arabiya | headquarter | Abu_Dhabi</otriple>
+        <otriple>Romai_Sports | headquarter | Abu_Dhabi</otriple>
+        <otriple>Maciej_Matthew_Szymanski | knownFor | Abu_Dhabi</otriple>
+        <otriple>Caracal_International | locationCity | Abu_Dhabi</otriple>
+        <otriple>Emirates_Defence_Industries_Company | locationCity | Abu_Dhabi</otriple>
+        <otriple>Adcom_Systems | locationCity | Abu_Dhabi</otriple>
+        <otriple>Waha_Capital | locationCountry | Abu_Dhabi</otriple>
+        <otriple>Al_Wathba,_Abu_Dhabi__Al_Wathba_Wetland_Reserve__1 | nearestCity | Abu_Dhabi</otriple>
+        <otriple>Zayed_Sports_City_Stadium__Zayed_Sports_City_Stadium__1 | operator | Abu_Dhabi</otriple>
+        <otriple>Cleveland_Clinic_Abu_Dhabi | region | Abu_Dhabi</otriple>
+        <otriple>Sheikh_Khalifa_Medical_City | region | Abu_Dhabi</otriple>
+        <otriple>DeSimone_Consulting_Engineers | regionServed | Abu_Dhabi</otriple>
+        <otriple>Aldar_Properties | regionServed | Abu_Dhabi</otriple>
+        <otriple>Fakhro_Group | regionServed | Abu_Dhabi</otriple>
+        <otriple>Danielle_Piermatei | residence | Abu_Dhabi</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Abu_Dhabi | areaTotal | 972.0</mtriple>
+        <mtriple>Abu_Dhabi | elevation | 27.0</mtriple>
+        <mtriple>Abu_Dhabi | populationTotal | 1512000</mtriple>
+        <mtriple>Abu_Dhabi | utcOffset | +4</mtriple>
+        <mtriple>Abu_Dhabi | country | United_Arab_Emirates</mtriple>
+        <mtriple>Abu_Dhabi | governmentType | Municipality</mtriple>
+        <mtriple>Abu_Dhabi | timeZone | Time_in_the_United_Arab_Emirates</mtriple>
+        <mtriple>Abu_Dhabi | type | Capital_city</mtriple>
+        <mtriple>Abu_Dhabi | type | Metropolis</mtriple>
+        <mtriple>Capital_Connection_(TV_programme) | location | Abu_Dhabi</mtriple>
+        <mtriple>Capital_Gate | location | Abu_Dhabi</mtriple>
+        <mtriple>Capital_Plaza | location | Abu_Dhabi</mtriple>
+        <mtriple>Robert_Renwick | birthPlace | Abu_Dhabi</mtriple>
+        <mtriple>Samir_El-Mais | birthPlace | Abu_Dhabi</mtriple>
+        <mtriple>Benny_Dayal | birthPlace | Abu_Dhabi</mtriple>
+        <mtriple>Begum_Dolly_Azad | deathPlace | Abu_Dhabi</mtriple>
+        <mtriple>Jouan_Salem_Al_Dhaheri | deathPlace | Abu_Dhabi</mtriple>
+        <mtriple>Sadiq_al-Mahdi | deathPlace | Abu_Dhabi</mtriple>
+        <mtriple>DHL_International_Aviation_ME | targetAirport | Abu_Dhabi</mtriple>
+        <mtriple>Abu_Dhabi_Urban_Planning_Council | jurisdiction | Abu_Dhabi</mtriple>
+        <mtriple>Mohamed_bin_Zayed_University_of_Artificial_Intelligence | state | Abu_Dhabi</mtriple>
+        <mtriple>United_Arab_Emirates | capital | Abu_Dhabi</mtriple>
+        <mtriple>Basil_Al_Bayati | award | Abu_Dhabi</mtriple>
+        <mtriple>Al_Ain_University | campus | Abu_Dhabi</mtriple>
+        <mtriple>Qatar_v_United_Arab_Emirates_(2019_AFC_Asian_Cup) | city | Abu_Dhabi</mtriple>
+        <mtriple>2009_FIFA_Club_World_Cup_Final | city | Abu_Dhabi</mtriple>
+        <mtriple>2010_FIFA_Club_World_Cup_Final | city | Abu_Dhabi</mtriple>
+        <mtriple>United_Arab_Emirates_Navy | garrison | Abu_Dhabi</mtriple>
+        <mtriple>French_Navy | garrison | Abu_Dhabi</mtriple>
+        <mtriple>Cabinet_of_the_United_Arab_Emirates | headquarter | Abu_Dhabi</mtriple>
+        <mtriple>Quest_Arabiya | headquarter | Abu_Dhabi</mtriple>
+        <mtriple>Romai_Sports | headquarter | Abu_Dhabi</mtriple>
+        <mtriple>Maciej_Matthew_Szymanski | knownFor | Abu_Dhabi</mtriple>
+        <mtriple>Caracal_International | locationCity | Abu_Dhabi</mtriple>
+        <mtriple>Emirates_Defence_Industries_Company | locationCity | Abu_Dhabi</mtriple>
+        <mtriple>Adcom_Systems | locationCity | Abu_Dhabi</mtriple>
+        <mtriple>Waha_Capital | locationCountry | Abu_Dhabi</mtriple>
+        <mtriple>Al_Wathba,_Abu_Dhabi__Al_Wathba_Wetland_Reserve__1 | nearestCity | Abu_Dhabi</mtriple>
+        <mtriple>Zayed_Sports_City_Stadium__Zayed_Sports_City_Stadium__1 | operator | Abu_Dhabi</mtriple>
+        <mtriple>Cleveland_Clinic_Abu_Dhabi | region | Abu_Dhabi</mtriple>
+        <mtriple>Sheikh_Khalifa_Medical_City | region | Abu_Dhabi</mtriple>
+        <mtriple>DeSimone_Consulting_Engineers | regionServed | Abu_Dhabi</mtriple>
+        <mtriple>Aldar_Properties | regionServed | Abu_Dhabi</mtriple>
+        <mtriple>Fakhro_Group | regionServed | Abu_Dhabi</mtriple>
+        <mtriple>Danielle_Piermatei | residence | Abu_Dhabi</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="Cities" eid="2" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="60">
+      <originaltripleset>
+        <otriple>Accra | areaMetro | 3245000000.0</otriple>
+        <otriple>Accra | areaUrban | 199400000.0</otriple>
+        <otriple>Accra | populationMetro | 5455692</otriple>
+        <otriple>Accra | areaTotal | 20.4</otriple>
+        <otriple>Accra | areaCode | 030</otriple>
+        <otriple>Accra | demonym | Accran</otriple>
+        <otriple>Accra | elevation | 60.96</otriple>
+        <otriple>Accra | populationTotal | 284124</otriple>
+        <otriple>Accra | postalCode | GA, GL, GZ</otriple>
+        <otriple>Accra | utcOffset | +0</otriple>
+        <otriple>Accra | country | Ghana</otriple>
+        <otriple>Accra | timeZone | GMT</otriple>
+        <otriple>Accra | type | Capital_city</otriple>
+        <otriple>Accra | type | Metropolis</otriple>
+        <otriple>Ministry_of_Women_and_Children's_Affairs | location | Accra</otriple>
+        <otriple>Bishop_Bowers_School | location | Accra</otriple>
+        <otriple>Braves_of_Customs | location | Accra</otriple>
+        <otriple>National_Liberation_Council | place | Accra</otriple>
+        <otriple>Prince_Amponsah | birthPlace | Accra</otriple>
+        <otriple>Prince_Baffoe | birthPlace | Accra</otriple>
+        <otriple>Prince_Gyasi | birthPlace | Accra</otriple>
+        <otriple>Carl_Henry_Clerk | deathPlace | Accra</otriple>
+        <otriple>Prince_Yawson | deathPlace | Accra</otriple>
+        <otriple>Roger_Joseph_Felli | deathPlace | Accra</otriple>
+        <otriple>Ga_language__Ga__1 | spokenIn | Accra</otriple>
+        <otriple>Dangme_language__Dangbe__1 | spokenIn | Accra</otriple>
+        <otriple>Sikkim_Manipal_University,_Ghana_Learning_Centre,_Accra | state | Accra</otriple>
+        <otriple>Wisconsin_International_University_College | state | Accra</otriple>
+        <otriple>Ghana | capital | Accra</otriple>
+        <otriple>Gold_Coast_(British_colony) | capital | Accra</otriple>
+        <otriple>History_of_Ghana | capital | Accra</otriple>
+        <otriple>Ghana | largestCity | Accra</otriple>
+        <otriple>Juliet_Ibrahim | award | Accra</otriple>
+        <otriple>Presbyterian_Senior_High_School,_Osu | city | Accra</otriple>
+        <otriple>Sarbah_Hall | city | Accra</otriple>
+        <otriple>Uniiq_FM | city | Accra</otriple>
+        <otriple>Sub-Saharan_Africa | country | Accra</otriple>
+        <otriple>President's_Own_Guard_Regiment | garrison | Accra</otriple>
+        <otriple>Ghana_Regiment | garrison | Accra</otriple>
+        <otriple>West_Africa_Command | garrison | Accra</otriple>
+        <otriple>2020–21_Accra_Great_Olympics_F.C._season | ground | Accra</otriple>
+        <otriple>Vision_F.C. | ground | Accra</otriple>
+        <otriple>Liberty_Professionals_F.C. | ground | Accra</otriple>
+        <otriple>Progress_Party_(Ghana) | headquarter | Accra</otriple>
+        <otriple>Meridian_Airways | headquarter | Accra</otriple>
+        <otriple>Metro_TV_(Ghana) | headquarter | Accra</otriple>
+        <otriple>Samini | hometown | Accra</otriple>
+        <otriple>Barima_Sidney | hometown | Accra</otriple>
+        <otriple>Becca_(Ghanaian_singer) | hometown | Accra</otriple>
+        <otriple>Environmental_Protection_Agency_(Ghana) | locationCity | Accra</otriple>
+        <otriple>Ghana_Airports_Company_Limited | locationCity | Accra</otriple>
+        <otriple>Ghana_News_Agency | locationCity | Accra</otriple>
+        <otriple>Achimota_Forest | nearestCity | Accra</otriple>
+        <otriple>Shai_Hills_Resource_Reserve | nearestCity | Accra</otriple>
+        <otriple>GIG_Mobility | regionServed | Accra</otriple>
+        <otriple>Surfline_Communications | regionServed | Accra</otriple>
+        <otriple>BusyInternet | regionServed | Accra</otriple>
+        <otriple>Benjamin_Asante | residence | Accra</otriple>
+        <otriple>Derek_Abrefa | residence | Accra</otriple>
+        <otriple>Kwesi_Amissah-Arthur | residence | Accra</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Accra | areaMetro | 3245000000.0</mtriple>
+        <mtriple>Accra | areaUrban | 199400000.0</mtriple>
+        <mtriple>Accra | populationMetro | 5455692</mtriple>
+        <mtriple>Accra | areaTotal | 20.4</mtriple>
+        <mtriple>Accra | areaCode | 030</mtriple>
+        <mtriple>Accra | demonym | Accran</mtriple>
+        <mtriple>Accra | elevation | 60.96</mtriple>
+        <mtriple>Accra | populationTotal | 284124</mtriple>
+        <mtriple>Accra | postalCode | GA, GL, GZ</mtriple>
+        <mtriple>Accra | utcOffset | +0</mtriple>
+        <mtriple>Accra | country | Ghana</mtriple>
+        <mtriple>Accra | timeZone | GMT</mtriple>
+        <mtriple>Accra | type | Capital_city</mtriple>
+        <mtriple>Accra | type | Metropolis</mtriple>
+        <mtriple>Ministry_of_Women_and_Children's_Affairs | location | Accra</mtriple>
+        <mtriple>Bishop_Bowers_School | location | Accra</mtriple>
+        <mtriple>Braves_of_Customs | location | Accra</mtriple>
+        <mtriple>National_Liberation_Council | place | Accra</mtriple>
+        <mtriple>Prince_Amponsah | birthPlace | Accra</mtriple>
+        <mtriple>Prince_Baffoe | birthPlace | Accra</mtriple>
+        <mtriple>Prince_Gyasi | birthPlace | Accra</mtriple>
+        <mtriple>Carl_Henry_Clerk | deathPlace | Accra</mtriple>
+        <mtriple>Prince_Yawson | deathPlace | Accra</mtriple>
+        <mtriple>Roger_Joseph_Felli | deathPlace | Accra</mtriple>
+        <mtriple>Ga_language__Ga__1 | spokenIn | Accra</mtriple>
+        <mtriple>Dangme_language__Dangbe__1 | spokenIn | Accra</mtriple>
+        <mtriple>Sikkim_Manipal_University,_Ghana_Learning_Centre,_Accra | state | Accra</mtriple>
+        <mtriple>Wisconsin_International_University_College | state | Accra</mtriple>
+        <mtriple>Ghana | capital | Accra</mtriple>
+        <mtriple>Gold_Coast_(British_colony) | capital | Accra</mtriple>
+        <mtriple>History_of_Ghana | capital | Accra</mtriple>
+        <mtriple>Ghana | largestCity | Accra</mtriple>
+        <mtriple>Juliet_Ibrahim | award | Accra</mtriple>
+        <mtriple>Presbyterian_Senior_High_School,_Osu | city | Accra</mtriple>
+        <mtriple>Sarbah_Hall | city | Accra</mtriple>
+        <mtriple>Uniiq_FM | city | Accra</mtriple>
+        <mtriple>Sub-Saharan_Africa | country | Accra</mtriple>
+        <mtriple>President's_Own_Guard_Regiment | garrison | Accra</mtriple>
+        <mtriple>Ghana_Regiment | garrison | Accra</mtriple>
+        <mtriple>West_Africa_Command | garrison | Accra</mtriple>
+        <mtriple>2020–21_Accra_Great_Olympics_F.C._season | ground | Accra</mtriple>
+        <mtriple>Vision_F.C. | ground | Accra</mtriple>
+        <mtriple>Liberty_Professionals_F.C. | ground | Accra</mtriple>
+        <mtriple>Progress_Party_(Ghana) | headquarter | Accra</mtriple>
+        <mtriple>Meridian_Airways | headquarter | Accra</mtriple>
+        <mtriple>Metro_TV_(Ghana) | headquarter | Accra</mtriple>
+        <mtriple>Samini | hometown | Accra</mtriple>
+        <mtriple>Barima_Sidney | hometown | Accra</mtriple>
+        <mtriple>Becca_(Ghanaian_singer) | hometown | Accra</mtriple>
+        <mtriple>Environmental_Protection_Agency_(Ghana) | locationCity | Accra</mtriple>
+        <mtriple>Ghana_Airports_Company_Limited | locationCity | Accra</mtriple>
+        <mtriple>Ghana_News_Agency | locationCity | Accra</mtriple>
+        <mtriple>Achimota_Forest | nearestCity | Accra</mtriple>
+        <mtriple>Shai_Hills_Resource_Reserve | nearestCity | Accra</mtriple>
+        <mtriple>GIG_Mobility | regionServed | Accra</mtriple>
+        <mtriple>Surfline_Communications | regionServed | Accra</mtriple>
+        <mtriple>BusyInternet | regionServed | Accra</mtriple>
+        <mtriple>Benjamin_Asante | residence | Accra</mtriple>
+        <mtriple>Derek_Abrefa | residence | Accra</mtriple>
+        <mtriple>Kwesi_Amissah-Arthur | residence | Accra</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="Cities" eid="3" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="62">
+      <originaltripleset>
+        <otriple>Islamabad | areaMetro | 1165500000.0</otriple>
+        <otriple>Islamabad | areaUrban | 220150000.0</otriple>
+        <otriple>Islamabad | populationMetro | 2003368</otriple>
+        <otriple>Islamabad | areaTotal | 220.0</otriple>
+        <otriple>Islamabad | populationDensity | 2089.0</otriple>
+        <otriple>Islamabad | areaCode | 051</otriple>
+        <otriple>Islamabad | demonym | Islamabadi</otriple>
+        <otriple>Islamabad | foundingDate | 1967-08-14</otriple>
+        <otriple>Islamabad | populationTotal | 1009832</otriple>
+        <otriple>Islamabad | postalCode | 44000</otriple>
+        <otriple>Islamabad | utcOffset | +05:00</otriple>
+        <otriple>Islamabad | country | Pakistan</otriple>
+        <otriple>Islamabad | governmentType | Islamabad_Metropolitan_Corporation</otriple>
+        <otriple>Islamabad | timeZone | Pakistan_Standard_Time</otriple>
+        <otriple>Islamabad | type | Federal_capital</otriple>
+        <otriple>Cabinet_Secretariat_(Pakistan) | location | Islamabad</otriple>
+        <otriple>Capital_Development_Authority_(Islamabad) | location | Islamabad</otriple>
+        <otriple>Capital_Talk | location | Islamabad</otriple>
+        <otriple>Siege_of_Lal_Masjid | place | Islamabad</otriple>
+        <otriple>Rohail_Nazir | birthPlace | Islamabad</otriple>
+        <otriple>Sarmad_Tariq | birthPlace | Islamabad</otriple>
+        <otriple>Humaira_Bano | birthPlace | Islamabad</otriple>
+        <otriple>Qazi_Hussain_Ahmad | deathPlace | Islamabad</otriple>
+        <otriple>Rufin_Anthony | deathPlace | Islamabad</otriple>
+        <otriple>Samina_Raja | deathPlace | Islamabad</otriple>
+        <otriple>Constantinos_Apostolou_Doxiadis | significantProject | Islamabad</otriple>
+        <otriple>Preston_University_(Pakistan) | state | Islamabad</otriple>
+        <otriple>Pak-Turk_Maarif_International_Schools_&amp;_Colleges | state | Islamabad</otriple>
+        <otriple>West_Pakistan | capital | Islamabad</otriple>
+        <otriple>Former_administrative_units_of_Pakistan | capital | Islamabad</otriple>
+        <otriple>Pakistan | capital | Islamabad</otriple>
+        <otriple>University_of_Lahore | campus | Islamabad</otriple>
+        <otriple>Pakistan_Institute_of_Public_Finance_Accountants | campus | Islamabad</otriple>
+        <otriple>Al-Hamd_Islamic_University | campus | Islamabad</otriple>
+        <otriple>Capital_University_of_Science_&amp;_Technology | city | Islamabad</otriple>
+        <otriple>Quaid-e-Azam_Inter_Provincial_Youth_Games | city | Islamabad</otriple>
+        <otriple>Quaid-i-Azam_University | city | Islamabad</otriple>
+        <otriple>2008_Pakistani_general_election_in_Islamabad | country | Islamabad</otriple>
+        <otriple>1977_Pakistani_general_election_in_Islamabad | country | Islamabad</otriple>
+        <otriple>President's_Bodyguard_(Pakistan) | garrison | Islamabad</otriple>
+        <otriple>Corona_Relief_Tiger_Force | garrison | Islamabad</otriple>
+        <otriple>Pakistan_Air_Force | garrison | Islamabad</otriple>
+        <otriple>Model_Town_Humak | governmentType | Islamabad</otriple>
+        <otriple>Cabinet_Secretariat_(Pakistan) | headquarter | Islamabad</otriple>
+        <otriple>Capital_Development_Authority_(Islamabad) | headquarter | Islamabad</otriple>
+        <otriple>Public-Private_Partnership_Authority_(Pakistan) | headquarter | Islamabad</otriple>
+        <otriple>Qayaas | hometown | Islamabad</otriple>
+        <otriple>Adil_Omar | hometown | Islamabad</otriple>
+        <otriple>Faakhir_Mehmood | hometown | Islamabad</otriple>
+        <otriple>Utility_Stores_Corporation | locationCity | Islamabad</otriple>
+        <otriple>Hashoo_Group | locationCity | Islamabad</otriple>
+        <otriple>Islamabad_Electric_Supply_Company | locationCity | Islamabad</otriple>
+        <otriple>Margalla_Hills_National_Park | nearestCity | Islamabad</otriple>
+        <otriple>Aasim_Sajjad_Akhtar | occupation | Islamabad</otriple>
+        <otriple>Quaid-e-Azam_International_Hospital | region | Islamabad</otriple>
+        <otriple>Islamabad_Chamber_of_Commerce_&amp;_Industry | regionServed | Islamabad</otriple>
+        <otriple>Islamabad_Football_Association | regionServed | Islamabad</otriple>
+        <otriple>Islamabad_Metropolitan_Corporation | regionServed | Islamabad</otriple>
+        <otriple>Qaiser_Mushtaq | residence | Islamabad</otriple>
+        <otriple>Qamar_Zaman_Chaudhry | residence | Islamabad</otriple>
+        <otriple>Roedad_Khan | residence | Islamabad</otriple>
+        <otriple>France_Colony,_Islamabad | type | Islamabad</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Islamabad | areaMetro | 1165500000.0</mtriple>
+        <mtriple>Islamabad | areaUrban | 220150000.0</mtriple>
+        <mtriple>Islamabad | populationMetro | 2003368</mtriple>
+        <mtriple>Islamabad | areaTotal | 220.0</mtriple>
+        <mtriple>Islamabad | populationDensity | 2089.0</mtriple>
+        <mtriple>Islamabad | areaCode | 051</mtriple>
+        <mtriple>Islamabad | demonym | Islamabadi</mtriple>
+        <mtriple>Islamabad | foundingDate | 1967-08-14</mtriple>
+        <mtriple>Islamabad | populationTotal | 1009832</mtriple>
+        <mtriple>Islamabad | postalCode | 44000</mtriple>
+        <mtriple>Islamabad | utcOffset | +05:00</mtriple>
+        <mtriple>Islamabad | country | Pakistan</mtriple>
+        <mtriple>Islamabad | governmentType | Islamabad_Metropolitan_Corporation</mtriple>
+        <mtriple>Islamabad | timeZone | Pakistan_Standard_Time</mtriple>
+        <mtriple>Islamabad | type | Federal_capital</mtriple>
+        <mtriple>Cabinet_Secretariat_(Pakistan) | location | Islamabad</mtriple>
+        <mtriple>Capital_Development_Authority_(Islamabad) | location | Islamabad</mtriple>
+        <mtriple>Capital_Talk | location | Islamabad</mtriple>
+        <mtriple>Siege_of_Lal_Masjid | place | Islamabad</mtriple>
+        <mtriple>Rohail_Nazir | birthPlace | Islamabad</mtriple>
+        <mtriple>Sarmad_Tariq | birthPlace | Islamabad</mtriple>
+        <mtriple>Humaira_Bano | birthPlace | Islamabad</mtriple>
+        <mtriple>Qazi_Hussain_Ahmad | deathPlace | Islamabad</mtriple>
+        <mtriple>Rufin_Anthony | deathPlace | Islamabad</mtriple>
+        <mtriple>Samina_Raja | deathPlace | Islamabad</mtriple>
+        <mtriple>Constantinos_Apostolou_Doxiadis | significantProject | Islamabad</mtriple>
+        <mtriple>Preston_University_(Pakistan) | state | Islamabad</mtriple>
+        <mtriple>Pak-Turk_Maarif_International_Schools_&amp;_Colleges | state | Islamabad</mtriple>
+        <mtriple>West_Pakistan | capital | Islamabad</mtriple>
+        <mtriple>Former_administrative_units_of_Pakistan | capital | Islamabad</mtriple>
+        <mtriple>Pakistan | capital | Islamabad</mtriple>
+        <mtriple>University_of_Lahore | campus | Islamabad</mtriple>
+        <mtriple>Pakistan_Institute_of_Public_Finance_Accountants | campus | Islamabad</mtriple>
+        <mtriple>Al-Hamd_Islamic_University | campus | Islamabad</mtriple>
+        <mtriple>Capital_University_of_Science_&amp;_Technology | city | Islamabad</mtriple>
+        <mtriple>Quaid-e-Azam_Inter_Provincial_Youth_Games | city | Islamabad</mtriple>
+        <mtriple>Quaid-i-Azam_University | city | Islamabad</mtriple>
+        <mtriple>2008_Pakistani_general_election_in_Islamabad | country | Islamabad</mtriple>
+        <mtriple>1977_Pakistani_general_election_in_Islamabad | country | Islamabad</mtriple>
+        <mtriple>President's_Bodyguard_(Pakistan) | garrison | Islamabad</mtriple>
+        <mtriple>Corona_Relief_Tiger_Force | garrison | Islamabad</mtriple>
+        <mtriple>Pakistan_Air_Force | garrison | Islamabad</mtriple>
+        <mtriple>Model_Town_Humak | governmentType | Islamabad</mtriple>
+        <mtriple>Cabinet_Secretariat_(Pakistan) | headquarter | Islamabad</mtriple>
+        <mtriple>Capital_Development_Authority_(Islamabad) | headquarter | Islamabad</mtriple>
+        <mtriple>Public-Private_Partnership_Authority_(Pakistan) | headquarter | Islamabad</mtriple>
+        <mtriple>Qayaas | hometown | Islamabad</mtriple>
+        <mtriple>Adil_Omar | hometown | Islamabad</mtriple>
+        <mtriple>Faakhir_Mehmood | hometown | Islamabad</mtriple>
+        <mtriple>Utility_Stores_Corporation | locationCity | Islamabad</mtriple>
+        <mtriple>Hashoo_Group | locationCity | Islamabad</mtriple>
+        <mtriple>Islamabad_Electric_Supply_Company | locationCity | Islamabad</mtriple>
+        <mtriple>Margalla_Hills_National_Park | nearestCity | Islamabad</mtriple>
+        <mtriple>Aasim_Sajjad_Akhtar | occupation | Islamabad</mtriple>
+        <mtriple>Quaid-e-Azam_International_Hospital | region | Islamabad</mtriple>
+        <mtriple>Islamabad_Chamber_of_Commerce_&amp;_Industry | regionServed | Islamabad</mtriple>
+        <mtriple>Islamabad_Football_Association | regionServed | Islamabad</mtriple>
+        <mtriple>Islamabad_Metropolitan_Corporation | regionServed | Islamabad</mtriple>
+        <mtriple>Qaiser_Mushtaq | residence | Islamabad</mtriple>
+        <mtriple>Qamar_Zaman_Chaudhry | residence | Islamabad</mtriple>
+        <mtriple>Roedad_Khan | residence | Islamabad</mtriple>
+        <mtriple>France_Colony,_Islamabad | type | Islamabad</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="Cities" eid="4" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="83">
+      <originaltripleset>
+        <otriple>Lagos | areaLand | 999600000.0</otriple>
+        <otriple>Lagos | areaMetro | 2706700000.0</otriple>
+        <otriple>Lagos | areaUrban | 907000000.0</otriple>
+        <otriple>Lagos | areaWater | 171680000.0</otriple>
+        <otriple>Lagos | populationMetro | 21320000</otriple>
+        <otriple>Lagos | populationMetroDensity | 7759.0</otriple>
+        <otriple>Lagos | areaTotal | 1171.28</otriple>
+        <otriple>Lagos | populationDensity | 6871.0</otriple>
+        <otriple>Lagos | areaCode | 010</otriple>
+        <otriple>Lagos | demonym | Lagosian</otriple>
+        <otriple>Lagos | elevation | 41.148</otriple>
+        <otriple>Lagos | motto | Èkó ò ní bàjé o!</otriple>
+        <otriple>Lagos | populationTotal | 8048430</otriple>
+        <otriple>Lagos | utcOffset | +1</otriple>
+        <otriple>Lagos | country | Nigeria</otriple>
+        <otriple>Lagos | founder | Awori_tribe</otriple>
+        <otriple>Lagos | timeZone | West_Africa_Time</otriple>
+        <otriple>Benfruit_Plant | location | Lagos</otriple>
+        <otriple>Nigerian_Institute_of_Management | location | Lagos</otriple>
+        <otriple>Before_30 | location | Lagos</otriple>
+        <otriple>Reduction_of_Lagos | place | Lagos</otriple>
+        <otriple>Cait_O'Riordan | birthPlace | Lagos</otriple>
+        <otriple>Candy_Augustine_Agbane | birthPlace | Lagos</otriple>
+        <otriple>Carol_King_(actress) | birthPlace | Lagos</otriple>
+        <otriple>Amusa_Shittu | deathPlace | Lagos</otriple>
+        <otriple>Samuel_Ajayi_Crowther | deathPlace | Lagos</otriple>
+        <otriple>Samuel_Johnson_(Nigerian_historian) | deathPlace | Lagos</otriple>
+        <otriple>Dobox | foundationPlace | Lagos</otriple>
+        <otriple>IROKO_Partners | foundationPlace | Lagos</otriple>
+        <otriple>Isaac_Fola-Alade | significantBuilding | Lagos</otriple>
+        <otriple>Olufemi_Majekodunmi | significantBuilding | Lagos</otriple>
+        <otriple>Cally_Air | targetAirport | Lagos</otriple>
+        <otriple>Ibom_Air | targetAirport | Lagos</otriple>
+        <otriple>Max_Air | targetAirport | Lagos</otriple>
+        <otriple>Isaac_Fola-Alade | significantProject | Lagos</otriple>
+        <otriple>ADC_Airlines | hubAirport | Lagos</otriple>
+        <otriple>Babington_Macaulay_Junior_Seminary | state | Lagos</otriple>
+        <otriple>Government_College_Ikorodu | state | Lagos</otriple>
+        <otriple>Ebun_Oluwa_Pro_Veritas | state | Lagos</otriple>
+        <otriple>Colonial_Nigeria | capital | Lagos</otriple>
+        <otriple>Federation_of_Nigeria | capital | Lagos</otriple>
+        <otriple>Lagos_Colony | capital | Lagos</otriple>
+        <otriple>African_Union | largestCity | Lagos</otriple>
+        <otriple>Nigeria | largestCity | Lagos</otriple>
+        <otriple>Military_dictatorship_in_Nigeria | largestCity | Lagos</otriple>
+        <otriple>Volkswagen_Beetle | assembly | Lagos</otriple>
+        <otriple>Volkswagen_Jetta_(A2) | assembly | Lagos</otriple>
+        <otriple>Isuzu_Forward | assembly | Lagos</otriple>
+        <otriple>Juliet_Ibrahim | award | Lagos</otriple>
+        <otriple>Benin-Ore-Shagamu_Expressway | city | Lagos</otriple>
+        <otriple>Encomium_Magazine | city | Lagos</otriple>
+        <otriple>Bogobiri_House | city | Lagos</otriple>
+        <otriple>Sub-Saharan_Africa | country | Lagos</otriple>
+        <otriple>Desmond_Majekodunmi | education | Lagos</otriple>
+        <otriple>Buchi_Emecheta | education | Lagos</otriple>
+        <otriple>Habeeb_Okunola | education | Lagos</otriple>
+        <otriple>MFM_F.C. | ground | Lagos</otriple>
+        <otriple>ACB_Lagos_F.C. | ground | Lagos</otriple>
+        <otriple>COD_United_F.C. | ground | Lagos</otriple>
+        <otriple>Caritas_Communications | headquarter | Lagos</otriple>
+        <otriple>Nigerian_Accounting_Association | headquarter | Lagos</otriple>
+        <otriple>Merchant_Express_Aviation | headquarter | Lagos</otriple>
+        <otriple>Sasha_P | hometown | Lagos</otriple>
+        <otriple>Davina_Oriakhi | hometown | Lagos</otriple>
+        <otriple>VanJess | hometown | Lagos</otriple>
+        <otriple>Olu_Amoda | knownFor | Lagos</otriple>
+        <otriple>Toki_Mabogunje | knownFor | Lagos</otriple>
+        <otriple>United_Africa_Company_of_Nigeria | locationCity | Lagos</otriple>
+        <otriple>Promasidor_Nigeria | locationCity | Lagos</otriple>
+        <otriple>G-Worldwide_Entertainment | locationCity | Lagos</otriple>
+        <otriple>LADOL | locationCountry | Lagos</otriple>
+        <otriple>Atlantic_Ocean | nearestCity | Lagos</otriple>
+        <otriple>Lagos_Lagoon | nearestCity | Lagos</otriple>
+        <otriple>Let_Me_Roll_It | recordedIn | Lagos</otriple>
+        <otriple>Mamunia | recordedIn | Lagos</otriple>
+        <otriple>Band_on_the_Run_(song) | recordedIn | Lagos</otriple>
+        <otriple>First_Consultant_Hospital | region | Lagos</otriple>
+        <otriple>National_Orthopaedic_Hospital,_Igbobi | region | Lagos</otriple>
+        <otriple>GIG_Mobility | regionServed | Lagos</otriple>
+        <otriple>TEDxLagos | regionServed | Lagos</otriple>
+        <otriple>Patrick_Utomi | residence | Lagos</otriple>
+        <otriple>Dakuku_Peterside | residence | Lagos</otriple>
+        <otriple>Mudashiru_Obasa | residence | Lagos</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Lagos | areaLand | 999600000.0</mtriple>
+        <mtriple>Lagos | areaMetro | 2706700000.0</mtriple>
+        <mtriple>Lagos | areaUrban | 907000000.0</mtriple>
+        <mtriple>Lagos | areaWater | 171680000.0</mtriple>
+        <mtriple>Lagos | populationMetro | 21320000</mtriple>
+        <mtriple>Lagos | populationMetroDensity | 7759.0</mtriple>
+        <mtriple>Lagos | areaTotal | 1171.28</mtriple>
+        <mtriple>Lagos | populationDensity | 6871.0</mtriple>
+        <mtriple>Lagos | areaCode | 010</mtriple>
+        <mtriple>Lagos | demonym | Lagosian</mtriple>
+        <mtriple>Lagos | elevation | 41.148</mtriple>
+        <mtriple>Lagos | motto | Èkó ò ní bàjé o!</mtriple>
+        <mtriple>Lagos | populationTotal | 8048430</mtriple>
+        <mtriple>Lagos | utcOffset | +1</mtriple>
+        <mtriple>Lagos | country | Nigeria</mtriple>
+        <mtriple>Lagos | founder | Awori_tribe</mtriple>
+        <mtriple>Lagos | timeZone | West_Africa_Time</mtriple>
+        <mtriple>Benfruit_Plant | location | Lagos</mtriple>
+        <mtriple>Nigerian_Institute_of_Management | location | Lagos</mtriple>
+        <mtriple>Before_30 | location | Lagos</mtriple>
+        <mtriple>Reduction_of_Lagos | place | Lagos</mtriple>
+        <mtriple>Cait_O'Riordan | birthPlace | Lagos</mtriple>
+        <mtriple>Candy_Augustine_Agbane | birthPlace | Lagos</mtriple>
+        <mtriple>Carol_King_(actress) | birthPlace | Lagos</mtriple>
+        <mtriple>Amusa_Shittu | deathPlace | Lagos</mtriple>
+        <mtriple>Samuel_Ajayi_Crowther | deathPlace | Lagos</mtriple>
+        <mtriple>Samuel_Johnson_(Nigerian_historian) | deathPlace | Lagos</mtriple>
+        <mtriple>Dobox | foundationPlace | Lagos</mtriple>
+        <mtriple>IROKO_Partners | foundationPlace | Lagos</mtriple>
+        <mtriple>Isaac_Fola-Alade | significantBuilding | Lagos</mtriple>
+        <mtriple>Olufemi_Majekodunmi | significantBuilding | Lagos</mtriple>
+        <mtriple>Cally_Air | targetAirport | Lagos</mtriple>
+        <mtriple>Ibom_Air | targetAirport | Lagos</mtriple>
+        <mtriple>Max_Air | targetAirport | Lagos</mtriple>
+        <mtriple>Isaac_Fola-Alade | significantProject | Lagos</mtriple>
+        <mtriple>ADC_Airlines | hubAirport | Lagos</mtriple>
+        <mtriple>Babington_Macaulay_Junior_Seminary | state | Lagos</mtriple>
+        <mtriple>Government_College_Ikorodu | state | Lagos</mtriple>
+        <mtriple>Ebun_Oluwa_Pro_Veritas | state | Lagos</mtriple>
+        <mtriple>Colonial_Nigeria | capital | Lagos</mtriple>
+        <mtriple>Federation_of_Nigeria | capital | Lagos</mtriple>
+        <mtriple>Lagos_Colony | capital | Lagos</mtriple>
+        <mtriple>African_Union | largestCity | Lagos</mtriple>
+        <mtriple>Nigeria | largestCity | Lagos</mtriple>
+        <mtriple>Military_dictatorship_in_Nigeria | largestCity | Lagos</mtriple>
+        <mtriple>Volkswagen_Beetle | assembly | Lagos</mtriple>
+        <mtriple>Volkswagen_Jetta_(A2) | assembly | Lagos</mtriple>
+        <mtriple>Isuzu_Forward | assembly | Lagos</mtriple>
+        <mtriple>Juliet_Ibrahim | award | Lagos</mtriple>
+        <mtriple>Benin-Ore-Shagamu_Expressway | city | Lagos</mtriple>
+        <mtriple>Encomium_Magazine | city | Lagos</mtriple>
+        <mtriple>Bogobiri_House | city | Lagos</mtriple>
+        <mtriple>Sub-Saharan_Africa | country | Lagos</mtriple>
+        <mtriple>Desmond_Majekodunmi | education | Lagos</mtriple>
+        <mtriple>Buchi_Emecheta | education | Lagos</mtriple>
+        <mtriple>Habeeb_Okunola | education | Lagos</mtriple>
+        <mtriple>MFM_F.C. | ground | Lagos</mtriple>
+        <mtriple>ACB_Lagos_F.C. | ground | Lagos</mtriple>
+        <mtriple>COD_United_F.C. | ground | Lagos</mtriple>
+        <mtriple>Caritas_Communications | headquarter | Lagos</mtriple>
+        <mtriple>Nigerian_Accounting_Association | headquarter | Lagos</mtriple>
+        <mtriple>Merchant_Express_Aviation | headquarter | Lagos</mtriple>
+        <mtriple>Sasha_P | hometown | Lagos</mtriple>
+        <mtriple>Davina_Oriakhi | hometown | Lagos</mtriple>
+        <mtriple>VanJess | hometown | Lagos</mtriple>
+        <mtriple>Olu_Amoda | knownFor | Lagos</mtriple>
+        <mtriple>Toki_Mabogunje | knownFor | Lagos</mtriple>
+        <mtriple>United_Africa_Company_of_Nigeria | locationCity | Lagos</mtriple>
+        <mtriple>Promasidor_Nigeria | locationCity | Lagos</mtriple>
+        <mtriple>G-Worldwide_Entertainment | locationCity | Lagos</mtriple>
+        <mtriple>LADOL | locationCountry | Lagos</mtriple>
+        <mtriple>Atlantic_Ocean | nearestCity | Lagos</mtriple>
+        <mtriple>Lagos_Lagoon | nearestCity | Lagos</mtriple>
+        <mtriple>Let_Me_Roll_It | recordedIn | Lagos</mtriple>
+        <mtriple>Mamunia | recordedIn | Lagos</mtriple>
+        <mtriple>Band_on_the_Run_(song) | recordedIn | Lagos</mtriple>
+        <mtriple>First_Consultant_Hospital | region | Lagos</mtriple>
+        <mtriple>National_Orthopaedic_Hospital,_Igbobi | region | Lagos</mtriple>
+        <mtriple>GIG_Mobility | regionServed | Lagos</mtriple>
+        <mtriple>TEDxLagos | regionServed | Lagos</mtriple>
+        <mtriple>Patrick_Utomi | residence | Lagos</mtriple>
+        <mtriple>Dakuku_Peterside | residence | Lagos</mtriple>
+        <mtriple>Mudashiru_Obasa | residence | Lagos</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="People" eid="5" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="7">
+      <originaltripleset>
+        <otriple>Hugh_Gaitskell__Tenure__2 | deputy | Aneurin_Bevan</otriple>
+        <otriple>Alfred_Robens,_Baron_Robens_of_Woldingham__Tenure__2 | predecessor | Aneurin_Bevan</otriple>
+        <otriple>Hilary_Marquand__Tenure__1 | predecessor | Aneurin_Bevan</otriple>
+        <otriple>Jennie_Lee,_Baroness_Lee_of_Asheridge | spouse | Aneurin_Bevan</otriple>
+        <otriple>Jim_Griffiths__Tenure__2 | successor | Aneurin_Bevan</otriple>
+        <otriple>Henry_Willink__Tenure__1 | successor | Aneurin_Bevan</otriple>
+        <otriple>George_Isaacs__Tenure__2 | successor | Aneurin_Bevan</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Hugh_Gaitskell__Tenure__2 | deputy | Aneurin_Bevan</mtriple>
+        <mtriple>Alfred_Robens,_Baron_Robens_of_Woldingham__Tenure__2 | predecessor | Aneurin_Bevan</mtriple>
+        <mtriple>Hilary_Marquand__Tenure__1 | predecessor | Aneurin_Bevan</mtriple>
+        <mtriple>Jennie_Lee,_Baroness_Lee_of_Asheridge | spouse | Aneurin_Bevan</mtriple>
+        <mtriple>Jim_Griffiths__Tenure__2 | successor | Aneurin_Bevan</mtriple>
+        <mtriple>Henry_Willink__Tenure__1 | successor | Aneurin_Bevan</mtriple>
+        <mtriple>George_Isaacs__Tenure__2 | successor | Aneurin_Bevan</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="People" eid="6" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="10">
+      <originaltripleset>
+        <otriple>Anthony_Giddens | birthPlace | London</otriple>
+        <otriple>Anthony_Giddens | birthDate | 1938-01-18</otriple>
+        <otriple>Anthony_Giddens | alias | Tony Giddens</otriple>
+        <otriple>Anthony_Giddens | birthName | Anthony Giddens</otriple>
+        <otriple>Anthony_Giddens | birthYear | 1938</otriple>
+        <otriple>Anthony_Giddens | party | Labour_Party_(UK)</otriple>
+        <otriple>The_Transformation_of_Intimacy | author | Anthony_Giddens</otriple>
+        <otriple>Stephen_R._Barley | influencedBy | Anthony_Giddens</otriple>
+        <otriple>Wanda_Orlikowski | influencedBy | Anthony_Giddens</otriple>
+        <otriple>Alexander_Wendt | influencedBy | Anthony_Giddens</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Anthony_Giddens | birthPlace | London</mtriple>
+        <mtriple>Anthony_Giddens | birthDate | 1938-01-18</mtriple>
+        <mtriple>Anthony_Giddens | alias | Tony Giddens</mtriple>
+        <mtriple>Anthony_Giddens | birthName | Anthony Giddens</mtriple>
+        <mtriple>Anthony_Giddens | birthYear | 1938</mtriple>
+        <mtriple>Anthony_Giddens | party | Labour_Party_(UK)</mtriple>
+        <mtriple>The_Transformation_of_Intimacy | author | Anthony_Giddens</mtriple>
+        <mtriple>Stephen_R._Barley | influencedBy | Anthony_Giddens</mtriple>
+        <mtriple>Wanda_Orlikowski | influencedBy | Anthony_Giddens</mtriple>
+        <mtriple>Alexander_Wendt | influencedBy | Anthony_Giddens</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="People" eid="7" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="16">
+      <originaltripleset>
+        <otriple>Antoine_Lavoisier | birthPlace | Paris</otriple>
+        <otriple>Antoine_Lavoisier | deathPlace | French_First_Republic</otriple>
+        <otriple>Antoine_Lavoisier | deathDate | 1794-05-08</otriple>
+        <otriple>Antoine_Lavoisier | birthDate | 1743-08-26</otriple>
+        <otriple>Antoine_Lavoisier | deathCause | Guillotine</otriple>
+        <otriple>Antoine_Lavoisier | academicDiscipline | Chemist</otriple>
+        <otriple>Antoine_Lavoisier | almaMater | University_of_Paris</otriple>
+        <otriple>Antoine_Lavoisier | almaMater | Collège_des_Quatre-Nations</otriple>
+        <otriple>Antoine_Lavoisier | influencedBy | Guillaume-François_Rouelle</otriple>
+        <otriple>Antoine_Lavoisier | influencedBy | Étienne_Condillac</otriple>
+        <otriple>Antoine_Lavoisier | knownFor | Carbon_cycle</otriple>
+        <otriple>Antoine_Lavoisier | knownFor | Elemental_analysis</otriple>
+        <otriple>Antoine_Lavoisier | knownFor | Hydrogen</otriple>
+        <otriple>Antoine_Lavoisier | spouse | Marie-Anne_Paulze_Lavoisier</otriple>
+        <otriple>Traité_Élémentaire_de_Chimie | author | Antoine_Lavoisier</otriple>
+        <otriple>Andrés_Manuel_del_Río | influencedBy | Antoine_Lavoisier</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Antoine_Lavoisier | birthPlace | Paris</mtriple>
+        <mtriple>Antoine_Lavoisier | deathPlace | French_First_Republic</mtriple>
+        <mtriple>Antoine_Lavoisier | deathDate | 1794-05-08</mtriple>
+        <mtriple>Antoine_Lavoisier | birthDate | 1743-08-26</mtriple>
+        <mtriple>Antoine_Lavoisier | deathCause | Guillotine</mtriple>
+        <mtriple>Antoine_Lavoisier | academicDiscipline | Chemist</mtriple>
+        <mtriple>Antoine_Lavoisier | almaMater | University_of_Paris</mtriple>
+        <mtriple>Antoine_Lavoisier | almaMater | Collège_des_Quatre-Nations</mtriple>
+        <mtriple>Antoine_Lavoisier | influencedBy | Guillaume-François_Rouelle</mtriple>
+        <mtriple>Antoine_Lavoisier | influencedBy | Étienne_Condillac</mtriple>
+        <mtriple>Antoine_Lavoisier | knownFor | Carbon_cycle</mtriple>
+        <mtriple>Antoine_Lavoisier | knownFor | Elemental_analysis</mtriple>
+        <mtriple>Antoine_Lavoisier | knownFor | Hydrogen</mtriple>
+        <mtriple>Antoine_Lavoisier | spouse | Marie-Anne_Paulze_Lavoisier</mtriple>
+        <mtriple>Traité_Élémentaire_de_Chimie | author | Antoine_Lavoisier</mtriple>
+        <mtriple>Andrés_Manuel_del_Río | influencedBy | Antoine_Lavoisier</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+    <entry category="People" eid="8" shape="(X (X) (X) (X) (X))" shape-type="sibling" size="9">
+      <originaltripleset>
+        <otriple>Antonio_Negri | birthPlace | Padua</otriple>
+        <otriple>Antonio_Negri | birthDate | 1933-08-01</otriple>
+        <otriple>Antonio_Negri | birthYear | 1933</otriple>
+        <otriple>Antonio_Negri | influencedBy | Galvano_Della_Volpe</otriple>
+        <otriple>Antonio_Negri | influencedBy | Karl_Marx</otriple>
+        <otriple>Antonio_Negri | region | Western_philosophy</otriple>
+        <otriple>Multitude:_War_and_Democracy_in_the_Age_of_Empire | author | Antonio_Negri</otriple>
+        <otriple>Franco_Berardi | influencedBy | Antonio_Negri</otriple>
+        <otriple>Marx_Reloaded | starring | Antonio_Negri</otriple>
+      </originaltripleset>
+      <modifiedtripleset>
+        <mtriple>Antonio_Negri | birthPlace | Padua</mtriple>
+        <mtriple>Antonio_Negri | birthDate | 1933-08-01</mtriple>
+        <mtriple>Antonio_Negri | birthYear | 1933</mtriple>
+        <mtriple>Antonio_Negri | influencedBy | Galvano_Della_Volpe</mtriple>
+        <mtriple>Antonio_Negri | influencedBy | Karl_Marx</mtriple>
+        <mtriple>Antonio_Negri | region | Western_philosophy</mtriple>
+        <mtriple>Multitude:_War_and_Democracy_in_the_Age_of_Empire | author | Antonio_Negri</mtriple>
+        <mtriple>Franco_Berardi | influencedBy | Antonio_Negri</mtriple>
+        <mtriple>Marx_Reloaded | starring | Antonio_Negri</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="id1" lang="ga">Some Irish text.</lex>
+    </entry>
+  </entries>
+</benchmark>

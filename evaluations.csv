@@ -1,0 +1,627 @@
+index,Triples,Output,llm_raw,No-Omissions_score,No-Omissions_just,No-Additions_score,No-Additions_just,Grammaticality_score,Grammaticality_just,Fluency_score,Fluency_just
+0,"Abraham_A._Ribicoff | deathPlace | United_States
+ Abraham_A._Ribicoff | birthPlace | United_States
+ United_States | ethnicGroup | African_Americans",Abraham A. Ribicoff was born and died in the United States. African Americans are one of the ethnic groups in the United States.,"{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: Abraham A. Ribicoff's birth and death in the United States, and that African Americans are an ethnic group in the United States."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new facts."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows well and the sentences are connected in a natural way."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all information from the triple set: Abraham A. Ribicoff's birth and death in the United States, and that African Americans are an ethnic group in the United States.",7,The text only contains information present in the triple set and does not introduce any new facts.,7,The text is grammatically correct and free of spelling errors.,7,The text flows well and the sentences are connected in a natural way.
+1,"Olga_Bondareva | deathPlace | Saint_Petersburg
+ Olga_Bondareva | birthDate | 1937-04-27
+ Olga_Bondareva | knownFor | Bondareva–Shapley_theorem
+ Olga_Bondareva | birthName | ""Olga Nikolaevna Bondareva""","Olga Nikolaevna Bondareva was born on April 27, 1937. She is known for the Bondareva–Shapley theorem. She passed away in Saint Petersburg.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all the information from the triple set: her birth name (Olga Nikolaevna Bondareva), birth date (April 27, 1937), what she is known for (Bondareva–Shapley theorem), and her place of death (Saint Petersburg)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new facts or details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-structured and flow naturally from one to the next."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all the information from the triple set: her birth name (Olga Nikolaevna Bondareva), birth date (April 27, 1937), what she is known for (Bondareva–Shapley theorem), and her place of death (Saint Petersburg).",7,The text only contains information present in the triple set and does not introduce any new facts or details.,7,The text is free of grammatical and spelling errors.,7,The sentences are well-structured and flow naturally from one to the next.
+2,"Alan_Shepard | deathPlace | California
+ Alan_Shepard | birthPlace | New_Hampshire
+ California | senators | Dianne_Feinstein",Alan Shepard was born in New Hampshire and died in California. Dianne Feinstein is one of the senators representing California.,"{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: Alan Shepard's birthplace (New Hampshire), his death place (California), and that Dianne Feinstein is a senator representing California."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new facts or details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-constructed and flow naturally."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all information from the triple set: Alan Shepard's birthplace (New Hampshire), his death place (California), and that Dianne Feinstein is a senator representing California.",7,The text only contains information present in the triple set and does not introduce any new facts or details.,7,The text is free of grammatical and spelling errors.,7,The sentences are well-constructed and flow naturally.
+3,"Bootleg_Series_Volume_1:_The_Quine_Tapes | artist | The_Velvet_Underground
+ Bootleg_Series_Volume_1:_The_Quine_Tapes | runtime | 230.05
+ Bootleg_Series_Volume_1:_The_Quine_Tapes | recordedIn | United_States",Bootleg Series Volume 1: The Quine Tapes is an album by The Velvet Underground. It was recorded in the United States and has a runtime of 230.05 minutes.,"{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the text: the artist (The Velvet Underground), the recording location (United States), and the runtime (230.05 minutes) are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only includes information from the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with well-connected sentences."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the text: the artist (The Velvet Underground), the recording location (United States), and the runtime (230.05 minutes) are all mentioned.",7,The text only includes information from the Triple Set and does not introduce any new or extraneous details.,7,The text is free of grammatical and spelling errors.,7,"The text flows naturally and is easy to read, with well-connected sentences."
+4,"Piotr_Hallmann | weight | 70.308
+ Piotr_Hallmann | birthDate | 1987-08-25
+ Piotr_Hallmann | birthPlace | Gdynia,_Poland
+ Gdynia,_Poland | areaTotal | 135000000.0
+ Gdynia,_Poland | foundingDate | 1926-02-10","Piotr Hallmann was born on August 25, 1987, in Gdynia, Poland. Gdynia itself was founded on February 10, 1926, and has a total area of 135,000,000.0. Piotr Hallmann's weight is 70.308.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: Piotr Hallmann's birth date, birth place, and weight are mentioned, as well as Gdynia's founding date and total area."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new facts or details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and natural connections between the sentences."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: Piotr Hallmann's birth date, birth place, and weight are mentioned, as well as Gdynia's founding date and total area.",7,The Text only includes information from the Triple Set and does not introduce any new facts or details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows well, with clear and natural connections between the sentences."
+5,"Expect_a_Miracle | genre | Instrumental_music
+ Expect_a_Miracle | followedBy | Afterplay_(Brian_Kelly_album)","""Expect a Miracle"" is an instrumental music album that was followed by ""Afterplay (Brian Kelly album).""","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: it states that 'Expect a Miracle' is an instrumental music album (covering the genre triple) and that it was followed by 'Afterplay (Brian Kelly album)' (covering the followedBy triple)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The sentence is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with its parts connected in a clear and logical way."",
+    ""Score"": ""7""
+  }
+}",7,The text includes all information from the triple set: it states that 'Expect a Miracle' is an instrumental music album (covering the genre triple) and that it was followed by 'Afterplay (Brian Kelly album)' (covering the followedBy triple).,7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The sentence is grammatically correct and free of spelling errors.,7,"The text flows naturally and is easy to read, with its parts connected in a clear and logical way."
+6,"Ciudad_Ayala | populationDensity | 1604.0
+ Ciudad_Ayala | leaderTitle | Governator
+ Ciudad_Ayala | isPartOf | Morelos
+ Ciudad_Ayala | country | Mexico","Ciudad Ayala is located in the state of Morelos, Mexico. The city has a population density of 1604.0 people per square kilometer, and its leader holds the title of Governator.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: Ciudad Ayala's population density (1604.0), its leader's title (Governator), its location in Morelos, and its country (Mexico) are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or unrelated facts."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and natural connections between its parts."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: Ciudad Ayala's population density (1604.0), its leader's title (Governator), its location in Morelos, and its country (Mexico) are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or unrelated facts.,7,The Text is grammatically correct and free of spelling errors.,7,"The Text flows well, with clear and natural connections between its parts."
+7,"Ciudad_Ayala | country | Mexico
+ Mexico | leaderTitle | ""President of the Senate""","Ciudad Ayala is a city located in Mexico, where the official leader title is ""President of the Senate.""","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: Ciudad Ayala is in Mexico, and Mexico's leader title is 'President of the Senate.'"",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text does not introduce any information beyond what is present in the triple set."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all information from the triple set: Ciudad Ayala is in Mexico, and Mexico's leader title is 'President of the Senate.'",7,The text does not introduce any information beyond what is present in the triple set.,7,The text is grammatically correct and free of spelling errors.,7,The text flows naturally and is easy to read.
+8,"McVeagh_of_the_South_Seas | director | Cyril_Bruce
+ McVeagh_of_the_South_Seas | director | Harry_Carey_(actor_born_1878)
+ McVeagh_of_the_South_Seas | writer | Harry_Carey_(actor_born_1878)
+ McVeagh_of_the_South_Seas | producer | The_Progressive_Motion_Picture_Company
+ McVeagh_of_the_South_Seas | distributor | Alliance_Films_Corporation","McVeagh of the South Seas was directed by Cyril Bruce and Harry Carey, who also wrote the film. The production was handled by The Progressive Motion Picture Company, and the film was distributed by Alliance Films Corporation.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: both directors (Cyril Bruce and Harry Carey), the writer (Harry Carey), the producer (The Progressive Motion Picture Company), and the distributor (Alliance Films Corporation) are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and natural connections between its parts."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: both directors (Cyril Bruce and Harry Carey), the writer (Harry Carey), the producer (The Progressive Motion Picture Company), and the distributor (Alliance Films Corporation) are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or extraneous details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows well, with clear and natural connections between its parts."
+9,"Nord_(Year_of_No_Light_album) | genre | Sludge_metal
+ Nord_(Year_of_No_Light_album) | producer | Year_of_No_Light","Nord is an album by Year of No Light. Its genre is sludge metal, and it was produced by Year of No Light.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: the album 'Nord' is by Year of No Light, its genre is sludge metal, and it was produced by Year of No Light."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-structured and flow naturally, making the text easy to read."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all information from the triple set: the album 'Nord' is by Year of No Light, its genre is sludge metal, and it was produced by Year of No Light.",7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The text is free of grammatical and spelling errors.,7,"The sentences are well-structured and flow naturally, making the text easy to read."
+10,"11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+ 11th_Mississippi_Infantry_Monument | municipality | Gettysburg,_Pennsylvania
+ 11th_Mississippi_Infantry_Monument | category | Contributing_property
+ Adams_County,_Pennsylvania | hasToItsNorth | Cumberland_County,_Pennsylvania","The 11th Mississippi Infantry Monument is located in Adams County, Pennsylvania, within the municipality of Gettysburg. It is classified as a contributing property. Adams County is bordered to the north by Cumberland County, Pennsylvania.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the monument's location in Adams County, its municipality as Gettysburg, its classification as a contributing property, and the fact that Adams County is bordered to the north by Cumberland County."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and logically connected sentences."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the monument's location in Adams County, its municipality as Gettysburg, its classification as a contributing property, and the fact that Adams County is bordered to the north by Cumberland County.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free from grammatical and spelling errors.,7,"The Text flows well, with clear and logically connected sentences."
+11,"Expect_a_Miracle | producer | Brian_Kelly_(composer_&_pianist)
+ Expect_a_Miracle | runtime | 54.56
+ Expect_a_Miracle | type | Compilation_Album","Expect a Miracle is a compilation album produced by Brian Kelly, the composer and pianist, with a runtime of 54.56 minutes.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all information from the triple set: the album title, its type (compilation album), the producer (Brian Kelly, composer and pianist), and the runtime (54.56 minutes)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The sentence is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows smoothly and the information is presented in a clear, natural way."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all information from the triple set: the album title, its type (compilation album), the producer (Brian Kelly, composer and pianist), and the runtime (54.56 minutes).",7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The sentence is grammatically correct and free of spelling errors.,7,"The text flows smoothly and the information is presented in a clear, natural way."
+12,"Expect_a_Miracle | runtime | 54.56
+ Expect_a_Miracle | precededBy | Pools_of_Light_(Brian_Kelly_album)",Expect a Miracle has a runtime of 54.56 minutes and was preceded by the album Pools of Light by Brian Kelly.,"{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes both pieces of information from the triple set: the runtime of 'Expect a Miracle' and that it was preceded by 'Pools of Light (Brian Kelly album)'."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The sentence is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with both facts connected smoothly."",
+    ""Score"": ""7""
+  }
+}",7,The text includes both pieces of information from the triple set: the runtime of 'Expect a Miracle' and that it was preceded by 'Pools of Light (Brian Kelly album)'.,7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The sentence is grammatically correct and free of spelling errors.,7,"The text flows naturally and is easy to read, with both facts connected smoothly."
+13,"1147_Stavropolis | apoapsis | 418476000000.0
+ 1147_Stavropolis | orbitalPeriod | 1249.6
+ 1147_Stavropolis | discoverer | Grigory_Neujmin
+ 1147_Stavropolis | absoluteMagnitude | 11.5
+ 1147_Stavropolis | discovered | 1929-06-11
+ 1147_Stavropolis | rotationPeriod | 20378.5
+ 1147_Stavropolis | periapsis | 260855000000.0","1147 Stavropolis was discovered by Grigory Neujmin on June 11, 1929. This celestial body has an absolute magnitude of 11.5, an orbital period of 1249.6, and a rotation period of 20378.5. Its orbit ranges from a periapsis of 260,855,000,000.0 to an apoapsis of 418,476,000,000.0.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the discoverer (Grigory Neujmin), discovery date (June 11, 1929), absolute magnitude (11.5), orbital period (1249.6), rotation period (20378.5), periapsis (260,855,000,000.0), and apoapsis (418,476,000,000.0) are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with information presented in a logical and connected manner."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the discoverer (Grigory Neujmin), discovery date (June 11, 1929), absolute magnitude (11.5), orbital period (1249.6), rotation period (20378.5), periapsis (260,855,000,000.0), and apoapsis (418,476,000,000.0) are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or extraneous details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows well, with information presented in a logical and connected manner."
+14,"Kingdom_of_England | capital | Winchester
+ Lady_Anne_Monson | nationality | Kingdom_of_England","Winchester was the capital of the Kingdom of England, which was also the nationality of Lady Anne Monson.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes both triples: it states that Winchester was the capital of the Kingdom of England, and that Lady Anne Monson's nationality was the Kingdom of England."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text does not introduce any information beyond what is present in the triple set."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows well and the sentences are connected in a natural way."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes both triples: it states that Winchester was the capital of the Kingdom of England, and that Lady Anne Monson's nationality was the Kingdom of England.",7,The text does not introduce any information beyond what is present in the triple set.,7,The text is grammatically correct and free of spelling errors.,7,The text flows well and the sentences are connected in a natural way.
+15,"Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+ Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+ Campeonato_Brasileiro_Série_C | country | Brazil
+ Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+ Agremiação_Sportiva_Arapiraquense | fullName | ""Agremiação Sportiva Arapiraquense""","Agremiação Sportiva Arapiraquense plays its home games at Estádio Municipal Coaracy da Mata Fonseca, which is located in Arapiraca. The club competes in the Campeonato Brasileiro Série C, a league based in Brazil.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the club's full name, its home ground, the location of the ground, the league it competes in, and the country of the league are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or unrelated facts."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-structured and the information flows naturally."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the club's full name, its home ground, the location of the ground, the league it competes in, and the country of the league are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or unrelated facts.,7,The Text is free from grammatical and spelling errors.,7,The sentences are well-structured and the information flows naturally.
+16,"Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+ Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+ Campeonato_Brasileiro_Série_C | country | Brazil
+ Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+ Agremiação_Sportiva_Arapiraquense | fullName | ""Agremiação Sportiva Arapiraquense""","Agremiação Sportiva Arapiraquense plays its home games at Estádio Municipal Coaracy da Mata Fonseca, which is located in Arapiraca. The club competes in the Campeonato Brasileiro Série C, a league based in Brazil.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the club's full name, its home ground, the ground's location, the league it competes in, and the league's country are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or unrelated facts."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-structured and the information flows naturally."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the club's full name, its home ground, the ground's location, the league it competes in, and the league's country are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or unrelated facts.,7,The Text is free of grammatical and spelling errors.,7,The sentences are well-structured and the information flows naturally.
+17,"Acharya_Institute_of_Technology | campus | ""In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.""
+ All_India_Council_for_Technical_Education | location | Mumbai
+ Acharya_Institute_of_Technology | director | ""Dr. G. P. Prabhukumar""
+ Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+ Acharya_Institute_of_Technology | wasGivenTheTechnicalCampusStatusBy | All_India_Council_for_Technical_Education
+ Acharya_Institute_of_Technology | numberOfPostgraduateStudents | 700","Acharya Institute of Technology is located on its campus at ""In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."" The institute is affiliated with Visvesvaraya Technological University and has 700 postgraduate students. Its director is Dr. G. P. Prabhukumar. Acharya Institute of Technology was granted technical campus status by the All India Council for Technical Education, which is based in Mumbai.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the campus location, affiliation, number of postgraduate students, director, the granting of technical campus status by AICTE, and the location of AICTE in Mumbai."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows smoothly, with well-constructed sentences and logical connections between the pieces of information."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the campus location, affiliation, number of postgraduate students, director, the granting of technical campus status by AICTE, and the location of AICTE in Mumbai.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free from grammatical and spelling errors.,7,"The Text flows smoothly, with well-constructed sentences and logical connections between the pieces of information."
+18,"Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+ Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+ Campeonato_Brasileiro_Série_C | country | Brazil
+ Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+ Agremiação_Sportiva_Arapiraquense | fullName | ""Agremiação Sportiva Arapiraquense""","Agremiação Sportiva Arapiraquense, whose full name is ""Agremiação Sportiva Arapiraquense,"" plays its home games at Estádio Municipal Coaracy da Mata Fonseca, which is located in Arapiraca. The team competes in the Campeonato Brasileiro Série C, a league based in Brazil.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the full name of the team, its home ground, the location of the stadium, the league in which the team competes, and the country of the league."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows smoothly and the sentences are well connected, making it easy to read."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the full name of the team, its home ground, the location of the stadium, the league in which the team competes, and the country of the league.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free from grammatical and spelling errors.,7,"The Text flows smoothly and the sentences are well connected, making it easy to read."
+19,"Alan_Shepard | birthDate | ""1923-11-18""
+ Alan_Shepard | nationality | United_States
+ Alan_Shepard | deathPlace | California
+ Alan_Shepard | birthPlace | New_Hampshire
+ Alan_Shepard | status | ""Deceased""","Alan Shepard was born on November 18, 1923, in New Hampshire, United States. He later passed away in California and is now deceased.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes all the information from the triple set: Alan Shepard's birth date (November 18, 1923), birth place (New Hampshire), nationality (United States), death place (California), and status (deceased)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with clear and connected sentences."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes all the information from the triple set: Alan Shepard's birth date (November 18, 1923), birth place (New Hampshire), nationality (United States), death place (California), and status (deceased).",7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The text is free of grammatical and spelling errors.,7,"The text flows naturally and is easy to read, with clear and connected sentences."
+20,"Alan_Shepard | birthDate | ""1923-11-18""
+ Alan_Shepard | nationality | United_States
+ Alan_Shepard | servedAsChiefOfTheAstronautOfficeIn | 1963
+ Alan_Shepard | deathPlace | California
+ Alan_Shepard | selectedByNasa | 1959
+ Alan_Shepard | birthPlace | New_Hampshire
+ Alan_Shepard | almaMater | ""NWC, M.A. 1957""","Alan Shepard was born on November 18, 1923, in New Hampshire, United States. He was selected by NASA in 1959 and served as Chief of the Astronaut Office in 1963. Shepard earned his M.A. from NWC in 1957. He passed away in California.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: Shepard's birth date and place, nationality, selection by NASA, service as Chief of the Astronaut Office in 1963, alma mater and degree, and death place are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new facts or details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with each sentence logically following the previous one and clear connections between the facts."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: Shepard's birth date and place, nationality, selection by NASA, service as Chief of the Astronaut Office in 1963, alma mater and degree, and death place are all mentioned.",7,The Text only includes information found in the Triple Set and does not introduce any new facts or details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows well, with each sentence logically following the previous one and clear connections between the facts."
+21,"Expect_a_Miracle | genre | Instrumental_music
+ Expect_a_Miracle | followedBy | Afterplay_(Brian_Kelly_album)","""Expect a Miracle"" is an instrumental music album, which was followed by ""Afterplay,"" another album by Brian Kelly.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes both triples: it states that 'Expect a Miracle' is an instrumental music album (covering the genre triple) and that it was followed by 'Afterplay,' another album by Brian Kelly (covering the followedBy triple)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only includes information present in the triple set. It does not introduce any new facts beyond the genre and the follow-up album."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with a clear connection between the two pieces of information."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes both triples: it states that 'Expect a Miracle' is an instrumental music album (covering the genre triple) and that it was followed by 'Afterplay,' another album by Brian Kelly (covering the followedBy triple).",7,The text only includes information present in the triple set. It does not introduce any new facts beyond the genre and the follow-up album.,7,The text is grammatically correct and free of spelling errors.,7,"The text flows naturally and is easy to read, with a clear connection between the two pieces of information."
+22,"Bootleg_Series_Volume_1:_The_Quine_Tapes | artist | The_Velvet_Underground
+ Bootleg_Series_Volume_1:_The_Quine_Tapes | producer | The_Velvet_Underground",Bootleg Series Volume 1: The Quine Tapes was both produced and performed by The Velvet Underground.,"{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes both pieces of information from the triple set: that The Velvet Underground is the artist and the producer of Bootleg Series Volume 1: The Quine Tapes."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text does not introduce any information beyond what is present in the triple set."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The sentence is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentence flows naturally and is easy to read."",
+    ""Score"": ""7""
+  }
+}",7,The text includes both pieces of information from the triple set: that The Velvet Underground is the artist and the producer of Bootleg Series Volume 1: The Quine Tapes.,7,The text does not introduce any information beyond what is present in the triple set.,7,The sentence is grammatically correct and free of spelling errors.,7,The sentence flows naturally and is easy to read.
+23,"Nord_(Year_of_No_Light_album) | genre | Sludge_metal
+ Nord_(Year_of_No_Light_album) | producer | Year_of_No_Light","The album ""Nord"" by Year of No Light belongs to the sludge metal genre and was produced by the band itself.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes both pieces of information from the triple set: the genre of the album ('sludge metal') and the producer ('the band itself', referring to Year of No Light)."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text does not introduce any information beyond what is present in the triple set."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The sentence is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read, with a clear and logical structure."",
+    ""Score"": ""7""
+  }
+}",7,"The text includes both pieces of information from the triple set: the genre of the album ('sludge metal') and the producer ('the band itself', referring to Year of No Light).",7,The text does not introduce any information beyond what is present in the triple set.,7,The sentence is grammatically correct and free of spelling errors.,7,"The text flows naturally and is easy to read, with a clear and logical structure."
+24,"11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+ 11th_Mississippi_Infantry_Monument | municipality | Gettysburg,_Pennsylvania
+ 11th_Mississippi_Infantry_Monument | category | Contributing_property
+ Adams_County,_Pennsylvania | hasToItsNorth | Cumberland_County,_Pennsylvania","The 11th Mississippi Infantry Monument is located in Gettysburg, Pennsylvania, within Adams County. It is classified as a contributing property. Adams County, Pennsylvania, has Cumberland County to its north.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the monument's location in Adams County, its municipality as Gettysburg, its category as a contributing property, and the geographic relationship between Adams County and Cumberland County."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The sentences are well-structured and the information flows naturally and logically."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the monument's location in Adams County, its municipality as Gettysburg, its category as a contributing property, and the geographic relationship between Adams County and Cumberland County.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free from grammatical and spelling errors.,7,The sentences are well-structured and the information flows naturally and logically.
+25,"11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+ 11th_Mississippi_Infantry_Monument | municipality | Gettysburg,_Pennsylvania
+ Adams_County,_Pennsylvania | hasToItsSoutheast | Carroll_County,_Maryland
+ 11th_Mississippi_Infantry_Monument | category | Contributing_property
+ Adams_County,_Pennsylvania | hasToItsNorth | Cumberland_County,_Pennsylvania","The 11th Mississippi Infantry Monument is located in Gettysburg, Pennsylvania, within Adams County. This monument is classified as a contributing property. Adams County, Pennsylvania, has Carroll County, Maryland to its southeast and Cumberland County, Pennsylvania to its north.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the monument's location in Adams County and Gettysburg, its classification as a contributing property, and the geographic relationships of Adams County to Carroll County and Cumberland County."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free from grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and natural connections between sentences."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the monument's location in Adams County and Gettysburg, its classification as a contributing property, and the geographic relationships of Adams County to Carroll County and Cumberland County.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free from grammatical and spelling errors.,7,"The Text flows well, with clear and natural connections between sentences."
+26,"McVeagh_of_the_South_Seas | director | Cyril_Bruce
+ McVeagh_of_the_South_Seas | director | Harry_Carey_(actor_born_1878)
+ McVeagh_of_the_South_Seas | writer | Harry_Carey_(actor_born_1878)
+ McVeagh_of_the_South_Seas | producer | The_Progressive_Motion_Picture_Company
+ McVeagh_of_the_South_Seas | distributor | Alliance_Films_Corporation","McVeagh of the South Seas was directed by Cyril Bruce and Harry Carey, who also wrote the film. The movie was produced by The Progressive Motion Picture Company and distributed by Alliance Films Corporation.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: both directors (Cyril Bruce and Harry Carey), the writer (Harry Carey), the producer (The Progressive Motion Picture Company), and the distributor (Alliance Films Corporation) are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information from the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows well, with clear and natural connections between its parts."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: both directors (Cyril Bruce and Harry Carey), the writer (Harry Carey), the producer (The Progressive Motion Picture Company), and the distributor (Alliance Films Corporation) are all mentioned.",7,The Text only includes information from the Triple Set and does not introduce any new or extraneous details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows well, with clear and natural connections between its parts."
+27,"Nord_(Year_of_No_Light_album) | releaseDate | 2006-09-06
+ Nord_(Year_of_No_Light_album) | recordLabel | E-Vinyl
+ Nord_(Year_of_No_Light_album) | runtime | 58.41
+ Nord_(Year_of_No_Light_album) | precededBy | Demo_2004_(Year_of_No_Light_album)","Nord, an album by Year of No Light, was released on September 6, 2006, under the E-Vinyl record label. The album has a runtime of 58.41 minutes and was preceded by Demo 2004.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present in the Text: the album's release date, record label, runtime, and the preceding album are all mentioned."",
+    ""Score"": ""7""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The Text only includes information found in the Triple Set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The Text is free of grammatical and spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The Text flows smoothly and the sentences are well connected, making it easy to read."",
+    ""Score"": ""7""
+  }
+}",7,"All information from the Triple Set is present in the Text: the album's release date, record label, runtime, and the preceding album are all mentioned.",7,The Text only includes information found in the Triple Set and does not introduce any new or extraneous details.,7,The Text is free of grammatical and spelling errors.,7,"The Text flows smoothly and the sentences are well connected, making it easy to read."
+28,"Nord_(Year_of_No_Light_album) | releaseDate | 2006-09-06
+ Nord_(Year_of_No_Light_album) | recordLabel | E-Vinyl
+ Nord_(Year_of_No_Light_album) | runtime | 58.41
+ Nord_(Year_of_No_Light_album) | precededBy | Demo_2004_(Year_of_No_Light_album)","The Year of No Light's album, Demo 2004, was released prior to the June, 6, 2006, release date of the band's album, Nord. An E-Vinyl record label production, the Year of No Light album, Nord, is 58.41 minutes long.","{
+  ""No-Omissions"": {
+    ""Justification"": ""All information from the Triple Set is present: the release date of Nord (though the date is written as June 6, 2006, instead of September 6, 2006), the record label (E-Vinyl), the runtime (58.41 minutes), and the fact that Demo 2004 preceded Nord."",
+    ""Score"": ""6""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text does not introduce any information not present in the Triple Set. All details are directly related to the triples."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct, with no spelling or structural errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows well and the sentences are connected in a natural way."",
+    ""Score"": ""7""
+  }
+}",6,"All information from the Triple Set is present: the release date of Nord (though the date is written as June 6, 2006, instead of September 6, 2006), the record label (E-Vinyl), the runtime (58.41 minutes), and the fact that Demo 2004 preceded Nord.",7,The text does not introduce any information not present in the Triple Set. All details are directly related to the triples.,7,"The text is grammatically correct, with no spelling or structural errors.",7,The text flows well and the sentences are connected in a natural way.
+29,"Olga_Bondareva | deathPlace | Saint_Petersburg
+ Olga_Bondareva | birthDate | 1937-04-27
+ Olga_Bondareva | knownFor | Bondareva–Shapley_theorem
+ Olga_Bondareva | birthName | ""Olga Nikolaevna Bondareva""","Olga Nikolaevna Bondareva, born on April 27, 1937, passed away in Saint Petersburg.","{
+  ""No-Omissions"": {
+    ""Justification"": ""The text includes Bondareva's birth name, birth date, and death place, but omits the information that she is known for the Bondareva–Shapley theorem."",
+    ""Score"": ""4""
+  },
+  ""No-Additions"": {
+    ""Justification"": ""The text only contains information present in the triple set and does not introduce any new or extraneous details."",
+    ""Score"": ""7""
+  },
+  ""Grammaticality"": {
+    ""Justification"": ""The text is grammatically correct and free of spelling errors."",
+    ""Score"": ""7""
+  },
+  ""Fluency"": {
+    ""Justification"": ""The text flows naturally and is easy to read."",
+    ""Score"": ""7""
+  }
+}",4,"The text includes Bondareva's birth name, birth date, and death place, but omits the information that she is known for the Bondareva–Shapley theorem.",7,The text only contains information present in the triple set and does not introduce any new or extraneous details.,7,The text is grammatically correct and free of spelling errors.,7,The text flows naturally and is easy to read.

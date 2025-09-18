@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<benchmark>
+  <entries>
+    <entry category="Creative_Work" eid="1" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | creator | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | initialReleaseYear | 1991</otriple>
+        <otriple>Python_(programming_language) | latestStableRelease | 3.12.0</otriple>
+        <otriple>Python_(programming_language) | latestReleaseDate | 2023-10-02</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | duck_typing</otriple>
+        <otriple>Python_(programming_language) | paradigm | multi-paradigm_programming</otriple>
+        <otriple>Python_(programming_language) | implementationLanguage | C</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | cross-platform</otriple>
+        <otriple>Python_(programming_language) | website | www.python.org</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | packageManager | pip</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | creator | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | initialReleaseYear | 1991</mtriple>
+        <mtriple>Python_(programming_language) | latestStableRelease | 3.12.0</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseDate | 2023-10-02</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | duck_typing</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | multi-paradigm_programming</mtriple>
+        <mtriple>Python_(programming_language) | implementationLanguage | C</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | website | www.python.org</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | packageManager | pip</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid1_l1" lang="en">Python is a cross-platform, multi-paradigm programming language created by Guido van Rossum and now developed under the stewardship of the Python Software Foundation. First released in 1991, it follows a duck-typing discipline and is implemented primarily in C. Distributed under the Python Software Foundation License, Python currently stands at stable version 3.12.0, issued on 2 October 2023. Source files typically carry the “.py” extension, packages are managed with pip, and documentation and downloads are available at www.python.org. Influenced by the ABC programming language, Python has in turn influenced languages such as Go.</lex>
+    </entry>
+
+    <entry category="Creative_Work" eid="2" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | type | Programming_Language</otriple>
+        <otriple>Python_(programming_language) | paradigm | Multi_paradigm</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | designer | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | latestReleaseVersion | 3.11</otriple>
+        <otriple>Python_(programming_language) | latestReleaseDate | 2023-10-24</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | implementation | CPython</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | Duck_typing</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | minTriplesRequirement | 10</otriple>
+        <otriple>Python_(programming_language) | maxTriplesRequirement | 100</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | type | Programming_Language</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | Multi_paradigm</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | designer | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseVersion | 3.11</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseDate | 2023-10-24</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | implementation | CPython</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | Duck_typing</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | minTriplesRequirement | 10</mtriple>
+        <mtriple>Python_(programming_language) | maxTriplesRequirement | 100</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid2_l1" lang="en">Python is a multi-paradigm programming language that first appeared in 1991 and was created by Guido van Rossum. It is now developed by the Python Software Foundation, which distributes it under the permissive Python Software Foundation License. The reference implementation is CPython, source files customarily carry the .py extension, and the language embraces duck typing as its typing discipline. Influenced by the ABC programming language, Python has itself gone on to influence the Go programming language. Its most recent stable release is version 3.11, issued on 24 October 2023. The collection of facts presented here satisfies the requirement of including at least 10 and no more than 100 triples.</lex>
+    </entry>
+
+    <entry category="Organization" eid="3" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Linux_kernel | type | Operating_system_kernel</otriple>
+        <otriple>Linux_kernel | developer | Linus_Torvalds</otriple>
+        <otriple>Linux_kernel | developer | Community_contributors</otriple>
+        <otriple>Linux_kernel | initial_release_year | 1991</otriple>
+        <otriple>Linux_kernel | latest_release_version | 6.9</otriple>
+        <otriple>Linux_kernel | latest_release_date | 2024-05-26</otriple>
+        <otriple>Linux_kernel | written_in_language | C</otriple>
+        <otriple>Linux_kernel | written_in_language | Assembly_language</otriple>
+        <otriple>Linux_kernel | license | GPL-2.0_only</otriple>
+        <otriple>Linux_kernel | kernel_type | Monolithic</otriple>
+        <otriple>Linux_kernel | source_model | Open_source</otriple>
+        <otriple>Linux_kernel | official_website | https://www.kernel.org/</otriple>
+        <otriple>Linux_kernel | supports_platform | x86</otriple>
+        <otriple>Linux_kernel | supports_platform | ARM</otriple>
+        <otriple>Linux_kernel | used_by | Android_operating_system</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Linux_kernel | type | Operating_system_kernel</mtriple>
+        <mtriple>Linux_kernel | developer | Linus_Torvalds</mtriple>
+        <mtriple>Linux_kernel | developer | Community_contributors</mtriple>
+        <mtriple>Linux_kernel | initial_release_year | 1991</mtriple>
+        <mtriple>Linux_kernel | latest_release_version | 6.9</mtriple>
+        <mtriple>Linux_kernel | latest_release_date | 2024-05-26</mtriple>
+        <mtriple>Linux_kernel | written_in_language | C</mtriple>
+        <mtriple>Linux_kernel | written_in_language | Assembly_language</mtriple>
+        <mtriple>Linux_kernel | license | GPL-2.0_only</mtriple>
+        <mtriple>Linux_kernel | kernel_type | Monolithic</mtriple>
+        <mtriple>Linux_kernel | source_model | Open_source</mtriple>
+        <mtriple>Linux_kernel | official_website | https://www.kernel.org/</mtriple>
+        <mtriple>Linux_kernel | supports_platform | x86</mtriple>
+        <mtriple>Linux_kernel | supports_platform | ARM</mtriple>
+        <mtriple>Linux_kernel | used_by | Android_operating_system</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid3_l1" lang="en">The Linux kernel is an open-source, monolithic operating system kernel that was first released in 1991; it was created by Linus Torvalds and is now developed and maintained by a wide community of contributors. Primarily written in C with critical portions in Assembly language, it supports platforms such as x86 and ARM and serves as the core component of the Android operating system. Distributed under the GPL-2.0-only license, the kernel’s most recent stable release is version 6.9, dated 26 May 2024, and full details and source code can be found on its official website, https://www.kernel.org/.</lex>
+    </entry>
+
+    <entry category="Software" eid="4" shape="(X (X) (X))" shape-type="sibling" size="12">
+      <synthetictripleset>
+        <otriple>Mozilla_Firefox | type | Web_browser</otriple>
+        <otriple>Mozilla_Firefox | developer | Mozilla_Corporation</otriple>
+        <otriple>Mozilla_Firefox | initialReleaseDate | 2004-11-09</otriple>
+        <otriple>Mozilla_Firefox | latestReleaseVersion | 124.0</otriple>
+        <otriple>Mozilla_Firefox | programmingLanguage | C++</otriple>
+        <otriple>Mozilla_Firefox | programmingLanguage | Rust</otriple>
+        <otriple>Mozilla_Firefox | engine | Gecko</otriple>
+        <otriple>Mozilla_Firefox | operatingSystemSupport | Windows</otriple>
+        <otriple>Mozilla_Firefox | operatingSystemSupport | macOS</otriple>
+        <otriple>Mozilla_Firefox | license | MPL_2.0</otriple>
+        <otriple>Mozilla_Firefox | openSource | true</otriple>
+        <otriple>Mozilla_Firefox | defaultSearchEngine | Google</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Mozilla_Firefox | type | Web_browser</mtriple>
+        <mtriple>Mozilla_Firefox | developer | Mozilla_Corporation</mtriple>
+        <mtriple>Mozilla_Firefox | initialReleaseDate | 2004-11-09</mtriple>
+        <mtriple>Mozilla_Firefox | latestReleaseVersion | 124.0</mtriple>
+        <mtriple>Mozilla_Firefox | programmingLanguage | C++</mtriple>
+        <mtriple>Mozilla_Firefox | programmingLanguage | Rust</mtriple>
+        <mtriple>Mozilla_Firefox | engine | Gecko</mtriple>
+        <mtriple>Mozilla_Firefox | operatingSystemSupport | Windows</mtriple>
+        <mtriple>Mozilla_Firefox | operatingSystemSupport | macOS</mtriple>
+        <mtriple>Mozilla_Firefox | license | MPL_2.0</mtriple>
+        <mtriple>Mozilla_Firefox | openSource | true</mtriple>
+        <mtriple>Mozilla_Firefox | defaultSearchEngine | Google</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid4_l1" lang="en">Mozilla Firefox is a web browser developed by the Mozilla Corporation that first appeared on 9 November 2004 and is currently available in version 124.0. Written in C++ and Rust, it relies on the Gecko rendering engine and runs on both Windows and macOS. Firefox is open-source software distributed under the MPL 2.0 license, and its default search engine is Google.</lex>
+    </entry>
+
+    <entry category="Software" eid="5" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | type | interpreted_high-level_programming_language</otriple>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | designedBy | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | stableReleaseVersion | 3.12.2</otriple>
+        <otriple>Python_(programming_language) | stableReleaseDate | 2024-02-06</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | paradigm | multi-paradigm</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | duck_dynamic_strong_typing</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | cross-platform</otriple>
+        <otriple>Python_(programming_language) | filenameExtension | .py</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | website | python.org</otriple>
+        <otriple>Python_(programming_language) | implementation | CPython</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | type | interpreted_high-level_programming_language</mtriple>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | designedBy | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | stableReleaseVersion | 3.12.2</mtriple>
+        <mtriple>Python_(programming_language) | stableReleaseDate | 2024-02-06</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | multi-paradigm</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | duck_dynamic_strong_typing</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | filenameExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | website | python.org</mtriple>
+        <mtriple>Python_(programming_language) | implementation | CPython</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid5_l1" lang="en">Python is an interpreted, high-level, multi-paradigm programming language with a duck, dynamic and strong typing discipline. Designed by Guido van Rossum, it first appeared in 1991 and is now developed and maintained by the Python Software Foundation, which distributes it under the Python Software Foundation License. The language is cross-platform, typically stored in files bearing the .py extension, and its reference implementation is CPython. Influenced by the ABC programming language, Python has itself gone on to influence Go. Its latest stable release is version 3.12.2, published on 6 February 2024, and full details can be found on its official website, python.org.</lex>
+    </entry>
+
+    <entry category="Sports_Team" eid="6" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Voyager_1 | type | space_probe</otriple>
+        <otriple>Voyager_1 | mission | Voyager_program</otriple>
+        <otriple>Voyager_1 | operator | NASA</otriple>
+        <otriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</otriple>
+        <otriple>Voyager_1 | launchDate | 1977-09-05</otriple>
+        <otriple>Voyager_1 | launchVehicle | Titan_IIIE</otriple>
+        <otriple>Voyager_1 | launchSite | Cape_Canaveral_Launch_Complex_41</otriple>
+        <otriple>Voyager_1 | mass | 722_kg</otriple>
+        <otriple>Voyager_1 | power | 470_W</otriple>
+        <otriple>Voyager_1 | speed | 17_km_per_s</otriple>
+        <otriple>Voyager_1 | missionDuration | ongoing</otriple>
+        <otriple>Voyager_1 | status | operating</otriple>
+        <otriple>Voyager_1 | instrument | Imaging_Science_System</otriple>
+        <otriple>Voyager_1 | notableDiscovery | volcanic_activity_on_Io</otriple>
+        <otriple>Voyager_1 | distanceFromEarth | 24_billion_km</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Voyager_1 | type | space_probe</mtriple>
+        <mtriple>Voyager_1 | mission | Voyager_program</mtriple>
+        <mtriple>Voyager_1 | operator | NASA</mtriple>
+        <mtriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</mtriple>
+        <mtriple>Voyager_1 | launchDate | 1977-09-05</mtriple>
+        <mtriple>Voyager_1 | launchVehicle | Titan_IIIE</mtriple>
+        <mtriple>Voyager_1 | launchSite | Cape_Canaveral_Launch_Complex_41</mtriple>
+        <mtriple>Voyager_1 | mass | 722_kg</mtriple>
+        <mtriple>Voyager_1 | power | 470_W</mtriple>
+        <mtriple>Voyager_1 | speed | 17_km_per_s</mtriple>
+        <mtriple>Voyager_1 | missionDuration | ongoing</mtriple>
+        <mtriple>Voyager_1 | status | operating</mtriple>
+        <mtriple>Voyager_1 | instrument | Imaging_Science_System</mtriple>
+        <mtriple>Voyager_1 | notableDiscovery | volcanic_activity_on_Io</mtriple>
+        <mtriple>Voyager_1 | distanceFromEarth | 24_billion_km</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid6_l1" lang="en">Voyager 1 is a 722-kilogram space probe built by the Jet Propulsion Laboratory for NASA’s Voyager program and operated by the agency to this day. Launched from Cape Canaveral Launch Complex 41 aboard a Titan IIIE rocket on 5 September 1977, it set off on an ongoing mission that has left it about 24 billion km from Earth. Hurtling through space at roughly 17 km per second and drawing about 470 W of electrical power, the probe carries an array of instruments, including its Imaging Science System, with which it made the notable discovery of volcanic activity on Jupiter’s moon Io. Voyager 1 remains fully operating, continuing to return valuable data as it journeys ever farther from our planet.</lex>
+    </entry>
+
+    <entry category="Scientific_Concept" eid="7" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | designedBy | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | dynamic_typing</otriple>
+        <otriple>Python_(programming_language) | license | Python_License</otriple>
+        <otriple>Python_(programming_language) | latestReleaseVersion | 3.12.0</otriple>
+        <otriple>Python_(programming_language) | stableReleaseDate | 2023-10-02</otriple>
+        <otriple>Python_(programming_language) | paradigm | multi-paradigm</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | website | python.org</otriple>
+        <otriple>Python_(programming_language) | mascot | Python_Mascot</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | cross-platform</otriple>
+        <otriple>Python_(programming_language) | implementedIn | C_(programming_language)</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | designedBy | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | dynamic_typing</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_License</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseVersion | 3.12.0</mtriple>
+        <mtriple>Python_(programming_language) | stableReleaseDate | 2023-10-02</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | multi-paradigm</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | website | python.org</mtriple>
+        <mtriple>Python_(programming_language) | mascot | Python_Mascot</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | implementedIn | C_(programming_language)</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid7_l1" lang="en">Python is a multi-paradigm programming language designed by Guido van Rossum and first released in 1991. Now developed and stewarded by the Python Software Foundation, it is implemented in the C programming language, employs dynamic typing, and runs cross-platform. Source code is commonly saved with the .py file extension, and the language is distributed under the Python License. Influenced by the ABC programming language, Python has itself gone on to influence Go. Its latest stable version, 3.12.0, was released on 2 October 2023, and further information can be found on its official website, python.org, where it is proudly represented by the Python Mascot.</lex>
+    </entry>
+
+    <entry category="Organization" eid="8" shape="(X (X) (X))" shape-type="sibling" size="12">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | type | High-level_programming_language</otriple>
+        <otriple>Python_(programming_language) | designer | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | stableReleaseVersion | 3.12</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | Duck_typing</otriple>
+        <otriple>Python_(programming_language) | paradigm | Object-oriented_programming</otriple>
+        <otriple>Python_(programming_language) | paradigm | Functional_programming</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | type | High-level_programming_language</mtriple>
+        <mtriple>Python_(programming_language) | designer | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | stableReleaseVersion | 3.12</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | Duck_typing</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | Object-oriented_programming</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | Functional_programming</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid8_l1" lang="en">Python is a high-level programming language that first appeared in 1991. Designed by Guido van Rossum and now developed under the auspices of the Python Software Foundation, it follows a duck-typing discipline and supports both object-oriented and functional programming paradigms. The language’s source files typically carry the “.py” extension, and its latest stable release is version 3.12. Distributed under the Python Software Foundation License, Python was originally influenced by the ABC programming language and has, in turn, gone on to influence languages such as Go.</lex>
+    </entry>
+
+    <entry category="Creative_Work" eid="9" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Voyager_1 | type | Spacecraft</otriple>
+        <otriple>Voyager_1 | mission | Voyager_program</otriple>
+        <otriple>Voyager_1 | operator | NASA</otriple>
+        <otriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</otriple>
+        <otriple>Voyager_1 | launchDate | 1977-09-05</otriple>
+        <otriple>Voyager_1 | launchVehicle | Titan_IIIE-Centaur</otriple>
+        <otriple>Voyager_1 | powerSource | Radioisotope_thermoelectric_generator</otriple>
+        <otriple>Voyager_1 | status | Operational</otriple>
+        <otriple>Voyager_1 | primaryObjective | Study_outer_Solar_System</otriple>
+        <otriple>Voyager_1 | notableAchievement | First_spacecraft_in_interstellar_space</otriple>
+        <otriple>Voyager_1 | instrument | Imaging_Science_System</otriple>
+        <otriple>Voyager_1 | instrument | Plasma_Wave_Subsystem</otriple>
+        <otriple>Voyager_1 | distanceFromEarth | Over_20_billion_kilometres</otriple>
+        <otriple>Voyager_1 | flightDuration | Over_45_years</otriple>
+        <otriple>Voyager_1 | communicationSystem | Deep_Space_Network</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Voyager_1 | type | Spacecraft</mtriple>
+        <mtriple>Voyager_1 | mission | Voyager_program</mtriple>
+        <mtriple>Voyager_1 | operator | NASA</mtriple>
+        <mtriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</mtriple>
+        <mtriple>Voyager_1 | launchDate | 1977-09-05</mtriple>
+        <mtriple>Voyager_1 | launchVehicle | Titan_IIIE-Centaur</mtriple>
+        <mtriple>Voyager_1 | powerSource | Radioisotope_thermoelectric_generator</mtriple>
+        <mtriple>Voyager_1 | status | Operational</mtriple>
+        <mtriple>Voyager_1 | primaryObjective | Study_outer_Solar_System</mtriple>
+        <mtriple>Voyager_1 | notableAchievement | First_spacecraft_in_interstellar_space</mtriple>
+        <mtriple>Voyager_1 | instrument | Imaging_Science_System</mtriple>
+        <mtriple>Voyager_1 | instrument | Plasma_Wave_Subsystem</mtriple>
+        <mtriple>Voyager_1 | distanceFromEarth | Over_20_billion_kilometres</mtriple>
+        <mtriple>Voyager_1 | flightDuration | Over_45_years</mtriple>
+        <mtriple>Voyager_1 | communicationSystem | Deep_Space_Network</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid9_l1" lang="en">Voyager 1 is a NASA-operated spacecraft built by the Jet Propulsion Laboratory for the Voyager program and launched aboard a Titan IIIE-Centaur on 5 September 1977. Still operational after more than 45 years in flight, it draws its power from a radioisotope thermoelectric generator and communicates with Earth through the Deep Space Network. Equipped with instruments such as the Imaging Science System and the Plasma Wave Subsystem, its primary objective has been to study the outer Solar System—a mission that led to its notable achievement as the first spacecraft to enter interstellar space. Today, Voyager 1 continues its historic journey at a distance of over 20 billion kilometres from Earth.</lex>
+    </entry>
+
+    <entry category="Creative_Work" eid="10" shape="(X (X) (X))" shape-type="sibling" size="12">
+      <synthetictripleset>
+        <otriple>Mozilla_Firefox | type | Web_browser</otriple>
+        <otriple>Mozilla_Firefox | developer | Mozilla_Corporation</otriple>
+        <otriple>Mozilla_Firefox | initialReleaseYear | 2002</otriple>
+        <otriple>Mozilla_Firefox | stableReleaseVersion | 115.0</otriple>
+        <otriple>Mozilla_Firefox | stableReleaseDate | 2023-07-04</otriple>
+        <otriple>Mozilla_Firefox | engine | Gecko</otriple>
+        <otriple>Mozilla_Firefox | license | MPL-2.0</otriple>
+        <otriple>Mozilla_Firefox | operatingSystem | Cross-platform</otriple>
+        <otriple>Mozilla_Firefox | programmingLanguage | C++</otriple>
+        <otriple>Mozilla_Firefox | officialWebsite | https://www.mozilla.org/firefox/</otriple>
+        <otriple>Mozilla_Firefox | sourceModel | Open_source</otriple>
+        <otriple>Mozilla_Firefox | availableLanguages | More_than_90</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Mozilla_Firefox | type | Web_browser</mtriple>
+        <mtriple>Mozilla_Firefox | developer | Mozilla_Corporation</mtriple>
+        <mtriple>Mozilla_Firefox | initialReleaseYear | 2002</mtriple>
+        <mtriple>Mozilla_Firefox | stableReleaseVersion | 115.0</mtriple>
+        <mtriple>Mozilla_Firefox | stableReleaseDate | 2023-07-04</mtriple>
+        <mtriple>Mozilla_Firefox | engine | Gecko</mtriple>
+        <mtriple>Mozilla_Firefox | license | MPL-2.0</mtriple>
+        <mtriple>Mozilla_Firefox | operatingSystem | Cross-platform</mtriple>
+        <mtriple>Mozilla_Firefox | programmingLanguage | C++</mtriple>
+        <mtriple>Mozilla_Firefox | officialWebsite | https://www.mozilla.org/firefox/</mtriple>
+        <mtriple>Mozilla_Firefox | sourceModel | Open_source</mtriple>
+        <mtriple>Mozilla_Firefox | availableLanguages | More_than_90</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid10_l1" lang="en">Mozilla Firefox is a cross-platform web browser developed by the Mozilla Corporation and first released in 2002. Written in C++, it relies on the Gecko engine, follows an open-source source model, and is distributed under the MPL 2.0 license. The browser is available in more than 90 languages, and its current stable version is 115.0, released on 4 July 2023. Further information can be found on its official website at https://www.mozilla.org/firefox/.</lex>
+    </entry>
+
+    <entry category="Spacecraft_or_Mission" eid="11" shape="(X (X) (X))" shape-type="sibling" size="18">
+      <synthetictripleset>
+        <otriple>Space_Shuttle_Discovery | type | Space_Shuttle_orbiter</otriple>
+        <otriple>Space_Shuttle_Discovery | operator | NASA</otriple>
+        <otriple>Space_Shuttle_Discovery | manufacturer | Rockwell_International</otriple>
+        <otriple>Space_Shuttle_Discovery | maiden_flight | STS-41-D</otriple>
+        <otriple>Space_Shuttle_Discovery | maiden_flight_date | 1984-08-30</otriple>
+        <otriple>Space_Shuttle_Discovery | retired_date | 2011-03-09</otriple>
+        <otriple>Space_Shuttle_Discovery | status | Retired</otriple>
+        <otriple>Space_Shuttle_Discovery | number_of_flights | 39</otriple>
+        <otriple>Space_Shuttle_Discovery | distance_traveled | 238000000_kilometres</otriple>
+        <otriple>Space_Shuttle_Discovery | total_time_in_space | 365_days</otriple>
+        <otriple>Space_Shuttle_Discovery | named_after | RRS_Discovery</otriple>
+        <otriple>Space_Shuttle_Discovery | current_location | Steven_F._Udvar-Hazy_Center</otriple>
+        <otriple>Space_Shuttle_Discovery | notable_mission | STS-31</otriple>
+        <otriple>Space_Shuttle_Discovery | notable_mission | STS-60</otriple>
+        <otriple>Space_Shuttle_Discovery | notable_mission | STS-120</otriple>
+        <otriple>Space_Shuttle_Discovery | height | 17.25_metres</otriple>
+        <otriple>Space_Shuttle_Discovery | payload_capacity | 24800_kilograms</otriple>
+        <otriple>Space_Shuttle_Discovery | launch_site | Kennedy_Space_Center_Launch_Complex_39</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Space_Shuttle_Discovery | type | Space_Shuttle_orbiter</mtriple>
+        <mtriple>Space_Shuttle_Discovery | operator | NASA</mtriple>
+        <mtriple>Space_Shuttle_Discovery | manufacturer | Rockwell_International</mtriple>
+        <mtriple>Space_Shuttle_Discovery | maiden_flight | STS-41-D</mtriple>
+        <mtriple>Space_Shuttle_Discovery | maiden_flight_date | 1984-08-30</mtriple>
+        <mtriple>Space_Shuttle_Discovery | retired_date | 2011-03-09</mtriple>
+        <mtriple>Space_Shuttle_Discovery | status | Retired</mtriple>
+        <mtriple>Space_Shuttle_Discovery | number_of_flights | 39</mtriple>
+        <mtriple>Space_Shuttle_Discovery | distance_traveled | 238000000_kilometres</mtriple>
+        <mtriple>Space_Shuttle_Discovery | total_time_in_space | 365_days</mtriple>
+        <mtriple>Space_Shuttle_Discovery | named_after | RRS_Discovery</mtriple>
+        <mtriple>Space_Shuttle_Discovery | current_location | Steven_F._Udvar-Hazy_Center</mtriple>
+        <mtriple>Space_Shuttle_Discovery | notable_mission | STS-31</mtriple>
+        <mtriple>Space_Shuttle_Discovery | notable_mission | STS-60</mtriple>
+        <mtriple>Space_Shuttle_Discovery | notable_mission | STS-120</mtriple>
+        <mtriple>Space_Shuttle_Discovery | height | 17.25_metres</mtriple>
+        <mtriple>Space_Shuttle_Discovery | payload_capacity | 24800_kilograms</mtriple>
+        <mtriple>Space_Shuttle_Discovery | launch_site | Kennedy_Space_Center_Launch_Complex_39</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid11_l1" lang="en">Space Shuttle Discovery is a Space Shuttle orbiter built by Rockwell International and operated throughout its career by NASA, launching from Kennedy Space Center Launch Complex 39. Named after the research vessel RRS Discovery, the spacecraft made its maiden flight, STS-41-D, on 30 August 1984. Across a total of 39 missions—among them the notable flights STS-31, STS-60 and STS-120—the orbiter stood 17.25 metres high, could carry payloads of up to 24,800 kilograms, logged 365 days in space and travelled roughly 238 million kilometres. Discovery was officially retired on 9 March 2011, and its status is now listed as “Retired”; today it can be seen at the Steven F. Udvar-Hazy Center.</lex>
+    </entry>
+
+    <entry category="Sports_Team" eid="12" shape="(X (X) (X))" shape-type="sibling" size="14">
+      <synthetictripleset>
+        <otriple>Git | type | Distributed_version_control_system</otriple>
+        <otriple>Git | developer | Linus_Torvalds</otriple>
+        <otriple>Git | developer | Junio_C._Hamano</otriple>
+        <otriple>Git | programmingLanguage | C_language</otriple>
+        <otriple>Git | license | GNU_General_Public_License_v2</otriple>
+        <otriple>Git | initialReleaseYear | 2005</otriple>
+        <otriple>Git | operatingSystem | Unix-like</otriple>
+        <otriple>Git | operatingSystem | Microsoft_Windows</otriple>
+        <otriple>Git | operatingSystem | macOS</otriple>
+        <otriple>Git | repositoryHosting | GitHub</otriple>
+        <otriple>Git | repositoryHosting | GitLab</otriple>
+        <otriple>Git | repositoryHosting | Bitbucket</otriple>
+        <otriple>Git | latestStableVersion | 2.43.0</otriple>
+        <otriple>Git | officialWebsite | git-scm.com</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Git | type | Distributed_version_control_system</mtriple>
+        <mtriple>Git | developer | Linus_Torvalds</mtriple>
+        <mtriple>Git | developer | Junio_C._Hamano</mtriple>
+        <mtriple>Git | programmingLanguage | C_language</mtriple>
+        <mtriple>Git | license | GNU_General_Public_License_v2</mtriple>
+        <mtriple>Git | initialReleaseYear | 2005</mtriple>
+        <mtriple>Git | operatingSystem | Unix-like</mtriple>
+        <mtriple>Git | operatingSystem | Microsoft_Windows</mtriple>
+        <mtriple>Git | operatingSystem | macOS</mtriple>
+        <mtriple>Git | repositoryHosting | GitHub</mtriple>
+        <mtriple>Git | repositoryHosting | GitLab</mtriple>
+        <mtriple>Git | repositoryHosting | Bitbucket</mtriple>
+        <mtriple>Git | latestStableVersion | 2.43.0</mtriple>
+        <mtriple>Git | officialWebsite | git-scm.com</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid12_l1" lang="en">Git is a distributed version control system that was first released in 2005 and is primarily written in the C programming language. Initially created by Linus Torvalds and now maintained by Junio C. Hamano, it is available under the GNU General Public License v2. The software runs on Unix-like platforms, Microsoft Windows, and macOS, and its repositories are commonly hosted on services such as GitHub, GitLab, and Bitbucket. The latest stable release is version 2.43.0, and further information can be found on its official website, git-scm.com.</lex>
+    </entry>
+
+    <entry category="Scientific_Concept" eid="13" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Mozilla_Firefox | type | Web_browser</otriple>
+        <otriple>Mozilla_Firefox | developer | Mozilla_Foundation</otriple>
+        <otriple>Mozilla_Firefox | developer | Mozilla_Corporation</otriple>
+        <otriple>Mozilla_Firefox | initial_release_date | 2002-09-23</otriple>
+        <otriple>Mozilla_Firefox | stable_release_version | 118.0</otriple>
+        <otriple>Mozilla_Firefox | operating_system | Microsoft_Windows</otriple>
+        <otriple>Mozilla_Firefox | operating_system | macOS</otriple>
+        <otriple>Mozilla_Firefox | operating_system | Linux</otriple>
+        <otriple>Mozilla_Firefox | programming_language | C++</otriple>
+        <otriple>Mozilla_Firefox | programming_language | JavaScript</otriple>
+        <otriple>Mozilla_Firefox | license | MPL_2.0</otriple>
+        <otriple>Mozilla_Firefox | layout_engine | Gecko</otriple>
+        <otriple>Mozilla_Firefox | source_model | Open_source</otriple>
+        <otriple>Mozilla_Firefox | website | https://www.mozilla.org/firefox/</otriple>
+        <otriple>Mozilla_Firefox | available_in | Ninety_plus_languages</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Mozilla_Firefox | type | Web_browser</mtriple>
+        <mtriple>Mozilla_Firefox | developer | Mozilla_Foundation</mtriple>
+        <mtriple>Mozilla_Firefox | developer | Mozilla_Corporation</mtriple>
+        <mtriple>Mozilla_Firefox | initial_release_date | 2002-09-23</mtriple>
+        <mtriple>Mozilla_Firefox | stable_release_version | 118.0</mtriple>
+        <mtriple>Mozilla_Firefox | operating_system | Microsoft_Windows</mtriple>
+        <mtriple>Mozilla_Firefox | operating_system | macOS</mtriple>
+        <mtriple>Mozilla_Firefox | operating_system | Linux</mtriple>
+        <mtriple>Mozilla_Firefox | programming_language | C++</mtriple>
+        <mtriple>Mozilla_Firefox | programming_language | JavaScript</mtriple>
+        <mtriple>Mozilla_Firefox | license | MPL_2.0</mtriple>
+        <mtriple>Mozilla_Firefox | layout_engine | Gecko</mtriple>
+        <mtriple>Mozilla_Firefox | source_model | Open_source</mtriple>
+        <mtriple>Mozilla_Firefox | website | https://www.mozilla.org/firefox/</mtriple>
+        <mtriple>Mozilla_Firefox | available_in | Ninety_plus_languages</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid13_l1" lang="en">Mozilla Firefox is an open-source web browser developed by both the Mozilla Foundation and its subsidiary, the Mozilla Corporation. First released on 23 September 2002, it now stands at stable version 118.0 and is built on the Gecko layout engine. Written chiefly in C++ and JavaScript, Firefox runs across Microsoft Windows, macOS and Linux, and is distributed under the MPL 2.0 licence. The browser is available in more than ninety languages, and further information or downloads can be found on its official site, https://www.mozilla.org/firefox/.</lex>
+    </entry>
+
+    <entry category="Software" eid="14" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Apache_Hadoop | type | software_framework</otriple>
+        <otriple>Apache_Hadoop | developer | Apache_Software_Foundation</otriple>
+        <otriple>Apache_Hadoop | programmingLanguage | Java</otriple>
+        <otriple>Apache_Hadoop | operatingSystem | cross_platform</otriple>
+        <otriple>Apache_Hadoop | license | Apache_License_2.0</otriple>
+        <otriple>Apache_Hadoop | initialReleaseYear | 2006</otriple>
+        <otriple>Apache_Hadoop | stableReleaseVersion | 3.3.6</otriple>
+        <otriple>Apache_Hadoop | latestReleaseDate | 2023_12</otriple>
+        <otriple>Apache_Hadoop | designedFor | distributed_storage_and_processing_of_big_data</otriple>
+        <otriple>Apache_Hadoop | components | HDFS</otriple>
+        <otriple>Apache_Hadoop | components | MapReduce</otriple>
+        <otriple>Apache_Hadoop | components | YARN</otriple>
+        <otriple>Apache_Hadoop | ecosystemIncludes | Apache_Hive</otriple>
+        <otriple>Apache_Hadoop | namedAfter | Hadoop_the_toy_elephant</otriple>
+        <otriple>Apache_Hadoop | website | hadoop.apache.org</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Apache_Hadoop | type | software_framework</mtriple>
+        <mtriple>Apache_Hadoop | developer | Apache_Software_Foundation</mtriple>
+        <mtriple>Apache_Hadoop | programmingLanguage | Java</mtriple>
+        <mtriple>Apache_Hadoop | operatingSystem | cross_platform</mtriple>
+        <mtriple>Apache_Hadoop | license | Apache_License_2.0</mtriple>
+        <mtriple>Apache_Hadoop | initialReleaseYear | 2006</mtriple>
+        <mtriple>Apache_Hadoop | stableReleaseVersion | 3.3.6</mtriple>
+        <mtriple>Apache_Hadoop | latestReleaseDate | 2023_12</mtriple>
+        <mtriple>Apache_Hadoop | designedFor | distributed_storage_and_processing_of_big_data</mtriple>
+        <mtriple>Apache_Hadoop | components | HDFS</mtriple>
+        <mtriple>Apache_Hadoop | components | MapReduce</mtriple>
+        <mtriple>Apache_Hadoop | components | YARN</mtriple>
+        <mtriple>Apache_Hadoop | ecosystemIncludes | Apache_Hive</mtriple>
+        <mtriple>Apache_Hadoop | namedAfter | Hadoop_the_toy_elephant</mtriple>
+        <mtriple>Apache_Hadoop | website | hadoop.apache.org</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid14_l1" lang="en">Apache Hadoop is a software framework developed by the Apache Software Foundation for the distributed storage and processing of big data. Written in Java and able to run across multiple operating systems, it is released under the permissive Apache License 2.0. First introduced in 2006, Hadoop has continued to evolve, with its current stable version being 3.3.6, issued in December 2023. Core components of the framework include the Hadoop Distributed File System (HDFS), the MapReduce programming model, and the YARN resource manager, while its wider ecosystem incorporates tools such as Apache Hive. The project takes its name from “Hadoop,” a toy elephant, and further information is available at hadoop.apache.org.</lex>
+    </entry>
+
+    <entry category="Standard_or_Protocol" eid="15" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>SpaceX | foundedYear | 2002</otriple>
+        <otriple>SpaceX | founder | Elon_Musk</otriple>
+        <otriple>SpaceX | headquarters | Hawthorne,_California</otriple>
+        <otriple>SpaceX | type | Private_Aerospace_Manufacturer</otriple>
+        <otriple>SpaceX | industry | Aerospace</otriple>
+        <otriple>SpaceX | CEO | Elon_Musk</otriple>
+        <otriple>SpaceX | COO | Gwynne_Shotwell</otriple>
+        <otriple>SpaceX | developedRocket | Falcon_9</otriple>
+        <otriple>SpaceX | developedRocket | Falcon_Heavy</otriple>
+        <otriple>SpaceX | developedSpacecraft | Dragon_2</otriple>
+        <otriple>SpaceX | mission | Commercial_Crew_Program</otriple>
+        <otriple>SpaceX | valuation_2023 | 137_billion_USD</otriple>
+        <otriple>SpaceX | employees_2023 | 12000</otriple>
+        <otriple>SpaceX | website | https://www.spacex.com/</otriple>
+        <otriple>SpaceX | operatesConstellation | Starlink</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>SpaceX | foundedYear | 2002</mtriple>
+        <mtriple>SpaceX | founder | Elon_Musk</mtriple>
+        <mtriple>SpaceX | headquarters | Hawthorne,_California</mtriple>
+        <mtriple>SpaceX | type | Private_Aerospace_Manufacturer</mtriple>
+        <mtriple>SpaceX | industry | Aerospace</mtriple>
+        <mtriple>SpaceX | CEO | Elon_Musk</mtriple>
+        <mtriple>SpaceX | COO | Gwynne_Shotwell</mtriple>
+        <mtriple>SpaceX | developedRocket | Falcon_9</mtriple>
+        <mtriple>SpaceX | developedRocket | Falcon_Heavy</mtriple>
+        <mtriple>SpaceX | developedSpacecraft | Dragon_2</mtriple>
+        <mtriple>SpaceX | mission | Commercial_Crew_Program</mtriple>
+        <mtriple>SpaceX | valuation_2023 | 137_billion_USD</mtriple>
+        <mtriple>SpaceX | employees_2023 | 12000</mtriple>
+        <mtriple>SpaceX | website | https://www.spacex.com/</mtriple>
+        <mtriple>SpaceX | operatesConstellation | Starlink</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid15_l1" lang="en">SpaceX, officially founded in 2002 by Elon Musk, is a private aerospace manufacturer operating within the aerospace industry and based in Hawthorne, California. Musk also serves as the company’s chief executive officer, while Gwynne Shotwell holds the position of chief operating officer. SpaceX has developed the Falcon 9 and Falcon Heavy rockets as well as the Dragon 2 spacecraft, and it operates the Starlink satellite constellation while pursuing missions such as NASA’s Commercial Crew Program. By 2023, the firm employed roughly 12,000 people and was valued at about 137 billion USD. Further details can be found on its website: https://www.spacex.com/.</lex>
+    </entry>
+
+    <entry category="Creative_Work" eid="16" shape="(X (X) (X))" shape-type="sibling" size="17">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | designer | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | duck_typing_dynamic_strong</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | paradigm | multi-paradigm</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | stableRelease | Python_3.12</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | cross-platform</otriple>
+        <otriple>Python_(programming_language) | implementation | CPython</otriple>
+        <otriple>Python_(programming_language) | website | python.org</otriple>
+        <otriple>Python_(programming_language) | latestReleaseDate | 2023-10-02</otriple>
+        <otriple>Python_(programming_language) | notableLibrary | NumPy</otriple>
+        <otriple>Python_(programming_language) | minTriples | 10</otriple>
+        <otriple>Python_(programming_language) | maxTriples | 100</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | designer | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | duck_typing_dynamic_strong</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | multi-paradigm</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | stableRelease | Python_3.12</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | implementation | CPython</mtriple>
+        <mtriple>Python_(programming_language) | website | python.org</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseDate | 2023-10-02</mtriple>
+        <mtriple>Python_(programming_language) | notableLibrary | NumPy</mtriple>
+        <mtriple>Python_(programming_language) | minTriples | 10</mtriple>
+        <mtriple>Python_(programming_language) | maxTriples | 100</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid16_l1" lang="en">Python is a multi-paradigm programming language designed by Guido van Rossum and now developed under the stewardship of the Python Software Foundation. First released in 1991, it adopts a duck-typed, dynamic and strong typing discipline and is distributed under the permissive Python Software Foundation License. The language was originally influenced by the ABC programming language and has itself gone on to influence newer languages such as Go. Its reference implementation is CPython, and programs are typically saved with the .py file extension; thanks to its cross-platform nature, Python runs on a wide variety of operating systems. The most recent stable version is Python 3.12, which was released on 2 October 2023, and the ecosystem boasts notable libraries such as NumPy. Further information can be found on the official website, python.org. Within the data set that describes it, Python is represented by no fewer than ten triples and no more than one hundred triples.</lex>
+    </entry>
+
+    <entry category="Scientific_Concept" eid="17" shape="(X (X) (X))" shape-type="sibling" size="14">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | firstReleaseYear | 1991</otriple>
+        <otriple>Python_(programming_language) | designer | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | Duck,_dynamic,_strong,_gradual</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | latestReleaseVersion | 3.11.4</otriple>
+        <otriple>Python_(programming_language) | paradigm | Multi-paradigm</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | Cross-platform</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | mascot | Python_(snake)</otriple>
+        <otriple>Python_(programming_language) | stableReleaseDate | 2023-06-06</otriple>
+        <otriple>Python_(programming_language) | website | https://www.python.org</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | firstReleaseYear | 1991</mtriple>
+        <mtriple>Python_(programming_language) | designer | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | Duck,_dynamic,_strong,_gradual</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseVersion | 3.11.4</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | Multi-paradigm</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | Cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | mascot | Python_(snake)</mtriple>
+        <mtriple>Python_(programming_language) | stableReleaseDate | 2023-06-06</mtriple>
+        <mtriple>Python_(programming_language) | website | https://www.python.org</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid17_l1" lang="en">Python is a multi-paradigm, cross-platform programming language that was first released in 1991 and was originally designed by Guido van Rossum; today it is developed under the auspices of the Python Software Foundation. It employs a duck, dynamic, strong and gradual typing discipline and is distributed under the Python Software Foundation License. Source files usually carry the “.py” extension. Influenced by the ABC programming language, Python has itself gone on to influence Go. Its latest stable release, version 3.11.4, became available on 6 June 2023. The language’s mascot is a python snake, and more information can be found on its official website at https://www.python.org.</lex>
+    </entry>
+
+    <entry category="Creative_Work" eid="18" shape="(X (X) (X))" shape-type="sibling" size="12">
+      <synthetictripleset>
+        <otriple>Voyager_1 | type | interplanetary_space_probe</otriple>
+        <otriple>Voyager_1 | mission | Voyager_program</otriple>
+        <otriple>Voyager_1 | operator | NASA</otriple>
+        <otriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</otriple>
+        <otriple>Voyager_1 | launchDate | 1977-09-05</otriple>
+        <otriple>Voyager_1 | launchSite | Cape_Canaveral_Launch_Complex_41</otriple>
+        <otriple>Voyager_1 | launchVehicle | Titan_IIIE_Centaur</otriple>
+        <otriple>Voyager_1 | powerSource | Radioisotope_thermoelectric_generator</otriple>
+        <otriple>Voyager_1 | instrument | Imaging_Science_Subsystem</otriple>
+        <otriple>Voyager_1 | status | operational</otriple>
+        <otriple>Voyager_1 | distanceFromEarth | over_23_billion_kilometres</otriple>
+        <otriple>Voyager_1 | notableAchievement | first_spacecraft_to_reach_interstellar_space</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Voyager_1 | type | interplanetary_space_probe</mtriple>
+        <mtriple>Voyager_1 | mission | Voyager_program</mtriple>
+        <mtriple>Voyager_1 | operator | NASA</mtriple>
+        <mtriple>Voyager_1 | manufacturer | Jet_Propulsion_Laboratory</mtriple>
+        <mtriple>Voyager_1 | launchDate | 1977-09-05</mtriple>
+        <mtriple>Voyager_1 | launchSite | Cape_Canaveral_Launch_Complex_41</mtriple>
+        <mtriple>Voyager_1 | launchVehicle | Titan_IIIE_Centaur</mtriple>
+        <mtriple>Voyager_1 | powerSource | Radioisotope_thermoelectric_generator</mtriple>
+        <mtriple>Voyager_1 | instrument | Imaging_Science_Subsystem</mtriple>
+        <mtriple>Voyager_1 | status | operational</mtriple>
+        <mtriple>Voyager_1 | distanceFromEarth | over_23_billion_kilometres</mtriple>
+        <mtriple>Voyager_1 | notableAchievement | first_spacecraft_to_reach_interstellar_space</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid18_l1" lang="en">Voyager 1 is an interplanetary space probe built by the Jet Propulsion Laboratory for NASA’s Voyager program. Powered by a radioisotope thermoelectric generator and equipped with an Imaging Science Subsystem among its instruments, the spacecraft was launched atop a Titan IIIE Centaur from Cape Canaveral Launch Complex 41 on 5 September 1977. Still operational today, Voyager 1 has travelled to a distance of more than 23 billion kilometres from Earth and has earned the distinction of becoming the first spacecraft to reach interstellar space.</lex>
+    </entry>
+
+    <entry category="Software" eid="19" shape="(X (X) (X))" shape-type="sibling" size="16">
+      <synthetictripleset>
+        <otriple>Cassini_Huygens | type | Spacecraft_or_Mission</otriple>
+        <otriple>Cassini_Huygens | mission | Study_Saturn_and_its_moons</otriple>
+        <otriple>Cassini_Huygens | launchDate | 1997-10-15</otriple>
+        <otriple>Cassini_Huygens | operator | NASA</otriple>
+        <otriple>Cassini_Huygens | operator | ESA</otriple>
+        <otriple>Cassini_Huygens | operator | ASI</otriple>
+        <otriple>Cassini_Huygens | manufacturer | Jet_Propulsion_Laboratory</otriple>
+        <otriple>Cassini_Huygens | mass | 5712_kg_for_Cassini_orbiter</otriple>
+        <otriple>Cassini_Huygens | arrivalDate | 2004-07-01</otriple>
+        <otriple>Cassini_Huygens | endOfMission | 2017-09-15</otriple>
+        <otriple>Cassini_Huygens | notableDiscovery | Enceladus_subsurface_ocean</otriple>
+        <otriple>Cassini_Huygens | orbited | Saturn</otriple>
+        <otriple>Cassini_Huygens | landedProbe | Huygens_probe</otriple>
+        <otriple>Cassini_Huygens | flyby | Titan</otriple>
+        <otriple>Cassini_Huygens | cost | 3.26_billion_USD</otriple>
+        <otriple>Cassini_Huygens | status | Mission_completed</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Cassini_Huygens | type | Spacecraft_or_Mission</mtriple>
+        <mtriple>Cassini_Huygens | mission | Study_Saturn_and_its_moons</mtriple>
+        <mtriple>Cassini_Huygens | launchDate | 1997-10-15</mtriple>
+        <mtriple>Cassini_Huygens | operator | NASA</mtriple>
+        <mtriple>Cassini_Huygens | operator | ESA</mtriple>
+        <mtriple>Cassini_Huygens | operator | ASI</mtriple>
+        <mtriple>Cassini_Huygens | manufacturer | Jet_Propulsion_Laboratory</mtriple>
+        <mtriple>Cassini_Huygens | mass | 5712_kg_for_Cassini_orbiter</mtriple>
+        <mtriple>Cassini_Huygens | arrivalDate | 2004-07-01</mtriple>
+        <mtriple>Cassini_Huygens | endOfMission | 2017-09-15</mtriple>
+        <mtriple>Cassini_Huygens | notableDiscovery | Enceladus_subsurface_ocean</mtriple>
+        <mtriple>Cassini_Huygens | orbited | Saturn</mtriple>
+        <mtriple>Cassini_Huygens | landedProbe | Huygens_probe</mtriple>
+        <mtriple>Cassini_Huygens | flyby | Titan</mtriple>
+        <mtriple>Cassini_Huygens | cost | 3.26_billion_USD</mtriple>
+        <mtriple>Cassini_Huygens | status | Mission_completed</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid19_l1" lang="en">Cassini–Huygens was a space mission and spacecraft manufactured by the Jet Propulsion Laboratory and jointly operated by NASA, the European Space Agency (ESA) and the Italian Space Agency (ASI). Launched on 15 October 1997 with a mass of 5,712 kg for the Cassini orbiter, it was sent to study Saturn and its moons; the craft entered Saturn’s orbit on 1 July 2004 and remained there until the mission ended on 15 September 2017. During its 3.26 billion USD mission, Cassini orbited Saturn, performed flybys of Titan, released the Huygens probe that landed on that moon, and made the notable discovery of a subsurface ocean on Enceladus. With these objectives achieved, the mission is now completed.</lex>
+    </entry>
+
+    <entry category="Sports_Team" eid="20" shape="(X (X) (X))" shape-type="sibling" size="16">
+      <synthetictripleset>
+        <otriple>Python_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Python_(programming_language) | designer | Guido_van_Rossum</otriple>
+        <otriple>Python_(programming_language) | firstAppeared | 1991</otriple>
+        <otriple>Python_(programming_language) | license | Python_Software_Foundation_License</otriple>
+        <otriple>Python_(programming_language) | typingDiscipline | duck_typing</otriple>
+        <otriple>Python_(programming_language) | paradigm | multi-paradigm</otriple>
+        <otriple>Python_(programming_language) | latestReleaseVersion | 3.11.4</otriple>
+        <otriple>Python_(programming_language) | latestReleaseDate | 2023-06-24</otriple>
+        <otriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | influenced | Go_(programming_language)</otriple>
+        <otriple>Python_(programming_language) | fileExtension | .py</otriple>
+        <otriple>Python_(programming_language) | tagline | batteries_included</otriple>
+        <otriple>Python_(programming_language) | operatingSystem | cross-platform</otriple>
+        <otriple>Python_(programming_language) | website | https://www.python.org/</otriple>
+        <otriple>Python_(programming_language) | packageRepository | Python_Package_Index</otriple>
+        <otriple>Python_(programming_language) | standardImplementation | CPython</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Python_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Python_(programming_language) | designer | Guido_van_Rossum</mtriple>
+        <mtriple>Python_(programming_language) | firstAppeared | 1991</mtriple>
+        <mtriple>Python_(programming_language) | license | Python_Software_Foundation_License</mtriple>
+        <mtriple>Python_(programming_language) | typingDiscipline | duck_typing</mtriple>
+        <mtriple>Python_(programming_language) | paradigm | multi-paradigm</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseVersion | 3.11.4</mtriple>
+        <mtriple>Python_(programming_language) | latestReleaseDate | 2023-06-24</mtriple>
+        <mtriple>Python_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | influenced | Go_(programming_language)</mtriple>
+        <mtriple>Python_(programming_language) | fileExtension | .py</mtriple>
+        <mtriple>Python_(programming_language) | tagline | batteries_included</mtriple>
+        <mtriple>Python_(programming_language) | operatingSystem | cross-platform</mtriple>
+        <mtriple>Python_(programming_language) | website | https://www.python.org/</mtriple>
+        <mtriple>Python_(programming_language) | packageRepository | Python_Package_Index</mtriple>
+        <mtriple>Python_(programming_language) | standardImplementation | CPython</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid20_l1" lang="en">Python is a cross-platform, multi-paradigm programming language that was designed by Guido van Rossum and is now developed under the auspices of the Python Software Foundation. First appearing in 1991, it follows a duck-typing discipline, carries the informal tagline “batteries included,” and is distributed under the Python Software Foundation License. Source files typically use the .py extension, and the language’s reference implementation is CPython. Python draws inspiration from the earlier ABC programming language and has, in turn, influenced languages such as Go. Its vast ecosystem is centred on the Python Package Index, while the latest stable release, version 3.11.4, was issued on 24 June 2023. Further information is available on its official website, https://www.python.org/.</lex>
+    </entry>
+  </entries>
+</benchmark>

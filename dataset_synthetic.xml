@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<benchmark>
+  <entries>
+    <entry category="Scientific_Concepts" eid="1" shape="(X (X) (X))" shape-type="sibling" size="23">
+      <synthetictripleset>
+        <otriple>mRNA_vaccine | discovered | 1964</otriple>
+        <otriple>mRNA_vaccine | discovered | 2012</otriple>
+        <otriple>mRNA_vaccine | notableResearcher | Jennifer_Doudna</otriple>
+        <otriple>mRNA_vaccine | evidenceFrom | Seismic_data</otriple>
+        <otriple>mRNA_vaccine | field | Genetics</otriple>
+        <otriple>mRNA_vaccine | field | Quantum_physics</otriple>
+        <otriple>mRNA_vaccine | discovered | 2004</otriple>
+        <otriple>mRNA_vaccine | evidenceFrom | LHC</otriple>
+        <otriple>mRNA_vaccine | evidenceFrom | Double-slit_experiment</otriple>
+        <otriple>mRNA_vaccine | notableResearcher | Albert_Einstein</otriple>
+        <otriple>mRNA_vaccine | discovered | 1915</otriple>
+        <otriple>mRNA_vaccine | evidenceFrom | X-ray_crystallography</otriple>
+        <otriple>mRNA_vaccine | model | Standard_Model</otriple>
+        <otriple>mRNA_vaccine | application | Semiconductors</otriple>
+        <otriple>mRNA_vaccine | model | Quantum_field_theory</otriple>
+        <otriple>mRNA_vaccine | field | Immunology</otriple>
+        <otriple>mRNA_vaccine | relatedTo | Cas9</otriple>
+        <otriple>mRNA_vaccine | model | Band_theory_of_solids</otriple>
+        <otriple>mRNA_vaccine | relatedTo | Quarks</otriple>
+        <otriple>mRNA_vaccine | discovered | 1905</otriple>
+        <otriple>mRNA_vaccine | application | Vaccination</otriple>
+        <otriple>mRNA_vaccine | notableResearcher | Peter_Higgs</otriple>
+        <otriple>mRNA_vaccine | notableResearcher | Emmanuelle_Charpentier</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>mRNA_vaccine | discovered | 1964</mtriple>
+        <mtriple>mRNA_vaccine | discovered | 2012</mtriple>
+        <mtriple>mRNA_vaccine | notableResearcher | Jennifer_Doudna</mtriple>
+        <mtriple>mRNA_vaccine | evidenceFrom | Seismic_data</mtriple>
+        <mtriple>mRNA_vaccine | field | Genetics</mtriple>
+        <mtriple>mRNA_vaccine | field | Quantum_physics</mtriple>
+        <mtriple>mRNA_vaccine | discovered | 2004</mtriple>
+        <mtriple>mRNA_vaccine | evidenceFrom | LHC</mtriple>
+        <mtriple>mRNA_vaccine | evidenceFrom | Double-slit_experiment</mtriple>
+        <mtriple>mRNA_vaccine | notableResearcher | Albert_Einstein</mtriple>
+        <mtriple>mRNA_vaccine | discovered | 1915</mtriple>
+        <mtriple>mRNA_vaccine | evidenceFrom | X-ray_crystallography</mtriple>
+        <mtriple>mRNA_vaccine | model | Standard_Model</mtriple>
+        <mtriple>mRNA_vaccine | application | Semiconductors</mtriple>
+        <mtriple>mRNA_vaccine | model | Quantum_field_theory</mtriple>
+        <mtriple>mRNA_vaccine | field | Immunology</mtriple>
+        <mtriple>mRNA_vaccine | relatedTo | Cas9</mtriple>
+        <mtriple>mRNA_vaccine | model | Band_theory_of_solids</mtriple>
+        <mtriple>mRNA_vaccine | relatedTo | Quarks</mtriple>
+        <mtriple>mRNA_vaccine | discovered | 1905</mtriple>
+        <mtriple>mRNA_vaccine | application | Vaccination</mtriple>
+        <mtriple>mRNA_vaccine | notableResearcher | Peter_Higgs</mtriple>
+        <mtriple>mRNA_vaccine | notableResearcher | Emmanuelle_Charpentier</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid1_l1" lang="en">mRNA vaccine has discovered 1964, 2012, 2004, 1915 and 1905. mRNA vaccine has notableResearcher Jennifer Doudna, Albert Einstein, Peter Higgs and Emmanuelle Charpentier. mRNA vaccine has evidenceFrom Seismic data, LHC, Double-slit experiment and X-ray crystallography. mRNA vaccine has field Genetics, Quantum physics and Immunology. mRNA vaccine has model Standard Model, Quantum field theory and Band theory of solids. mRNA vaccine has application Semiconductors and Vaccination.</lex>
+    </entry>
+
+    <entry category="Works" eid="2" shape="(X (X) (X))" shape-type="sibling" size="19">
+      <synthetictripleset>
+        <otriple>Bohemian_Rhapsody | basedOn | Original_screenplay</otriple>
+        <otriple>Bohemian_Rhapsody | releaseYear | 1954</otriple>
+        <otriple>Bohemian_Rhapsody | starring | Carrie-Anne_Moss</otriple>
+        <otriple>Bohemian_Rhapsody | starring | Keanu_Reeves</otriple>
+        <otriple>Bohemian_Rhapsody | genre | Progressive_rock</otriple>
+        <otriple>Bohemian_Rhapsody | wonAward | Grammy_Hall_of_Fame</otriple>
+        <otriple>Bohemian_Rhapsody | language | English</otriple>
+        <otriple>Bohemian_Rhapsody | artist | Pink_Floyd</otriple>
+        <otriple>Bohemian_Rhapsody | director | Christopher_Nolan</otriple>
+        <otriple>Bohemian_Rhapsody | basedOn | Novel</otriple>
+        <otriple>Bohemian_Rhapsody | label | Harvest_Records</otriple>
+        <otriple>Bohemian_Rhapsody | wonAward | Academy_Award_for_Best_Cinematography</otriple>
+        <otriple>Bohemian_Rhapsody | director | Lilly_Wachowski</otriple>
+        <otriple>Bohemian_Rhapsody | genre | Epic_fantasy</otriple>
+        <otriple>Bohemian_Rhapsody | author | Stephen_Hawking</otriple>
+        <otriple>Bohemian_Rhapsody | genre | Popular_science</otriple>
+        <otriple>Bohemian_Rhapsody | artist | Queen</otriple>
+        <otriple>Bohemian_Rhapsody | director | Lana_Wachowski</otriple>
+        <otriple>Bohemian_Rhapsody | author | Leo_Tolstoy</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Bohemian_Rhapsody | basedOn | Original_screenplay</mtriple>
+        <mtriple>Bohemian_Rhapsody | releaseYear | 1954</mtriple>
+        <mtriple>Bohemian_Rhapsody | starring | Carrie-Anne_Moss</mtriple>
+        <mtriple>Bohemian_Rhapsody | starring | Keanu_Reeves</mtriple>
+        <mtriple>Bohemian_Rhapsody | genre | Progressive_rock</mtriple>
+        <mtriple>Bohemian_Rhapsody | wonAward | Grammy_Hall_of_Fame</mtriple>
+        <mtriple>Bohemian_Rhapsody | language | English</mtriple>
+        <mtriple>Bohemian_Rhapsody | artist | Pink_Floyd</mtriple>
+        <mtriple>Bohemian_Rhapsody | director | Christopher_Nolan</mtriple>
+        <mtriple>Bohemian_Rhapsody | basedOn | Novel</mtriple>
+        <mtriple>Bohemian_Rhapsody | label | Harvest_Records</mtriple>
+        <mtriple>Bohemian_Rhapsody | wonAward | Academy_Award_for_Best_Cinematography</mtriple>
+        <mtriple>Bohemian_Rhapsody | director | Lilly_Wachowski</mtriple>
+        <mtriple>Bohemian_Rhapsody | genre | Epic_fantasy</mtriple>
+        <mtriple>Bohemian_Rhapsody | author | Stephen_Hawking</mtriple>
+        <mtriple>Bohemian_Rhapsody | genre | Popular_science</mtriple>
+        <mtriple>Bohemian_Rhapsody | artist | Queen</mtriple>
+        <mtriple>Bohemian_Rhapsody | director | Lana_Wachowski</mtriple>
+        <mtriple>Bohemian_Rhapsody | author | Leo_Tolstoy</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid2_l1" lang="en">Bohemian Rhapsody has basedOn Original screenplay and Novel. Bohemian Rhapsody has releaseYear 1954. Bohemian Rhapsody has starring Carrie-Anne Moss and Keanu Reeves. Bohemian Rhapsody has genre Progressive rock, Epic fantasy and Popular science. Bohemian Rhapsody has wonAward Grammy Hall of Fame and Academy Award for Best Cinematography. Bohemian Rhapsody has language English.</lex>
+    </entry>
+
+    <entry category="Space_Missions" eid="3" shape="(X (X) (X))" shape-type="sibling" size="21">
+      <synthetictripleset>
+        <otriple>International_Space_Station | manufacturer | Boeing</otriple>
+        <otriple>International_Space_Station | instrument | LORRI</otriple>
+        <otriple>International_Space_Station | status | Extended_mission</otriple>
+        <otriple>International_Space_Station | manufacturer | Ball_Aerospace</otriple>
+        <otriple>International_Space_Station | launchDate | 1977-08-20</otriple>
+        <otriple>International_Space_Station | target | Deep_space</otriple>
+        <otriple>International_Space_Station | status | Operational</otriple>
+        <otriple>International_Space_Station | launchDate | 1990-04-24</otriple>
+        <otriple>International_Space_Station | operator | ESA</otriple>
+        <otriple>International_Space_Station | launchDate | 1998-11-20</otriple>
+        <otriple>International_Space_Station | target | Jupiter</otriple>
+        <otriple>International_Space_Station | mass | 6200_kg</otriple>
+        <otriple>International_Space_Station | mass | 478_kg</otriple>
+        <otriple>International_Space_Station | launchDate | 2011-11-26</otriple>
+        <otriple>International_Space_Station | notableDiscovery | Pluto_geology</otriple>
+        <otriple>International_Space_Station | operator | JAXA</otriple>
+        <otriple>International_Space_Station | notableDiscovery | Interstellar_plasma</otriple>
+        <otriple>International_Space_Station | target | Interstellar_space</otriple>
+        <otriple>International_Space_Station | launchVehicle | Ariane_5</otriple>
+        <otriple>International_Space_Station | launchVehicle | Titan_IIIE</otriple>
+        <otriple>International_Space_Station | launchDate | 2020-07-30</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>International_Space_Station | manufacturer | Boeing</mtriple>
+        <mtriple>International_Space_Station | instrument | LORRI</mtriple>
+        <mtriple>International_Space_Station | status | Extended_mission</mtriple>
+        <mtriple>International_Space_Station | manufacturer | Ball_Aerospace</mtriple>
+        <mtriple>International_Space_Station | launchDate | 1977-08-20</mtriple>
+        <mtriple>International_Space_Station | target | Deep_space</mtriple>
+        <mtriple>International_Space_Station | status | Operational</mtriple>
+        <mtriple>International_Space_Station | launchDate | 1990-04-24</mtriple>
+        <mtriple>International_Space_Station | operator | ESA</mtriple>
+        <mtriple>International_Space_Station | launchDate | 1998-11-20</mtriple>
+        <mtriple>International_Space_Station | target | Jupiter</mtriple>
+        <mtriple>International_Space_Station | mass | 6200_kg</mtriple>
+        <mtriple>International_Space_Station | mass | 478_kg</mtriple>
+        <mtriple>International_Space_Station | launchDate | 2011-11-26</mtriple>
+        <mtriple>International_Space_Station | notableDiscovery | Pluto_geology</mtriple>
+        <mtriple>International_Space_Station | operator | JAXA</mtriple>
+        <mtriple>International_Space_Station | notableDiscovery | Interstellar_plasma</mtriple>
+        <mtriple>International_Space_Station | target | Interstellar_space</mtriple>
+        <mtriple>International_Space_Station | launchVehicle | Ariane_5</mtriple>
+        <mtriple>International_Space_Station | launchVehicle | Titan_IIIE</mtriple>
+        <mtriple>International_Space_Station | launchDate | 2020-07-30</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid3_l1" lang="en">International Space Station has manufacturer Boeing and Ball Aerospace. International Space Station has instrument LORRI. International Space Station has status Extended mission and Operational. International Space Station has launchDate 1977-08-20, 1990-04-24, 1998-11-20, 2011-11-26 and 2020-07-30. International Space Station has target Deep space, Jupiter and Interstellar space. International Space Station has operator ESA and JAXA.</lex>
+    </entry>
+
+    <entry category="Sports_Teams" eid="4" shape="(X (X) (X))" shape-type="sibling" size="11">
+      <synthetictripleset>
+        <otriple>Los_Angeles_Dodgers | starPlayer | Stephen_Curry</otriple>
+        <otriple>Los_Angeles_Dodgers | league | MLB</otriple>
+        <otriple>Los_Angeles_Dodgers | homeArena | Santiago_Bernabéu</otriple>
+        <otriple>Los_Angeles_Dodgers | championships | 6</otriple>
+        <otriple>Los_Angeles_Dodgers | championships | 7</otriple>
+        <otriple>Los_Angeles_Dodgers | championships | 27</otriple>
+        <otriple>Los_Angeles_Dodgers | rival | Los_Angeles_Lakers</otriple>
+        <otriple>Los_Angeles_Dodgers | founded | 1936</otriple>
+        <otriple>Los_Angeles_Dodgers | starPlayer | Lionel_Messi</otriple>
+        <otriple>Los_Angeles_Dodgers | homeArena | Yankee_Stadium</otriple>
+        <otriple>Los_Angeles_Dodgers | founded | 1902</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Los_Angeles_Dodgers | starPlayer | Stephen_Curry</mtriple>
+        <mtriple>Los_Angeles_Dodgers | league | MLB</mtriple>
+        <mtriple>Los_Angeles_Dodgers | homeArena | Santiago_Bernabéu</mtriple>
+        <mtriple>Los_Angeles_Dodgers | championships | 6</mtriple>
+        <mtriple>Los_Angeles_Dodgers | championships | 7</mtriple>
+        <mtriple>Los_Angeles_Dodgers | championships | 27</mtriple>
+        <mtriple>Los_Angeles_Dodgers | rival | Los_Angeles_Lakers</mtriple>
+        <mtriple>Los_Angeles_Dodgers | founded | 1936</mtriple>
+        <mtriple>Los_Angeles_Dodgers | starPlayer | Lionel_Messi</mtriple>
+        <mtriple>Los_Angeles_Dodgers | homeArena | Yankee_Stadium</mtriple>
+        <mtriple>Los_Angeles_Dodgers | founded | 1902</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid4_l1" lang="en">Los Angeles Dodgers has starPlayer Stephen Curry and Lionel Messi. Los Angeles Dodgers has league MLB. Los Angeles Dodgers has homeArena Santiago Bernabéu and Yankee Stadium. Los Angeles Dodgers has championships 6, 7 and 27. Los Angeles Dodgers has rival Los Angeles Lakers. Los Angeles Dodgers has founded 1936 and 1902.</lex>
+    </entry>
+
+    <entry category="Organizations" eid="5" shape="(X (X) (X))" shape-type="sibling" size="28">
+      <synthetictripleset>
+        <otriple>NVIDIA | founded | 1958</otriple>
+        <otriple>NVIDIA | memberOf | W3C</otriple>
+        <otriple>NVIDIA | partner | JAXA</otriple>
+        <otriple>NVIDIA | founded | 2002</otriple>
+        <otriple>NVIDIA | headquarter | Armonk</otriple>
+        <otriple>NVIDIA | type | Intergovernmental_organization</otriple>
+        <otriple>NVIDIA | headquarter | Redmond</otriple>
+        <otriple>NVIDIA | operates | AWS</otriple>
+        <otriple>NVIDIA | headquarter | Paris</otriple>
+        <otriple>NVIDIA | operates | Jet_Propulsion_Laboratory</otriple>
+        <otriple>NVIDIA | headquarter | Washington,_D.C.</otriple>
+        <otriple>NVIDIA | partner | CERN</otriple>
+        <otriple>NVIDIA | mission | Artemis_program</otriple>
+        <otriple>NVIDIA | subsidiary | Instagram</otriple>
+        <otriple>NVIDIA | mission | Sustainable_Development_Goals</otriple>
+        <otriple>NVIDIA | type | Non_profit</otriple>
+        <otriple>NVIDIA | memberOf | Partnership_on_AI</otriple>
+        <otriple>NVIDIA | headquarter | Geneva</otriple>
+        <otriple>NVIDIA | headquarter | Vienna</otriple>
+        <otriple>NVIDIA | subsidiary | WhatsApp</otriple>
+        <otriple>NVIDIA | type | Corporation</otriple>
+        <otriple>NVIDIA | partner | ESA</otriple>
+        <otriple>NVIDIA | mission | Apollo_program</otriple>
+        <otriple>NVIDIA | mission | Polio_eradication</otriple>
+        <otriple>NVIDIA | operates | Azure_Cloud</otriple>
+        <otriple>NVIDIA | operates | DeepMind</otriple>
+        <otriple>NVIDIA | partner | Broad_Institute</otriple>
+        <otriple>NVIDIA | program | Horizon_Europe</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>NVIDIA | founded | 1958</mtriple>
+        <mtriple>NVIDIA | memberOf | W3C</mtriple>
+        <mtriple>NVIDIA | partner | JAXA</mtriple>
+        <mtriple>NVIDIA | founded | 2002</mtriple>
+        <mtriple>NVIDIA | headquarter | Armonk</mtriple>
+        <mtriple>NVIDIA | type | Intergovernmental_organization</mtriple>
+        <mtriple>NVIDIA | headquarter | Redmond</mtriple>
+        <mtriple>NVIDIA | operates | AWS</mtriple>
+        <mtriple>NVIDIA | headquarter | Paris</mtriple>
+        <mtriple>NVIDIA | operates | Jet_Propulsion_Laboratory</mtriple>
+        <mtriple>NVIDIA | headquarter | Washington,_D.C.</mtriple>
+        <mtriple>NVIDIA | partner | CERN</mtriple>
+        <mtriple>NVIDIA | mission | Artemis_program</mtriple>
+        <mtriple>NVIDIA | subsidiary | Instagram</mtriple>
+        <mtriple>NVIDIA | mission | Sustainable_Development_Goals</mtriple>
+        <mtriple>NVIDIA | type | Non_profit</mtriple>
+        <mtriple>NVIDIA | memberOf | Partnership_on_AI</mtriple>
+        <mtriple>NVIDIA | headquarter | Geneva</mtriple>
+        <mtriple>NVIDIA | headquarter | Vienna</mtriple>
+        <mtriple>NVIDIA | subsidiary | WhatsApp</mtriple>
+        <mtriple>NVIDIA | type | Corporation</mtriple>
+        <mtriple>NVIDIA | partner | ESA</mtriple>
+        <mtriple>NVIDIA | mission | Apollo_program</mtriple>
+        <mtriple>NVIDIA | mission | Polio_eradication</mtriple>
+        <mtriple>NVIDIA | operates | Azure_Cloud</mtriple>
+        <mtriple>NVIDIA | operates | DeepMind</mtriple>
+        <mtriple>NVIDIA | partner | Broad_Institute</mtriple>
+        <mtriple>NVIDIA | program | Horizon_Europe</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid5_l1" lang="en">NVIDIA has founded 1958 and 2002. NVIDIA has memberOf W3C and Partnership on AI. NVIDIA has partner JAXA, CERN, ESA and Broad Institute. NVIDIA has headquarter Armonk, Redmond, Paris, Washington, D.C., Geneva and Vienna. NVIDIA has type Intergovernmental organization, Non profit and Corporation. NVIDIA has operates AWS, Jet Propulsion Laboratory, Azure Cloud and DeepMind.</lex>
+    </entry>
+
+    <entry category="Organizations" eid="6" shape="(X (X) (X))" shape-type="sibling" size="16">
+      <synthetictripleset>
+        <otriple>NASA | mission | Artemis_program</otriple>
+        <otriple>NASA | memberOf | W3C</otriple>
+        <otriple>NASA | program | Space_Shuttle_program</otriple>
+        <otriple>NASA | headquarter | Geneva</otriple>
+        <otriple>NASA | type | Intergovernmental_organization</otriple>
+        <otriple>NASA | subsidiary | GitHub</otriple>
+        <otriple>NASA | partner | JAXA</otriple>
+        <otriple>NASA | program | Global_Polio_Eradication_Initiative</otriple>
+        <otriple>NASA | founded | 1957</otriple>
+        <otriple>NASA | subsidiary | YouTube</otriple>
+        <otriple>NASA | subsidiary | Instagram</otriple>
+        <otriple>NASA | operates | Hubble_Space_Telescope</otriple>
+        <otriple>NASA | operates | James_Webb_Space_Telescope</otriple>
+        <otriple>NASA | type | Corporation</otriple>
+        <otriple>NASA | founded | 1948</otriple>
+        <otriple>NASA | subsidiary | LinkedIn</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>NASA | mission | Artemis_program</mtriple>
+        <mtriple>NASA | memberOf | W3C</mtriple>
+        <mtriple>NASA | program | Space_Shuttle_program</mtriple>
+        <mtriple>NASA | headquarter | Geneva</mtriple>
+        <mtriple>NASA | type | Intergovernmental_organization</mtriple>
+        <mtriple>NASA | subsidiary | GitHub</mtriple>
+        <mtriple>NASA | partner | JAXA</mtriple>
+        <mtriple>NASA | program | Global_Polio_Eradication_Initiative</mtriple>
+        <mtriple>NASA | founded | 1957</mtriple>
+        <mtriple>NASA | subsidiary | YouTube</mtriple>
+        <mtriple>NASA | subsidiary | Instagram</mtriple>
+        <mtriple>NASA | operates | Hubble_Space_Telescope</mtriple>
+        <mtriple>NASA | operates | James_Webb_Space_Telescope</mtriple>
+        <mtriple>NASA | type | Corporation</mtriple>
+        <mtriple>NASA | founded | 1948</mtriple>
+        <mtriple>NASA | subsidiary | LinkedIn</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid6_l1" lang="en">NASA has mission Artemis program. NASA has memberOf W3C. NASA has program Space Shuttle program and Global Polio Eradication Initiative. NASA has headquarter Geneva. NASA has type Intergovernmental organization and Corporation. NASA has subsidiary GitHub, YouTube, Instagram and LinkedIn.</lex>
+    </entry>
+
+    <entry category="Sports_Teams" eid="7" shape="(X (X) (X))" shape-type="sibling" size="24">
+      <synthetictripleset>
+        <otriple>FC_Barcelona | homeArena | Chase_Center</otriple>
+        <otriple>FC_Barcelona | championships | 7</otriple>
+        <otriple>FC_Barcelona | rival | Los_Angeles_Lakers</otriple>
+        <otriple>FC_Barcelona | homeArena | Yankee_Stadium</otriple>
+        <otriple>FC_Barcelona | founded | 1901</otriple>
+        <otriple>FC_Barcelona | rival | FC_Barcelona</otriple>
+        <otriple>FC_Barcelona | starPlayer | Karim_Benzema</otriple>
+        <otriple>FC_Barcelona | championships | 27</otriple>
+        <otriple>FC_Barcelona | founded | 1946</otriple>
+        <otriple>FC_Barcelona | rival | Boston_Red_Sox</otriple>
+        <otriple>FC_Barcelona | founded | 1936</otriple>
+        <otriple>FC_Barcelona | starPlayer | Mookie_Betts</otriple>
+        <otriple>FC_Barcelona | league | NBA</otriple>
+        <otriple>FC_Barcelona | founded | 1902</otriple>
+        <otriple>FC_Barcelona | coach | Aaron_Boone</otriple>
+        <otriple>FC_Barcelona | coach | Bill_Belichick</otriple>
+        <otriple>FC_Barcelona | championships | 14</otriple>
+        <otriple>FC_Barcelona | starPlayer | Lionel_Messi</otriple>
+        <otriple>FC_Barcelona | league | UEFA_Champions_League</otriple>
+        <otriple>FC_Barcelona | league | NFL</otriple>
+        <otriple>FC_Barcelona | starPlayer | Stephen_Curry</otriple>
+        <otriple>FC_Barcelona | coach | Carlo_Ancelotti</otriple>
+        <otriple>FC_Barcelona | homeArena | Santiago_Bernabéu</otriple>
+        <otriple>FC_Barcelona | championships | 6</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>FC_Barcelona | homeArena | Chase_Center</mtriple>
+        <mtriple>FC_Barcelona | championships | 7</mtriple>
+        <mtriple>FC_Barcelona | rival | Los_Angeles_Lakers</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Yankee_Stadium</mtriple>
+        <mtriple>FC_Barcelona | founded | 1901</mtriple>
+        <mtriple>FC_Barcelona | rival | FC_Barcelona</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Karim_Benzema</mtriple>
+        <mtriple>FC_Barcelona | championships | 27</mtriple>
+        <mtriple>FC_Barcelona | founded | 1946</mtriple>
+        <mtriple>FC_Barcelona | rival | Boston_Red_Sox</mtriple>
+        <mtriple>FC_Barcelona | founded | 1936</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Mookie_Betts</mtriple>
+        <mtriple>FC_Barcelona | league | NBA</mtriple>
+        <mtriple>FC_Barcelona | founded | 1902</mtriple>
+        <mtriple>FC_Barcelona | coach | Aaron_Boone</mtriple>
+        <mtriple>FC_Barcelona | coach | Bill_Belichick</mtriple>
+        <mtriple>FC_Barcelona | championships | 14</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Lionel_Messi</mtriple>
+        <mtriple>FC_Barcelona | league | UEFA_Champions_League</mtriple>
+        <mtriple>FC_Barcelona | league | NFL</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Stephen_Curry</mtriple>
+        <mtriple>FC_Barcelona | coach | Carlo_Ancelotti</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Santiago_Bernabéu</mtriple>
+        <mtriple>FC_Barcelona | championships | 6</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid7_l1" lang="en">FC Barcelona has homeArena Chase Center, Yankee Stadium and Santiago Bernabéu. FC Barcelona has championships 7, 27, 14 and 6. FC Barcelona has rival Los Angeles Lakers, FC Barcelona and Boston Red Sox. FC Barcelona has founded 1901, 1946, 1936 and 1902. FC Barcelona has starPlayer Karim Benzema, Mookie Betts, Lionel Messi and Stephen Curry. FC Barcelona has league NBA, UEFA Champions League and NFL.</lex>
+    </entry>
+
+    <entry category="Organizations" eid="8" shape="(X (X) (X))" shape-type="sibling" size="22">
+      <synthetictripleset>
+        <otriple>World_Bank | operates | James_Webb_Space_Telescope</otriple>
+        <otriple>World_Bank | founded | 1958</otriple>
+        <otriple>World_Bank | operates | PyTorch</otriple>
+        <otriple>World_Bank | headquarter | Washington,_D.C.</otriple>
+        <otriple>World_Bank | program | Global_Polio_Eradication_Initiative</otriple>
+        <otriple>World_Bank | program | UN_Peacekeeping</otriple>
+        <otriple>World_Bank | type | Intergovernmental_organization</otriple>
+        <otriple>World_Bank | headquarter | Armonk</otriple>
+        <otriple>World_Bank | type | Corporation</otriple>
+        <otriple>World_Bank | founded | 2002</otriple>
+        <otriple>World_Bank | operates | Hubble_Space_Telescope</otriple>
+        <otriple>World_Bank | memberOf | United_Nations_System</otriple>
+        <otriple>World_Bank | memberOf | W3C</otriple>
+        <otriple>World_Bank | partner | CERN</otriple>
+        <otriple>World_Bank | partner | Broad_Institute</otriple>
+        <otriple>World_Bank | memberOf | Partnership_on_AI</otriple>
+        <otriple>World_Bank | operates | DeepMind</otriple>
+        <otriple>World_Bank | mission | Artemis_program</otriple>
+        <otriple>World_Bank | mission | Polio_eradication</otriple>
+        <otriple>World_Bank | subsidiary | GitHub</otriple>
+        <otriple>World_Bank | headquarter | Vienna</otriple>
+        <otriple>World_Bank | type | Government_agency</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>World_Bank | operates | James_Webb_Space_Telescope</mtriple>
+        <mtriple>World_Bank | founded | 1958</mtriple>
+        <mtriple>World_Bank | operates | PyTorch</mtriple>
+        <mtriple>World_Bank | headquarter | Washington,_D.C.</mtriple>
+        <mtriple>World_Bank | program | Global_Polio_Eradication_Initiative</mtriple>
+        <mtriple>World_Bank | program | UN_Peacekeeping</mtriple>
+        <mtriple>World_Bank | type | Intergovernmental_organization</mtriple>
+        <mtriple>World_Bank | headquarter | Armonk</mtriple>
+        <mtriple>World_Bank | type | Corporation</mtriple>
+        <mtriple>World_Bank | founded | 2002</mtriple>
+        <mtriple>World_Bank | operates | Hubble_Space_Telescope</mtriple>
+        <mtriple>World_Bank | memberOf | United_Nations_System</mtriple>
+        <mtriple>World_Bank | memberOf | W3C</mtriple>
+        <mtriple>World_Bank | partner | CERN</mtriple>
+        <mtriple>World_Bank | partner | Broad_Institute</mtriple>
+        <mtriple>World_Bank | memberOf | Partnership_on_AI</mtriple>
+        <mtriple>World_Bank | operates | DeepMind</mtriple>
+        <mtriple>World_Bank | mission | Artemis_program</mtriple>
+        <mtriple>World_Bank | mission | Polio_eradication</mtriple>
+        <mtriple>World_Bank | subsidiary | GitHub</mtriple>
+        <mtriple>World_Bank | headquarter | Vienna</mtriple>
+        <mtriple>World_Bank | type | Government_agency</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid8_l1" lang="en">World Bank has operates James Webb Space Telescope, PyTorch, Hubble Space Telescope and DeepMind. World Bank has founded 1958 and 2002. World Bank has headquarter Washington, D.C., Armonk and Vienna. World Bank has program Global Polio Eradication Initiative and UN Peacekeeping. World Bank has type Intergovernmental organization, Corporation and Government agency. World Bank has memberOf United Nations System, W3C and Partnership on AI.</lex>
+    </entry>
+
+    <entry category="Works" eid="9" shape="(X (X) (X))" shape-type="sibling" size="19">
+      <synthetictripleset>
+        <otriple>The_Lord_of_the_Rings | director | Lana_Wachowski</otriple>
+        <otriple>The_Lord_of_the_Rings | label | Harvest_Records</otriple>
+        <otriple>The_Lord_of_the_Rings | wonAward | Grammy_Hall_of_Fame</otriple>
+        <otriple>The_Lord_of_the_Rings | label | EMI</otriple>
+        <otriple>The_Lord_of_the_Rings | releaseYear | 2010</otriple>
+        <otriple>The_Lord_of_the_Rings | label | Warner_Bros.</otriple>
+        <otriple>The_Lord_of_the_Rings | author | Stephen_Hawking</otriple>
+        <otriple>The_Lord_of_the_Rings | author | J._R._R._Tolkien</otriple>
+        <otriple>The_Lord_of_the_Rings | genre | Epic_fantasy</otriple>
+        <otriple>The_Lord_of_the_Rings | wonAward | Academy_Award_for_Best_Cinematography</otriple>
+        <otriple>The_Lord_of_the_Rings | starring | Keanu_Reeves</otriple>
+        <otriple>The_Lord_of_the_Rings | artist | Pink_Floyd</otriple>
+        <otriple>The_Lord_of_the_Rings | artist | Queen</otriple>
+        <otriple>The_Lord_of_the_Rings | basedOn | Novel</otriple>
+        <otriple>The_Lord_of_the_Rings | director | Lilly_Wachowski</otriple>
+        <otriple>The_Lord_of_the_Rings | language | Russian</otriple>
+        <otriple>The_Lord_of_the_Rings | language | English</otriple>
+        <otriple>The_Lord_of_the_Rings | author | Leo_Tolstoy</otriple>
+        <otriple>The_Lord_of_the_Rings | releaseYear | 1973</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>The_Lord_of_the_Rings | director | Lana_Wachowski</mtriple>
+        <mtriple>The_Lord_of_the_Rings | label | Harvest_Records</mtriple>
+        <mtriple>The_Lord_of_the_Rings | wonAward | Grammy_Hall_of_Fame</mtriple>
+        <mtriple>The_Lord_of_the_Rings | label | EMI</mtriple>
+        <mtriple>The_Lord_of_the_Rings | releaseYear | 2010</mtriple>
+        <mtriple>The_Lord_of_the_Rings | label | Warner_Bros.</mtriple>
+        <mtriple>The_Lord_of_the_Rings | author | Stephen_Hawking</mtriple>
+        <mtriple>The_Lord_of_the_Rings | author | J._R._R._Tolkien</mtriple>
+        <mtriple>The_Lord_of_the_Rings | genre | Epic_fantasy</mtriple>
+        <mtriple>The_Lord_of_the_Rings | wonAward | Academy_Award_for_Best_Cinematography</mtriple>
+        <mtriple>The_Lord_of_the_Rings | starring | Keanu_Reeves</mtriple>
+        <mtriple>The_Lord_of_the_Rings | artist | Pink_Floyd</mtriple>
+        <mtriple>The_Lord_of_the_Rings | artist | Queen</mtriple>
+        <mtriple>The_Lord_of_the_Rings | basedOn | Novel</mtriple>
+        <mtriple>The_Lord_of_the_Rings | director | Lilly_Wachowski</mtriple>
+        <mtriple>The_Lord_of_the_Rings | language | Russian</mtriple>
+        <mtriple>The_Lord_of_the_Rings | language | English</mtriple>
+        <mtriple>The_Lord_of_the_Rings | author | Leo_Tolstoy</mtriple>
+        <mtriple>The_Lord_of_the_Rings | releaseYear | 1973</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid9_l1" lang="en">The Lord of the Rings has director Lana Wachowski and Lilly Wachowski. The Lord of the Rings has label Harvest Records, EMI and Warner Bros.. The Lord of the Rings has wonAward Grammy Hall of Fame and Academy Award for Best Cinematography. The Lord of the Rings has releaseYear 2010 and 1973. The Lord of the Rings has author Stephen Hawking, J. R. R. Tolkien and Leo Tolstoy. The Lord of the Rings has genre Epic fantasy.</lex>
+    </entry>
+
+    <entry category="Scientific_Concepts" eid="10" shape="(X (X) (X))" shape-type="sibling" size="18">
+      <synthetictripleset>
+        <otriple>Graphene | evidenceFrom | LHC</otriple>
+        <otriple>Graphene | model | Standard_Model</otriple>
+        <otriple>Graphene | application | Gene_editing</otriple>
+        <otriple>Graphene | application | Seismology</otriple>
+        <otriple>Graphene | notableResearcher | Albert_Einstein</otriple>
+        <otriple>Graphene | relatedTo | RNA</otriple>
+        <otriple>Graphene | field | Quantum_physics</otriple>
+        <otriple>Graphene | field | Materials_science</otriple>
+        <otriple>Graphene | model | Band_theory_of_solids</otriple>
+        <otriple>Graphene | relatedTo | Quarks</otriple>
+        <otriple>Graphene | field | Biology</otriple>
+        <otriple>Graphene | field | Geology</otriple>
+        <otriple>Graphene | model | Quantum_field_theory</otriple>
+        <otriple>Graphene | application | Sensors</otriple>
+        <otriple>Graphene | notableResearcher | Emmanuelle_Charpentier</otriple>
+        <otriple>Graphene | notableResearcher | Peter_Higgs</otriple>
+        <otriple>Graphene | evidenceFrom | Seismic_data</otriple>
+        <otriple>Graphene | relatedTo | Spacetime</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Graphene | evidenceFrom | LHC</mtriple>
+        <mtriple>Graphene | model | Standard_Model</mtriple>
+        <mtriple>Graphene | application | Gene_editing</mtriple>
+        <mtriple>Graphene | application | Seismology</mtriple>
+        <mtriple>Graphene | notableResearcher | Albert_Einstein</mtriple>
+        <mtriple>Graphene | relatedTo | RNA</mtriple>
+        <mtriple>Graphene | field | Quantum_physics</mtriple>
+        <mtriple>Graphene | field | Materials_science</mtriple>
+        <mtriple>Graphene | model | Band_theory_of_solids</mtriple>
+        <mtriple>Graphene | relatedTo | Quarks</mtriple>
+        <mtriple>Graphene | field | Biology</mtriple>
+        <mtriple>Graphene | field | Geology</mtriple>
+        <mtriple>Graphene | model | Quantum_field_theory</mtriple>
+        <mtriple>Graphene | application | Sensors</mtriple>
+        <mtriple>Graphene | notableResearcher | Emmanuelle_Charpentier</mtriple>
+        <mtriple>Graphene | notableResearcher | Peter_Higgs</mtriple>
+        <mtriple>Graphene | evidenceFrom | Seismic_data</mtriple>
+        <mtriple>Graphene | relatedTo | Spacetime</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid10_l1" lang="en">Graphene has evidenceFrom LHC and Seismic data. Graphene has model Standard Model, Band theory of solids and Quantum field theory. Graphene has application Gene editing, Seismology and Sensors. Graphene has notableResearcher Albert Einstein, Emmanuelle Charpentier and Peter Higgs. Graphene has relatedTo RNA, Quarks and Spacetime. Graphene has field Quantum physics, Materials science, Biology and Geology.</lex>
+    </entry>
+
+    <entry category="Sports_Teams" eid="11" shape="(X (X) (X))" shape-type="sibling" size="26">
+      <synthetictripleset>
+        <otriple>FC_Barcelona | rival | FC_Barcelona</otriple>
+        <otriple>FC_Barcelona | rival | Cleveland_Cavaliers</otriple>
+        <otriple>FC_Barcelona | founded | 1936</otriple>
+        <otriple>FC_Barcelona | homeArena | Santiago_Bernabéu</otriple>
+        <otriple>FC_Barcelona | coach | Bill_Belichick</otriple>
+        <otriple>FC_Barcelona | founded | 1946</otriple>
+        <otriple>FC_Barcelona | championships | 27</otriple>
+        <otriple>FC_Barcelona | homeArena | Camp_Nou</otriple>
+        <otriple>FC_Barcelona | rival | Boston_Red_Sox</otriple>
+        <otriple>FC_Barcelona | founded | 1901</otriple>
+        <otriple>FC_Barcelona | coach | Aaron_Boone</otriple>
+        <otriple>FC_Barcelona | coach | Steve_Kerr</otriple>
+        <otriple>FC_Barcelona | coach | Carlo_Ancelotti</otriple>
+        <otriple>FC_Barcelona | league | MLB</otriple>
+        <otriple>FC_Barcelona | starPlayer | Lionel_Messi</otriple>
+        <otriple>FC_Barcelona | championships | 14</otriple>
+        <otriple>FC_Barcelona | championships | 7</otriple>
+        <otriple>FC_Barcelona | league | NFL</otriple>
+        <otriple>FC_Barcelona | starPlayer | Karim_Benzema</otriple>
+        <otriple>FC_Barcelona | founded | 1902</otriple>
+        <otriple>FC_Barcelona | homeArena | Yankee_Stadium</otriple>
+        <otriple>FC_Barcelona | league | UEFA_Champions_League</otriple>
+        <otriple>FC_Barcelona | league | NBA</otriple>
+        <otriple>FC_Barcelona | championships | 6</otriple>
+        <otriple>FC_Barcelona | homeArena | Chase_Center</otriple>
+        <otriple>FC_Barcelona | starPlayer | Stephen_Curry</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>FC_Barcelona | rival | FC_Barcelona</mtriple>
+        <mtriple>FC_Barcelona | rival | Cleveland_Cavaliers</mtriple>
+        <mtriple>FC_Barcelona | founded | 1936</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Santiago_Bernabéu</mtriple>
+        <mtriple>FC_Barcelona | coach | Bill_Belichick</mtriple>
+        <mtriple>FC_Barcelona | founded | 1946</mtriple>
+        <mtriple>FC_Barcelona | championships | 27</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Camp_Nou</mtriple>
+        <mtriple>FC_Barcelona | rival | Boston_Red_Sox</mtriple>
+        <mtriple>FC_Barcelona | founded | 1901</mtriple>
+        <mtriple>FC_Barcelona | coach | Aaron_Boone</mtriple>
+        <mtriple>FC_Barcelona | coach | Steve_Kerr</mtriple>
+        <mtriple>FC_Barcelona | coach | Carlo_Ancelotti</mtriple>
+        <mtriple>FC_Barcelona | league | MLB</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Lionel_Messi</mtriple>
+        <mtriple>FC_Barcelona | championships | 14</mtriple>
+        <mtriple>FC_Barcelona | championships | 7</mtriple>
+        <mtriple>FC_Barcelona | league | NFL</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Karim_Benzema</mtriple>
+        <mtriple>FC_Barcelona | founded | 1902</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Yankee_Stadium</mtriple>
+        <mtriple>FC_Barcelona | league | UEFA_Champions_League</mtriple>
+        <mtriple>FC_Barcelona | league | NBA</mtriple>
+        <mtriple>FC_Barcelona | championships | 6</mtriple>
+        <mtriple>FC_Barcelona | homeArena | Chase_Center</mtriple>
+        <mtriple>FC_Barcelona | starPlayer | Stephen_Curry</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid11_l1" lang="en">FC Barcelona has rival FC Barcelona, Cleveland Cavaliers and Boston Red Sox. FC Barcelona has founded 1936, 1946, 1901 and 1902. FC Barcelona has homeArena Santiago Bernabéu, Camp Nou, Yankee Stadium and Chase Center. FC Barcelona has coach Bill Belichick, Aaron Boone, Steve Kerr and Carlo Ancelotti. FC Barcelona has championships 27, 14, 7 and 6. FC Barcelona has league MLB, NFL, UEFA Champions League and NBA.</lex>
+    </entry>
+
+    <entry category="Organizations" eid="12" shape="(X (X) (X))" shape-type="sibling" size="34">
+      <synthetictripleset>
+        <otriple>World_Bank | operates | AWS</otriple>
+        <otriple>World_Bank | memberOf | Partnership_on_AI</otriple>
+        <otriple>World_Bank | mission | Sustainable_Development_Goals</otriple>
+        <otriple>World_Bank | mission | Apollo_program</otriple>
+        <otriple>World_Bank | headquarter | Armonk</otriple>
+        <otriple>World_Bank | operates | International_Space_Station</otriple>
+        <otriple>World_Bank | type | Government_agency</otriple>
+        <otriple>World_Bank | type | Intergovernmental_organization</otriple>
+        <otriple>World_Bank | program | UN_Peacekeeping</otriple>
+        <otriple>World_Bank | founded | 1961</otriple>
+        <otriple>World_Bank | mission | Polio_eradication</otriple>
+        <otriple>World_Bank | memberOf | United_Nations_System</otriple>
+        <otriple>World_Bank | operates | DeepMind</otriple>
+        <otriple>World_Bank | headquarter | Paris</otriple>
+        <otriple>World_Bank | operates | James_Webb_Space_Telescope</otriple>
+        <otriple>World_Bank | mission | Artemis_program</otriple>
+        <otriple>World_Bank | headquarter | Geneva</otriple>
+        <otriple>World_Bank | type | Non_profit</otriple>
+        <otriple>World_Bank | headquarter | Washington,_D.C.</otriple>
+        <otriple>World_Bank | founded | 1972</otriple>
+        <otriple>World_Bank | subsidiary | GitHub</otriple>
+        <otriple>World_Bank | headquarter | Vienna</otriple>
+        <otriple>World_Bank | founded | 1957</otriple>
+        <otriple>World_Bank | founded | 1948</otriple>
+        <otriple>World_Bank | memberOf | W3C</otriple>
+        <otriple>World_Bank | type | Corporation</otriple>
+        <otriple>World_Bank | program | Horizon_Europe</otriple>
+        <otriple>World_Bank | subsidiary | YouTube</otriple>
+        <otriple>World_Bank | partner | ESA</otriple>
+        <otriple>World_Bank | subsidiary | WhatsApp</otriple>
+        <otriple>World_Bank | program | Space_Shuttle_program</otriple>
+        <otriple>World_Bank | partner | Broad_Institute</otriple>
+        <otriple>World_Bank | operates | Azure_Cloud</otriple>
+        <otriple>World_Bank | partner | JAXA</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>World_Bank | operates | AWS</mtriple>
+        <mtriple>World_Bank | memberOf | Partnership_on_AI</mtriple>
+        <mtriple>World_Bank | mission | Sustainable_Development_Goals</mtriple>
+        <mtriple>World_Bank | mission | Apollo_program</mtriple>
+        <mtriple>World_Bank | headquarter | Armonk</mtriple>
+        <mtriple>World_Bank | operates | International_Space_Station</mtriple>
+        <mtriple>World_Bank | type | Government_agency</mtriple>
+        <mtriple>World_Bank | type | Intergovernmental_organization</mtriple>
+        <mtriple>World_Bank | program | UN_Peacekeeping</mtriple>
+        <mtriple>World_Bank | founded | 1961</mtriple>
+        <mtriple>World_Bank | mission | Polio_eradication</mtriple>
+        <mtriple>World_Bank | memberOf | United_Nations_System</mtriple>
+        <mtriple>World_Bank | operates | DeepMind</mtriple>
+        <mtriple>World_Bank | headquarter | Paris</mtriple>
+        <mtriple>World_Bank | operates | James_Webb_Space_Telescope</mtriple>
+        <mtriple>World_Bank | mission | Artemis_program</mtriple>
+        <mtriple>World_Bank | headquarter | Geneva</mtriple>
+        <mtriple>World_Bank | type | Non_profit</mtriple>
+        <mtriple>World_Bank | headquarter | Washington,_D.C.</mtriple>
+        <mtriple>World_Bank | founded | 1972</mtriple>
+        <mtriple>World_Bank | subsidiary | GitHub</mtriple>
+        <mtriple>World_Bank | headquarter | Vienna</mtriple>
+        <mtriple>World_Bank | founded | 1957</mtriple>
+        <mtriple>World_Bank | founded | 1948</mtriple>
+        <mtriple>World_Bank | memberOf | W3C</mtriple>
+        <mtriple>World_Bank | type | Corporation</mtriple>
+        <mtriple>World_Bank | program | Horizon_Europe</mtriple>
+        <mtriple>World_Bank | subsidiary | YouTube</mtriple>
+        <mtriple>World_Bank | partner | ESA</mtriple>
+        <mtriple>World_Bank | subsidiary | WhatsApp</mtriple>
+        <mtriple>World_Bank | program | Space_Shuttle_program</mtriple>
+        <mtriple>World_Bank | partner | Broad_Institute</mtriple>
+        <mtriple>World_Bank | operates | Azure_Cloud</mtriple>
+        <mtriple>World_Bank | partner | JAXA</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid12_l1" lang="en">World Bank has operates AWS, International Space Station, DeepMind, James Webb Space Telescope and Azure Cloud. World Bank has memberOf Partnership on AI, United Nations System and W3C. World Bank has mission Sustainable Development Goals, Apollo program, Polio eradication and Artemis program. World Bank has headquarter Armonk, Paris, Geneva, Washington, D.C. and Vienna. World Bank has type Government agency, Intergovernmental organization, Non profit and Corporation. World Bank has program UN Peacekeeping, Horizon Europe and Space Shuttle program.</lex>
+    </entry>
+
+    <entry category="Space_Missions" eid="13" shape="(X (X) (X))" shape-type="sibling" size="15">
+      <synthetictripleset>
+        <otriple>Perseverance_(rover) | operator | JAXA</otriple>
+        <otriple>Perseverance_(rover) | target | Mars</otriple>
+        <otriple>Perseverance_(rover) | launchVehicle | Titan_IIIE</otriple>
+        <otriple>Perseverance_(rover) | manufacturer | Lockheed_Martin</otriple>
+        <otriple>Perseverance_(rover) | manufacturer | Ball_Aerospace</otriple>
+        <otriple>Perseverance_(rover) | launchDate | 1977-08-20</otriple>
+        <otriple>Perseverance_(rover) | launchDate | 2020-07-30</otriple>
+        <otriple>Perseverance_(rover) | launchDate | 1977-09-05</otriple>
+        <otriple>Perseverance_(rover) | mass | 722_kg</otriple>
+        <otriple>Perseverance_(rover) | manufacturer | JPL</otriple>
+        <otriple>Perseverance_(rover) | notableDiscovery | Pluto_geology</otriple>
+        <otriple>Perseverance_(rover) | mass | 6200_kg</otriple>
+        <otriple>Perseverance_(rover) | mass | 5712_kg</otriple>
+        <otriple>Perseverance_(rover) | launchVehicle | Ariane_5</otriple>
+        <otriple>Perseverance_(rover) | target | Kuiper_belt</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Perseverance_(rover) | operator | JAXA</mtriple>
+        <mtriple>Perseverance_(rover) | target | Mars</mtriple>
+        <mtriple>Perseverance_(rover) | launchVehicle | Titan_IIIE</mtriple>
+        <mtriple>Perseverance_(rover) | manufacturer | Lockheed_Martin</mtriple>
+        <mtriple>Perseverance_(rover) | manufacturer | Ball_Aerospace</mtriple>
+        <mtriple>Perseverance_(rover) | launchDate | 1977-08-20</mtriple>
+        <mtriple>Perseverance_(rover) | launchDate | 2020-07-30</mtriple>
+        <mtriple>Perseverance_(rover) | launchDate | 1977-09-05</mtriple>
+        <mtriple>Perseverance_(rover) | mass | 722_kg</mtriple>
+        <mtriple>Perseverance_(rover) | manufacturer | JPL</mtriple>
+        <mtriple>Perseverance_(rover) | notableDiscovery | Pluto_geology</mtriple>
+        <mtriple>Perseverance_(rover) | mass | 6200_kg</mtriple>
+        <mtriple>Perseverance_(rover) | mass | 5712_kg</mtriple>
+        <mtriple>Perseverance_(rover) | launchVehicle | Ariane_5</mtriple>
+        <mtriple>Perseverance_(rover) | target | Kuiper_belt</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid13_l1" lang="en">Perseverance (rover) has operator JAXA. Perseverance (rover) has target Mars and Kuiper belt. Perseverance (rover) has launchVehicle Titan IIIE and Ariane 5. Perseverance (rover) has manufacturer Lockheed Martin, Ball Aerospace and JPL. Perseverance (rover) has launchDate 1977-08-20, 2020-07-30 and 1977-09-05. Perseverance (rover) has mass 722 kg, 6200 kg and 5712 kg.</lex>
+    </entry>
+
+    <entry category="Tech_Standards" eid="14" shape="(X (X) (X))" shape-type="sibling" size="25">
+      <synthetictripleset>
+        <otriple>Wi-Fi | backwardCompatible | False</otriple>
+        <otriple>Wi-Fi | uses | AES</otriple>
+        <otriple>Wi-Fi | uses | OFDM</otriple>
+        <otriple>Wi-Fi | portType | Type-A</otriple>
+        <otriple>Wi-Fi | portType | Micro-B</otriple>
+        <otriple>Wi-Fi | portType | Type-C</otriple>
+        <otriple>Wi-Fi | successor | TLS_1.3</otriple>
+        <otriple>Wi-Fi | successor | Wi-Fi_6</otriple>
+        <otriple>Wi-Fi | layer | Application</otriple>
+        <otriple>Wi-Fi | standardizedBy | Wi-Fi_Alliance</otriple>
+        <otriple>Wi-Fi | releaseYear | 2020</otriple>
+        <otriple>Wi-Fi | standardizedBy | IEEE</otriple>
+        <otriple>Wi-Fi | successor | USB-C</otriple>
+        <otriple>Wi-Fi | releaseYear | 2018</otriple>
+        <otriple>Wi-Fi | releaseYear | 1999</otriple>
+        <otriple>Wi-Fi | backwardCompatible | True</otriple>
+        <otriple>Wi-Fi | successor | HTTP_3</otriple>
+        <otriple>Wi-Fi | standardizedBy | HDMI_Licensing</otriple>
+        <otriple>Wi-Fi | version | 2.0</otriple>
+        <otriple>Wi-Fi | uses | Public_key_cryptography</otriple>
+        <otriple>Wi-Fi | version | 3.1</otriple>
+        <otriple>Wi-Fi | version | 5.0</otriple>
+        <otriple>Wi-Fi | releaseYear | 2013</otriple>
+        <otriple>Wi-Fi | standardizedBy | USB-IF</otriple>
+        <otriple>Wi-Fi | successor | HDMI_2.1</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Wi-Fi | backwardCompatible | False</mtriple>
+        <mtriple>Wi-Fi | uses | AES</mtriple>
+        <mtriple>Wi-Fi | uses | OFDM</mtriple>
+        <mtriple>Wi-Fi | portType | Type-A</mtriple>
+        <mtriple>Wi-Fi | portType | Micro-B</mtriple>
+        <mtriple>Wi-Fi | portType | Type-C</mtriple>
+        <mtriple>Wi-Fi | successor | TLS_1.3</mtriple>
+        <mtriple>Wi-Fi | successor | Wi-Fi_6</mtriple>
+        <mtriple>Wi-Fi | layer | Application</mtriple>
+        <mtriple>Wi-Fi | standardizedBy | Wi-Fi_Alliance</mtriple>
+        <mtriple>Wi-Fi | releaseYear | 2020</mtriple>
+        <mtriple>Wi-Fi | standardizedBy | IEEE</mtriple>
+        <mtriple>Wi-Fi | successor | USB-C</mtriple>
+        <mtriple>Wi-Fi | releaseYear | 2018</mtriple>
+        <mtriple>Wi-Fi | releaseYear | 1999</mtriple>
+        <mtriple>Wi-Fi | backwardCompatible | True</mtriple>
+        <mtriple>Wi-Fi | successor | HTTP_3</mtriple>
+        <mtriple>Wi-Fi | standardizedBy | HDMI_Licensing</mtriple>
+        <mtriple>Wi-Fi | version | 2.0</mtriple>
+        <mtriple>Wi-Fi | uses | Public_key_cryptography</mtriple>
+        <mtriple>Wi-Fi | version | 3.1</mtriple>
+        <mtriple>Wi-Fi | version | 5.0</mtriple>
+        <mtriple>Wi-Fi | releaseYear | 2013</mtriple>
+        <mtriple>Wi-Fi | standardizedBy | USB-IF</mtriple>
+        <mtriple>Wi-Fi | successor | HDMI_2.1</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid14_l1" lang="en">Wi-Fi has backwardCompatible False and True. Wi-Fi has uses AES, OFDM and Public key cryptography. Wi-Fi has portType Type-A, Micro-B and Type-C. Wi-Fi has successor TLS 1.3, Wi-Fi 6, USB-C, HTTP 3 and HDMI 2.1. Wi-Fi has layer Application. Wi-Fi has standardizedBy Wi-Fi Alliance, IEEE, HDMI Licensing and USB-IF.</lex>
+    </entry>
+
+    <entry category="Software" eid="15" shape="(X (X) (X))" shape-type="sibling" size="19">
+      <synthetictripleset>
+        <otriple>PyTorch | paradigm | Functional</otriple>
+        <otriple>PyTorch | firstAppeared | 2015</otriple>
+        <otriple>PyTorch | developer | Apache_Software_Foundation</otriple>
+        <otriple>PyTorch | latestRelease | 1.13</otriple>
+        <otriple>PyTorch | designedBy | Oracle_Corporation</otriple>
+        <otriple>PyTorch | influenced | Swift_(programming_language)</otriple>
+        <otriple>PyTorch | firstAppeared | 2016</otriple>
+        <otriple>PyTorch | influencedBy | Haskell</otriple>
+        <otriple>PyTorch | influenced | TypeScript</otriple>
+        <otriple>PyTorch | license | GPLv2</otriple>
+        <otriple>PyTorch | firstAppeared | 1995</otriple>
+        <otriple>PyTorch | license | GPLv3</otriple>
+        <otriple>PyTorch | influenced | Kotlin_(programming_language)</otriple>
+        <otriple>PyTorch | influenced | Julia_(programming_language)</otriple>
+        <otriple>PyTorch | designedBy | Dennis_Ritchie</otriple>
+        <otriple>PyTorch | developer | The_Linux_Foundation</otriple>
+        <otriple>PyTorch | influencedBy | C</otriple>
+        <otriple>PyTorch | firstAppeared | 1991</otriple>
+        <otriple>PyTorch | influencedBy | ML</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>PyTorch | paradigm | Functional</mtriple>
+        <mtriple>PyTorch | firstAppeared | 2015</mtriple>
+        <mtriple>PyTorch | developer | Apache_Software_Foundation</mtriple>
+        <mtriple>PyTorch | latestRelease | 1.13</mtriple>
+        <mtriple>PyTorch | designedBy | Oracle_Corporation</mtriple>
+        <mtriple>PyTorch | influenced | Swift_(programming_language)</mtriple>
+        <mtriple>PyTorch | firstAppeared | 2016</mtriple>
+        <mtriple>PyTorch | influencedBy | Haskell</mtriple>
+        <mtriple>PyTorch | influenced | TypeScript</mtriple>
+        <mtriple>PyTorch | license | GPLv2</mtriple>
+        <mtriple>PyTorch | firstAppeared | 1995</mtriple>
+        <mtriple>PyTorch | license | GPLv3</mtriple>
+        <mtriple>PyTorch | influenced | Kotlin_(programming_language)</mtriple>
+        <mtriple>PyTorch | influenced | Julia_(programming_language)</mtriple>
+        <mtriple>PyTorch | designedBy | Dennis_Ritchie</mtriple>
+        <mtriple>PyTorch | developer | The_Linux_Foundation</mtriple>
+        <mtriple>PyTorch | influencedBy | C</mtriple>
+        <mtriple>PyTorch | firstAppeared | 1991</mtriple>
+        <mtriple>PyTorch | influencedBy | ML</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid15_l1" lang="en">PyTorch has paradigm Functional. PyTorch has firstAppeared 2015, 2016, 1995 and 1991. PyTorch has developer Apache Software Foundation and The Linux Foundation. PyTorch has latestRelease 1.13. PyTorch has designedBy Oracle Corporation and Dennis Ritchie. PyTorch has influenced Swift (programming language), TypeScript, Kotlin (programming language) and Julia (programming language).</lex>
+    </entry>
+
+    <entry category="Software" eid="16" shape="(X (X) (X))" shape-type="sibling" size="28">
+      <synthetictripleset>
+        <otriple>Go_(programming_language) | license | BSD_3-Clause</otriple>
+        <otriple>Go_(programming_language) | developer | Google</otriple>
+        <otriple>Go_(programming_language) | platform | Windows</otriple>
+        <otriple>Go_(programming_language) | paradigm | Imperative</otriple>
+        <otriple>Go_(programming_language) | latestRelease | 1.13</otriple>
+        <otriple>Go_(programming_language) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Go_(programming_language) | latestRelease | 2.0</otriple>
+        <otriple>Go_(programming_language) | paradigm | Functional</otriple>
+        <otriple>Go_(programming_language) | license | GPLv3</otriple>
+        <otriple>Go_(programming_language) | license | Apache_2.0</otriple>
+        <otriple>Go_(programming_language) | influenced | Julia_(programming_language)</otriple>
+        <otriple>Go_(programming_language) | influenced | TypeScript</otriple>
+        <otriple>Go_(programming_language) | developer | Apache_Software_Foundation</otriple>
+        <otriple>Go_(programming_language) | designedBy | Dennis_Ritchie</otriple>
+        <otriple>Go_(programming_language) | developer | Docker,_Inc.</otriple>
+        <otriple>Go_(programming_language) | firstAppeared | 2016</otriple>
+        <otriple>Go_(programming_language) | firstAppeared | 2009</otriple>
+        <otriple>Go_(programming_language) | designedBy | Guido_van_Rossum</otriple>
+        <otriple>Go_(programming_language) | firstAppeared | 2010</otriple>
+        <otriple>Go_(programming_language) | developer | The_Linux_Foundation</otriple>
+        <otriple>Go_(programming_language) | paradigm | Concurrent</otriple>
+        <otriple>Go_(programming_language) | platform | macOS</otriple>
+        <otriple>Go_(programming_language) | license | MIT_License</otriple>
+        <otriple>Go_(programming_language) | designedBy | Google</otriple>
+        <otriple>Go_(programming_language) | latestRelease | 3.11</otriple>
+        <otriple>Go_(programming_language) | influencedBy | Haskell</otriple>
+        <otriple>Go_(programming_language) | developer | Python_Software_Foundation</otriple>
+        <otriple>Go_(programming_language) | influencedBy | C</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Go_(programming_language) | license | BSD_3-Clause</mtriple>
+        <mtriple>Go_(programming_language) | developer | Google</mtriple>
+        <mtriple>Go_(programming_language) | platform | Windows</mtriple>
+        <mtriple>Go_(programming_language) | paradigm | Imperative</mtriple>
+        <mtriple>Go_(programming_language) | latestRelease | 1.13</mtriple>
+        <mtriple>Go_(programming_language) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Go_(programming_language) | latestRelease | 2.0</mtriple>
+        <mtriple>Go_(programming_language) | paradigm | Functional</mtriple>
+        <mtriple>Go_(programming_language) | license | GPLv3</mtriple>
+        <mtriple>Go_(programming_language) | license | Apache_2.0</mtriple>
+        <mtriple>Go_(programming_language) | influenced | Julia_(programming_language)</mtriple>
+        <mtriple>Go_(programming_language) | influenced | TypeScript</mtriple>
+        <mtriple>Go_(programming_language) | developer | Apache_Software_Foundation</mtriple>
+        <mtriple>Go_(programming_language) | designedBy | Dennis_Ritchie</mtriple>
+        <mtriple>Go_(programming_language) | developer | Docker,_Inc.</mtriple>
+        <mtriple>Go_(programming_language) | firstAppeared | 2016</mtriple>
+        <mtriple>Go_(programming_language) | firstAppeared | 2009</mtriple>
+        <mtriple>Go_(programming_language) | designedBy | Guido_van_Rossum</mtriple>
+        <mtriple>Go_(programming_language) | firstAppeared | 2010</mtriple>
+        <mtriple>Go_(programming_language) | developer | The_Linux_Foundation</mtriple>
+        <mtriple>Go_(programming_language) | paradigm | Concurrent</mtriple>
+        <mtriple>Go_(programming_language) | platform | macOS</mtriple>
+        <mtriple>Go_(programming_language) | license | MIT_License</mtriple>
+        <mtriple>Go_(programming_language) | designedBy | Google</mtriple>
+        <mtriple>Go_(programming_language) | latestRelease | 3.11</mtriple>
+        <mtriple>Go_(programming_language) | influencedBy | Haskell</mtriple>
+        <mtriple>Go_(programming_language) | developer | Python_Software_Foundation</mtriple>
+        <mtriple>Go_(programming_language) | influencedBy | C</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid16_l1" lang="en">Go (programming language) has license BSD 3-Clause, GPLv3, Apache 2.0 and MIT License. Go (programming language) has developer Google, Apache Software Foundation, Docker, Inc., The Linux Foundation and Python Software Foundation. Go (programming language) has platform Windows and macOS. Go (programming language) has paradigm Imperative, Functional and Concurrent. Go (programming language) has latestRelease 1.13, 2.0 and 3.11. Go (programming language) has influencedBy ABC (programming language), Haskell and C.</lex>
+    </entry>
+
+    <entry category="Software" eid="17" shape="(X (X) (X))" shape-type="sibling" size="12">
+      <synthetictripleset>
+        <otriple>Angular_(web_framework) | platform | Linux</otriple>
+        <otriple>Angular_(web_framework) | developer | Google</otriple>
+        <otriple>Angular_(web_framework) | influencedBy | C</otriple>
+        <otriple>Angular_(web_framework) | designedBy | Google</otriple>
+        <otriple>Angular_(web_framework) | paradigm | Functional</otriple>
+        <otriple>Angular_(web_framework) | platform | Windows</otriple>
+        <otriple>Angular_(web_framework) | paradigm | Object-oriented</otriple>
+        <otriple>Angular_(web_framework) | designedBy | Graydon_Hoare</otriple>
+        <otriple>Angular_(web_framework) | developer | The_Linux_Foundation</otriple>
+        <otriple>Angular_(web_framework) | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>Angular_(web_framework) | paradigm | Imperative</otriple>
+        <otriple>Angular_(web_framework) | license | GPLv3</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>Angular_(web_framework) | platform | Linux</mtriple>
+        <mtriple>Angular_(web_framework) | developer | Google</mtriple>
+        <mtriple>Angular_(web_framework) | influencedBy | C</mtriple>
+        <mtriple>Angular_(web_framework) | designedBy | Google</mtriple>
+        <mtriple>Angular_(web_framework) | paradigm | Functional</mtriple>
+        <mtriple>Angular_(web_framework) | platform | Windows</mtriple>
+        <mtriple>Angular_(web_framework) | paradigm | Object-oriented</mtriple>
+        <mtriple>Angular_(web_framework) | designedBy | Graydon_Hoare</mtriple>
+        <mtriple>Angular_(web_framework) | developer | The_Linux_Foundation</mtriple>
+        <mtriple>Angular_(web_framework) | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>Angular_(web_framework) | paradigm | Imperative</mtriple>
+        <mtriple>Angular_(web_framework) | license | GPLv3</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid17_l1" lang="en">Angular (web framework) has platform Linux and Windows. Angular (web framework) has developer Google and The Linux Foundation. Angular (web framework) has influencedBy C and ABC (programming language). Angular (web framework) has designedBy Google and Graydon Hoare. Angular (web framework) has paradigm Functional, Object-oriented and Imperative. Angular (web framework) has license GPLv3.</lex>
+    </entry>
+
+    <entry category="Organizations" eid="18" shape="(X (X) (X))" shape-type="sibling" size="33">
+      <synthetictripleset>
+        <otriple>World_Health_Organization | subsidiary | GitHub</otriple>
+        <otriple>World_Health_Organization | headquarter | Washington,_D.C.</otriple>
+        <otriple>World_Health_Organization | partner | JAXA</otriple>
+        <otriple>World_Health_Organization | founded | 2002</otriple>
+        <otriple>World_Health_Organization | mission | Sustainable_Development_Goals</otriple>
+        <otriple>World_Health_Organization | founded | 1958</otriple>
+        <otriple>World_Health_Organization | memberOf | Partnership_on_AI</otriple>
+        <otriple>World_Health_Organization | program | Space_Shuttle_program</otriple>
+        <otriple>World_Health_Organization | memberOf | W3C</otriple>
+        <otriple>World_Health_Organization | memberOf | United_Nations_System</otriple>
+        <otriple>World_Health_Organization | headquarter | New_York</otriple>
+        <otriple>World_Health_Organization | type | Intergovernmental_organization</otriple>
+        <otriple>World_Health_Organization | type | Non_profit</otriple>
+        <otriple>World_Health_Organization | partner | CERN</otriple>
+        <otriple>World_Health_Organization | program | Horizon_Europe</otriple>
+        <otriple>World_Health_Organization | headquarter | Armonk</otriple>
+        <otriple>World_Health_Organization | program | UN_Peacekeeping</otriple>
+        <otriple>World_Health_Organization | operates | AWS</otriple>
+        <otriple>World_Health_Organization | subsidiary | LinkedIn</otriple>
+        <otriple>World_Health_Organization | mission | Polio_eradication</otriple>
+        <otriple>World_Health_Organization | type | Corporation</otriple>
+        <otriple>World_Health_Organization | headquarter | Geneva</otriple>
+        <otriple>World_Health_Organization | subsidiary | Instagram</otriple>
+        <otriple>World_Health_Organization | partner | ESA</otriple>
+        <otriple>World_Health_Organization | founded | 1957</otriple>
+        <otriple>World_Health_Organization | headquarter | Paris</otriple>
+        <otriple>World_Health_Organization | operates | Hubble_Space_Telescope</otriple>
+        <otriple>World_Health_Organization | subsidiary | YouTube</otriple>
+        <otriple>World_Health_Organization | mission | Artemis_program</otriple>
+        <otriple>World_Health_Organization | mission | Apollo_program</otriple>
+        <otriple>World_Health_Organization | type | Government_agency</otriple>
+        <otriple>World_Health_Organization | headquarter | Redmond</otriple>
+        <otriple>World_Health_Organization | founded | 1945</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>World_Health_Organization | subsidiary | GitHub</mtriple>
+        <mtriple>World_Health_Organization | headquarter | Washington,_D.C.</mtriple>
+        <mtriple>World_Health_Organization | partner | JAXA</mtriple>
+        <mtriple>World_Health_Organization | founded | 2002</mtriple>
+        <mtriple>World_Health_Organization | mission | Sustainable_Development_Goals</mtriple>
+        <mtriple>World_Health_Organization | founded | 1958</mtriple>
+        <mtriple>World_Health_Organization | memberOf | Partnership_on_AI</mtriple>
+        <mtriple>World_Health_Organization | program | Space_Shuttle_program</mtriple>
+        <mtriple>World_Health_Organization | memberOf | W3C</mtriple>
+        <mtriple>World_Health_Organization | memberOf | United_Nations_System</mtriple>
+        <mtriple>World_Health_Organization | headquarter | New_York</mtriple>
+        <mtriple>World_Health_Organization | type | Intergovernmental_organization</mtriple>
+        <mtriple>World_Health_Organization | type | Non_profit</mtriple>
+        <mtriple>World_Health_Organization | partner | CERN</mtriple>
+        <mtriple>World_Health_Organization | program | Horizon_Europe</mtriple>
+        <mtriple>World_Health_Organization | headquarter | Armonk</mtriple>
+        <mtriple>World_Health_Organization | program | UN_Peacekeeping</mtriple>
+        <mtriple>World_Health_Organization | operates | AWS</mtriple>
+        <mtriple>World_Health_Organization | subsidiary | LinkedIn</mtriple>
+        <mtriple>World_Health_Organization | mission | Polio_eradication</mtriple>
+        <mtriple>World_Health_Organization | type | Corporation</mtriple>
+        <mtriple>World_Health_Organization | headquarter | Geneva</mtriple>
+        <mtriple>World_Health_Organization | subsidiary | Instagram</mtriple>
+        <mtriple>World_Health_Organization | partner | ESA</mtriple>
+        <mtriple>World_Health_Organization | founded | 1957</mtriple>
+        <mtriple>World_Health_Organization | headquarter | Paris</mtriple>
+        <mtriple>World_Health_Organization | operates | Hubble_Space_Telescope</mtriple>
+        <mtriple>World_Health_Organization | subsidiary | YouTube</mtriple>
+        <mtriple>World_Health_Organization | mission | Artemis_program</mtriple>
+        <mtriple>World_Health_Organization | mission | Apollo_program</mtriple>
+        <mtriple>World_Health_Organization | type | Government_agency</mtriple>
+        <mtriple>World_Health_Organization | headquarter | Redmond</mtriple>
+        <mtriple>World_Health_Organization | founded | 1945</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid18_l1" lang="en">World Health Organization has subsidiary GitHub, LinkedIn, Instagram and YouTube. World Health Organization has headquarter Washington, D.C., New York, Armonk, Geneva, Paris and Redmond. World Health Organization has partner JAXA, CERN and ESA. World Health Organization has founded 2002, 1958, 1957 and 1945. World Health Organization has mission Sustainable Development Goals, Polio eradication, Artemis program and Apollo program. World Health Organization has memberOf Partnership on AI, W3C and United Nations System.</lex>
+    </entry>
+
+    <entry category="Software" eid="19" shape="(X (X) (X))" shape-type="sibling" size="16">
+      <synthetictripleset>
+        <otriple>PostgreSQL | influenced | Kotlin_(programming_language)</otriple>
+        <otriple>PostgreSQL | influencedBy | ABC_(programming_language)</otriple>
+        <otriple>PostgreSQL | designedBy | Oracle_Corporation</otriple>
+        <otriple>PostgreSQL | license | BSD_3-Clause</otriple>
+        <otriple>PostgreSQL | paradigm | Concurrent</otriple>
+        <otriple>PostgreSQL | platform | Linux</otriple>
+        <otriple>PostgreSQL | platform | Windows</otriple>
+        <otriple>PostgreSQL | firstAppeared | 2015</otriple>
+        <otriple>PostgreSQL | firstAppeared | 1991</otriple>
+        <otriple>PostgreSQL | license | GPLv3</otriple>
+        <otriple>PostgreSQL | license | GPLv2</otriple>
+        <otriple>PostgreSQL | influenced | Julia_(programming_language)</otriple>
+        <otriple>PostgreSQL | license | Apache_2.0</otriple>
+        <otriple>PostgreSQL | influencedBy | C</otriple>
+        <otriple>PostgreSQL | latestRelease | 1.13</otriple>
+        <otriple>PostgreSQL | firstAppeared | 1995</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>PostgreSQL | influenced | Kotlin_(programming_language)</mtriple>
+        <mtriple>PostgreSQL | influencedBy | ABC_(programming_language)</mtriple>
+        <mtriple>PostgreSQL | designedBy | Oracle_Corporation</mtriple>
+        <mtriple>PostgreSQL | license | BSD_3-Clause</mtriple>
+        <mtriple>PostgreSQL | paradigm | Concurrent</mtriple>
+        <mtriple>PostgreSQL | platform | Linux</mtriple>
+        <mtriple>PostgreSQL | platform | Windows</mtriple>
+        <mtriple>PostgreSQL | firstAppeared | 2015</mtriple>
+        <mtriple>PostgreSQL | firstAppeared | 1991</mtriple>
+        <mtriple>PostgreSQL | license | GPLv3</mtriple>
+        <mtriple>PostgreSQL | license | GPLv2</mtriple>
+        <mtriple>PostgreSQL | influenced | Julia_(programming_language)</mtriple>
+        <mtriple>PostgreSQL | license | Apache_2.0</mtriple>
+        <mtriple>PostgreSQL | influencedBy | C</mtriple>
+        <mtriple>PostgreSQL | latestRelease | 1.13</mtriple>
+        <mtriple>PostgreSQL | firstAppeared | 1995</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid19_l1" lang="en">PostgreSQL has influenced Kotlin (programming language) and Julia (programming language). PostgreSQL has influencedBy ABC (programming language) and C. PostgreSQL has designedBy Oracle Corporation. PostgreSQL has license BSD 3-Clause, GPLv3, GPLv2 and Apache 2.0. PostgreSQL has paradigm Concurrent. PostgreSQL has platform Linux and Windows.</lex>
+    </entry>
+
+    <entry category="Works" eid="20" shape="(X (X) (X))" shape-type="sibling" size="13">
+      <synthetictripleset>
+        <otriple>A_Brief_History_of_Time | label | Harvest_Records</otriple>
+        <otriple>A_Brief_History_of_Time | language | English</otriple>
+        <otriple>A_Brief_History_of_Time | director | Lilly_Wachowski</otriple>
+        <otriple>A_Brief_History_of_Time | wonAward | Academy_Award_for_Best_Cinematography</otriple>
+        <otriple>A_Brief_History_of_Time | language | Russian</otriple>
+        <otriple>A_Brief_History_of_Time | artist | Queen</otriple>
+        <otriple>A_Brief_History_of_Time | director | Christopher_Nolan</otriple>
+        <otriple>A_Brief_History_of_Time | genre | Progressive_rock</otriple>
+        <otriple>A_Brief_History_of_Time | starring | Carrie-Anne_Moss</otriple>
+        <otriple>A_Brief_History_of_Time | basedOn | Original_screenplay</otriple>
+        <otriple>A_Brief_History_of_Time | starring | Keanu_Reeves</otriple>
+        <otriple>A_Brief_History_of_Time | genre | Historical_fiction</otriple>
+        <otriple>A_Brief_History_of_Time | basedOn | Novel</otriple>
+      </synthetictripleset>
+      <modifiedtripleset>
+        <mtriple>A_Brief_History_of_Time | label | Harvest_Records</mtriple>
+        <mtriple>A_Brief_History_of_Time | language | English</mtriple>
+        <mtriple>A_Brief_History_of_Time | director | Lilly_Wachowski</mtriple>
+        <mtriple>A_Brief_History_of_Time | wonAward | Academy_Award_for_Best_Cinematography</mtriple>
+        <mtriple>A_Brief_History_of_Time | language | Russian</mtriple>
+        <mtriple>A_Brief_History_of_Time | artist | Queen</mtriple>
+        <mtriple>A_Brief_History_of_Time | director | Christopher_Nolan</mtriple>
+        <mtriple>A_Brief_History_of_Time | genre | Progressive_rock</mtriple>
+        <mtriple>A_Brief_History_of_Time | starring | Carrie-Anne_Moss</mtriple>
+        <mtriple>A_Brief_History_of_Time | basedOn | Original_screenplay</mtriple>
+        <mtriple>A_Brief_History_of_Time | starring | Keanu_Reeves</mtriple>
+        <mtriple>A_Brief_History_of_Time | genre | Historical_fiction</mtriple>
+        <mtriple>A_Brief_History_of_Time | basedOn | Novel</mtriple>
+      </modifiedtripleset>
+      <lex comment="" lid="eid20_l1" lang="en">A Brief History of Time has label Harvest Records. A Brief History of Time has language English and Russian. A Brief History of Time has director Lilly Wachowski and Christopher Nolan. A Brief History of Time has wonAward Academy Award for Best Cinematography. A Brief History of Time has artist Queen. A Brief History of Time has genre Progressive rock and Historical fiction.</lex>
+    </entry>
+  </entries>
+</benchmark>
