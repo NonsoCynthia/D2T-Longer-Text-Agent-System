@@ -50,48 +50,37 @@ The framework also supports surface realization in both English and Irish and is
 
 The core modules in this repository include:
 
-- `agents/llm_model.py`  
-  Unified interface over different LLM providers. Encapsulates provider specific configuration and exposes a single unified model interface and a configuration map for model names and parameters.
+- `agents/llm_model.py`Unified interface over different LLM providers. Encapsulates provider specific configuration and exposes a single unified model interface and a configuration map for model names and parameters.
+- `agents/workflow.py`LangGraph based definition of the overall agent workflow and ablation variants, including:
 
-- `agents/workflow.py`  
-  LangGraph based definition of the overall agent workflow and ablation variants, including:
   - Default multi agent workflow with orchestrator, workers, guardrail and finalizer
   - `build_agent_workflow_single_module`
   - `build_agent_workflow_no_guardrail`
   - `build_agent_workflow_no_finalizer`
   - `build_agent_workflow_no_orchestrator`
+- `agents/orchestrator.py`Orchestrator agent that:
 
-- `agents/orchestrator.py`  
-  Orchestrator agent that:
   - Reads the current `ExecutionState`
   - Chooses the next agent to call
   - Forms prompts for the workers using recent history, user input and guardrail feedback
+- `agents/worker.py`Generic worker wrapper used for content ordering, text structuring and surface realization. Each worker is configured by a role specific system prompt.
+- `agents/guardrail.py`Guardrail agent that:
 
-- `agents/worker.py`  
-  Generic worker wrapper used for content ordering, text structuring and surface realization. Each worker is configured by a role specific system prompt.
-
-- `agents/guardrail.py`  
-  Guardrail agent that:
   - Evaluates the most recent worker output
   - Produces structured feedback and a correctness judgment
   - Signals whether to rerun or move toward finalization
+- `agents/finalizer.py`Finalizer agent that compiles the history of validated outputs into a final response.
+- `agents/agent_prompts.py`Prompt definitions for:
 
-- `agents/finalizer.py`  
-  Finalizer agent that compiles the history of validated outputs into a final response.
-
-- `agents/agent_prompts.py`  
-  Prompt definitions for:
   - Content ordering
   - Text structuring
   - Surface realization in English and Irish
   - Guardrail evaluation, additions and omissions checks and revision instructions
+- `agents/utilities/utils.py`Utility types and data structures, including:
 
-- `agents/utilities/utils.py`  
-  Utility types and data structures, including:
   - `AgentStepOutput`
   - `ExecutionState` typed dict used as the LangGraph state
-
-- `agents/utilities/agent_utils.py`  
+- `agents/utilities/agent_utils.py`
   Helper functions to format and summarize agent step history for use by orchestrator and guardrail prompts.
 
 Adjust paths if the package layout changes.
@@ -112,7 +101,7 @@ cd D2T-Longer-Text-Agent-System
 ```bash
 python -m venv .venv
 source .venv/bin/activate         # on Linux or macOS
-# .venv\Scriptsctivate          # on Windows
+# .venv\Scripts\ctivate          # on Windows
 ```
 
 3. Install dependencies
@@ -207,10 +196,8 @@ Surface realization prompts are defined separately for English and Irish in `age
 
 Typical options:
 
-- English surface realization  
-  Use the default configuration or set `language="en"` when calling ablation builders.
-
-- Irish surface realization  
+- English surface realizationUse the default configuration or set `language="en"` when calling ablation builders.
+- Irish surface realization
   Use `SURFACE_REALIZATION_PROMPT_GA` or pass `language="ga"` to the workflow builders that accept it.
 
 Example for an Irish workflow variant:
@@ -284,13 +271,13 @@ graph = build_agent_workflow_no_orchestrator(
 
 Removes the orchestrator and replaces dynamic routing with a fixed pipeline. Execution order is:
 
-1. Content ordering  
-2. Guardrail for content ordering  
-3. Text structuring  
-4. Guardrail for text structuring  
-5. Surface realization  
-6. Guardrail for surface realization  
-7. Finalizer  
+1. Content ordering
+2. Guardrail for content ordering
+3. Text structuring
+4. Guardrail for text structuring
+5. Surface realization
+6. Guardrail for surface realization
+7. Finalizer
 
 This lets you compare the dynamic agentic system against a deterministic pipeline with the same components.
 
@@ -315,12 +302,7 @@ For quantitative experiments, for example on WebNLG or your own triple based dat
 If you use this repository in academic work, please consider citing the corresponding paper once it is available. A generic BibTeX entry could look like:
 
 ```bibtex
-@inproceedings{osuji2025multiagentd2t,
-  title = {Multi Agent Architectures for Long Context Data to Text Generation},
-  author = {Osuji, Chinonso Cynthia and others},
-  booktitle = {Proceedings of the International Natural Language Generation Conference},
-  year = {2025}
-}
+TBA
 ```
 
 Update this with the final citation details for your publication.
@@ -339,5 +321,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 For questions, issues or collaboration requests, please open a GitHub issue or contact:
 
-- Chinonso Cynthia Osuji  
-- See the email address on the GitHub profile.
+- Chinonso Cynthia Osuji
+- {firstname.lastname}@adaptcentre.ie
