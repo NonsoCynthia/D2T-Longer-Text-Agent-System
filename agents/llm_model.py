@@ -39,21 +39,69 @@ class OllamaModel(ModelBase):
         return self.llm
 
 
-# === OpenAI Model ===
+# # === OpenAI Model ===
+# class OpenAIModel(ModelBase):
+#     def __init__(self, model_name: str = "gpt-4", temperature: float = 0.0, api_key: Optional[str] = None):
+#         from langchain_openai import ChatOpenAI
+#         openai_key = os.getenv("OPENAI_API_KEY") or api_key
+#         self.llm = ChatOpenAI(model=model_name, temperature=temperature, api_key=openai_key)
+
+#     def model_(self, agent_prompts: Optional[Text]) -> Dict:
+#         prompt = ChatPromptTemplate.from_messages([
+#             ("system", agent_prompts), ("human", "{input}")
+#         ])
+#         return prompt | self.llm
+
+#     def raw_model(self):
+#         return self.llm
+
+    
+# # === OpenAI Model ===
+from langchain_openai import ChatOpenAI
+
+class ChatOpenAINoStop(ChatOpenAI):
+    """
+    Wrapper around ChatOpenAI that ignores any `stop` parameter coming from
+    LangChain Agents or Runnables, so that models which do not support `stop`
+    (like gpt-5.1) can be used safely.
+    """
+
+    # Newer LangChain code paths call _generate with `stop`
+    def _generate(self, messages, stop=None, run_manager=None, **kwargs):
+        # Drop the stop argument completely
+        return super()._generate(messages, run_manager=run_manager, **kwargs)
+
+    # Some older paths call generate(...) directly
+    def generate(self, messages, stop=None, **kwargs):
+        # Drop stop here as well, just in case
+        return super().generate(messages, **kwargs)
+
+
 class OpenAIModel(ModelBase):
     def __init__(self, model_name: str = "gpt-4", temperature: float = 0.0, api_key: Optional[str] = None):
-        from langchain_openai import ChatOpenAI
         openai_key = os.getenv("OPENAI_API_KEY") or api_key
-        self.llm = ChatOpenAI(model=model_name, temperature=temperature, api_key=openai_key)
+        if not openai_key:
+            raise ValueError("OPENAI_API_KEY not found. Set it in .env or pass `api_key`.")
+
+        # Use the no stop wrapper here
+        self.llm = ChatOpenAINoStop(
+            model=model_name,
+            temperature=temperature,
+            api_key=openai_key,
+            # optional, but recommended for new models:
+            # max_completion_tokens=800,
+        )
 
     def model_(self, agent_prompts: Optional[Text]) -> Dict:
         prompt = ChatPromptTemplate.from_messages([
-            ("system", agent_prompts), ("human", "{input}")
+            ("system", agent_prompts),
+            ("human", "{input}")
         ])
         return prompt | self.llm
 
     def raw_model(self):
         return self.llm
+
 
 
 # === Anthropic Model ===

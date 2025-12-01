@@ -39,3 +39,27 @@ def extract_mtriples(xml_file):
         all_mtriples.append(mtriples)
     
     return all_mtriples
+
+def extract_modified_triplesets_from_file(path):
+    """
+    Read XML from a file path and extract modified triplesets.
+    """
+    tree = ET.parse(path)
+    root = tree.getroot()
+    all_triplesets = []
+
+    for entry in root.findall("./entries/entry"):
+        tripleset = []
+        for mtriple in entry.findall("./modifiedtripleset/mtriple"):
+            if mtriple.text is None:
+                continue
+            parts = [p.strip() for p in mtriple.text.split("|")]
+            if len(parts) != 3:
+                continue
+            subj, rel, obj = parts
+            tripleset.append([subj, rel, obj])  # Changed to list for consistency
+
+        if tripleset:
+            all_triplesets.append(tripleset)
+
+    return all_triplesets

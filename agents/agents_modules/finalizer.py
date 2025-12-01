@@ -7,7 +7,7 @@ Description:
     Refine, polish and return the final output
 """
 
-from langchain.agents import AgentExecutor
+from langchain_classic.agents import AgentExecutor
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
 from agents.agent_prompts import FINALIZER_PROMPT, FINALIZER_INPUT
@@ -24,9 +24,9 @@ class TaskFinalizer:
         def run(state: ExecutionState):
             # prompt = state.get('user_prompt', '') # User input
             history = state.get("history_of_steps", [])
-            # step_log = "\n\n".join(summarize_agent_steps(history)[-2:]) or "No result steps." # Last 2 agent interactions formated
-            filtered_steps = [t for t in history if getattr(t, "agent_name", "").lower() not in ["orchestrator", "guardrail"]][-2:]
-            step_log = "\n\n".join(summarize_agent_steps(filtered_steps)) or "No result steps."
+            step_log = "\n\n".join(summarize_agent_steps(history)[-2:]) or "No result steps." # Last 2 agent interactions formated
+            # filtered_steps = [t for t in history if getattr(t, "agent_name", "").lower() not in ["orchestrator", "guardrail"]][-2:]
+            # step_log = "\n\n".join(summarize_agent_steps(filtered_steps)) or "No result steps."
 
             final_input = FINALIZER_INPUT.format(
                                                 #  input=prompt, 

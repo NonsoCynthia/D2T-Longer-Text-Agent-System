@@ -7,14 +7,11 @@ Description:
     Worker agent that executes tasks based on the orchestrator's instructions.
 """
 
-from typing import Dict, List, Text, Any, Union
+from typing import Dict, List, Text, Any, Union, Optional
 import json
-import re
 
 from langchain_classic.agents import AgentExecutor, create_json_chat_agent
 from langchain_core.prompts import MessagesPlaceholder, ChatPromptTemplate
-from langchain_core.exceptions import OutputParserException #TRoublesome
-
 from langgraph.errors import GraphRecursionError
 
 from agents.utilities.utils import ExecutionState, AgentStepOutput
@@ -55,77 +52,214 @@ class TaskWorker:
             ]
         ).partial(output_format="text")
 
-        # custom parsing error handler
-        def _handle_parsing_errors(e: OutputParserException) -> str:
-            """
-            Make the JSON agent tolerant of extra text around the JSON.
+        return AgentExecutor(
+            agent=create_json_chat_agent(model, tools, prompt),
+            tools=tools,
+            verbose=True,
+            max_iterations=max(4, 4 * len(tools)),
+            handle_parsing_errors=True,
+            return_result_steps=True,
+        )
 
-            Strategy:
-            - Pull the raw llm_output
-            - Extract the largest {...} or [...] block
-            - Drop `//` comments
-            - If we can parse that as JSON, wrap it as:
-              {"action": "Final Answer", "action_input": <that-json>}
-            - Otherwise return a minimal valid Final Answer
+    @classmethod
+    def execute(cls, agent: AgentExecutor, role: str):
+        role = role.strip().lower()
+
+        def build_worker_input(state: ExecutionState) -> Text:
             """
-            raw = getattr(e, "llm_output", "") or ""
-            # Fallback if we have nothing at all
-            if not raw.strip():
-                return json.dumps(
-                    {"action": "Final Answer", "action_input": "PARSING_ERROR"}
+            Compose the worker input based on the role and the current state.
+
+            - content ordering: orchestrator instruction + raw data_input
+            - text structuring: orchestrator instruction + latest content ordering output
+            - surface realization: orchestrator instruction
+                                   + latest text structuring output
+                                   + previous surface realization output (if any)
+                                   + guardrail feedback (if any)
+            """
+
+            # Instruction from the orchestrator for this step
+            orch_instruction = state.get("next_agent_payload", "").strip()
+
+            # All previous steps
+            history = state.get("history_of_steps", []) or []
+
+            # Helper to fetch the latest output for a given agent name
+            def latest_output_for(agent_name: str) -> Text:
+                target = agent_name.strip().lower()
+                for step in reversed(history):
+                    if step.agent_name.strip().lower() == target:
+                        return str(step.agent_output)
+                return ""
+
+            if role == "content ordering":
+                data_input = state.get("data_input", "")
+                return (
+                    "Worker: content ordering\n\n"
+                    "Worker Input:\n"
+                    "ORCHESTRATOR INSTRUCTION:\n"
+                    f"{orch_instruction}\n\n"
+                    "DATA INPUT:\n"
+                    f"{data_input}"
+                ).strip()
+
+            if role == "text structuring":
+                ordering_output = latest_output_for("content ordering")
+                return (
+                    "Worker: text structuring\n\n"
+                    "Worker Input:\n"
+                    "ORCHESTRATOR INSTRUCTION:\n"
+                    f"{orch_instruction}\n\n"
+                    "ORDERING OUTPUT:\n"
+                    f"{ordering_output}"
+                ).strip()
+
+            if role == "surface realization":
+                structuring_output = latest_output_for("text structuring")
+                previous_sr_output = latest_output_for("surface realization")
+
+                # Guardrail feedback can be stored under "review" (or similar) in the state.
+                # We accept dict, list, or string and normalize to a JSON string for clarity.
+                raw_feedback = (
+                    state.get("review")
+                    or state.get("guardrail_feedback")
+                    or state.get("guardrail_review")
+                    or ""
                 )
 
-            # Remove backtick fences and any leading "Action:" noise
-            cleaned = raw
-            cleaned = cleaned.replace("```json", "```")
-            cleaned = cleaned.replace("```", "")
-            cleaned = re.sub(r"^\s*Action\s*:\s*", "", cleaned, flags=re.IGNORECASE)
+                if isinstance(raw_feedback, (dict, list)):
+                    guardrail_feedback_str = json.dumps(
+                        raw_feedback, ensure_ascii=False, indent=2
+                    )
+                else:
+                    guardrail_feedback_str = str(raw_feedback).strip()
 
-            # Keep only from first { or [ onwards
-            idxs = [i for i in [cleaned.find("{"), cleaned.find("[")] if i != -1]
-            if idxs:
-                cleaned = cleaned[min(idxs) :]
+                previous_block = (
+                    "\n\nPREVIOUS SURFACE REALIZATION OUTPUT:\n"
+                    f"{previous_sr_output}"
+                    if previous_sr_output
+                    else ""
+                )
 
-            # Drop comment lines
-            cleaned_no_comments = "\n".join(
-                line for line in cleaned.splitlines()
-                if not line.lstrip().startswith("//")
-            ).strip()
+                feedback_block = (
+                    "\n\nGUARDRAIL FEEDBACK (JSON):\n"
+                    f"{guardrail_feedback_str}"
+                    if guardrail_feedback_str
+                    else ""
+                )
 
-            # Try to parse the inner JSON
+                return (
+                    "Worker: surface realization\n\n"
+                    "Worker Input:\n"
+                    "ORCHESTRATOR INSTRUCTION:\n"
+                    f"{orch_instruction}\n\n"
+                    "TEXT STRUCTURING OUTPUT:\n"
+                    f"{structuring_output}"
+                    f"{previous_block}"
+                    f"{feedback_block}"
+                ).strip()
+
+            # Fallback for any other roles if you add more in future
+            return orch_instruction
+
+        def run(state: ExecutionState):
+            idx = state.get("iteration_count", 0)
+            inputs = build_worker_input(state)
+            history = state.get("history_of_steps", []) or []
+
             try:
-                parsed_inner = json.loads(cleaned_no_comments)
-            except Exception:
-                # As a last resort, treat the whole raw output as plain text
-                return json.dumps(
-                    {
-                        "action": "Final Answer",
-                        "action_input": raw.strip(),
-                    }
+                out = agent.invoke({"input": inputs})
+                text = (
+                    out.get("output")
+                    or out.get("action_input")
+                    or getattr(out, "content", str(out))
                 )
+                tools = out.get("result_steps", []) if isinstance(out, dict) else []
+            except GraphRecursionError:
+                text, tools = "Too many iterations. Try splitting task.", []
 
-            # If inner JSON already has "action" and "action_input", just use it
-            if isinstance(parsed_inner, dict) and "action" in parsed_inner and "action_input" in parsed_inner:
-                return json.dumps(parsed_inner)
-
-            # Otherwise wrap it as the action_input payload
-            return json.dumps(
-                {
-                    "action": "Final Answer",
-                    "action_input": parsed_inner,
-                }
+            history.append(
+                AgentStepOutput(
+                    agent_name=role,
+                    agent_input=inputs,
+                    agent_output=text,
+                    rationale=text,
+                    tool_steps=tools,
+                )
             )
+
+            return {
+                "next_agent": "guardrail",
+                "history_of_steps": history,
+                "iteration_count": idx + 1,
+            }
+
+        return run
+    
+
+# #####################################################################
+
+__author__ = "chinonsocynthiaosuji"
+
+"""
+Author: Chinonso Cynthia Osuji
+Date: 10/07/2025
+Description:
+    Worker agent that executes tasks based on the orchestrator's instructions.
+"""
+
+from typing import Dict, List, Text, Any, Union
+import json
+
+from langchain_classic.agents import AgentExecutor, create_json_chat_agent
+from langchain_core.prompts import MessagesPlaceholder, ChatPromptTemplate
+from langgraph.errors import GraphRecursionError
+
+from agents.utilities.utils import ExecutionState, AgentStepOutput
+from agents.llm_model import UnifiedModel, model_name
+from agents.agent_prompts import WORKER_SYSTEM_PROMPT, WORKER_HUMAN_PROMPT
+from agents.utilities.agent_utils import apply_variable_substitution
+
+
+class TaskWorker:
+    @classmethod
+    def init(
+        cls,
+        description: Text,
+        tools: List[Any],
+        context: Union[Text, Dict[str, Any]],
+        provider: str = "ollama",
+    ) -> AgentExecutor:
+        params = model_name.get(provider.lower())
+        model = UnifiedModel(provider=provider, **params).raw_model()
+
+        agent_description = (
+            apply_variable_substitution(description, context) if description else ""
+        )
+
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    (
+                        "AGENT DESCRIPTION:\n"
+                        f"{agent_description}\n\n"
+                        "EXECUTION INSTRUCTION:\n"
+                        f"{WORKER_SYSTEM_PROMPT}"
+                    ),
+                ),
+                MessagesPlaceholder(variable_name="chat_history", optional=True),
+                ("human", WORKER_HUMAN_PROMPT),
+            ]
+        ).partial(output_format="text")
 
         return AgentExecutor(
             agent=create_json_chat_agent(model, tools, prompt),
             tools=tools,
             verbose=True,
             max_iterations=max(4, 4 * len(tools)),
-            handle_parsing_errors=_handle_parsing_errors,
+            handle_parsing_errors=True,
             return_result_steps=True,
         )
-
-
 
     @classmethod
     def execute(cls, agent: AgentExecutor, role: str):
@@ -269,20 +403,12 @@ Produce the FULL revised text, not a diff, and do NOT mention these instructions
 
             try:
                 out = agent.invoke({"input": inputs})
-                raw_output = out.get("output", out)
-
-                # If output is of the form {"action": "...", "action_input": ...}
-                if isinstance(raw_output, dict) and "action_input" in raw_output:
-                    text = raw_output["action_input"]
-                else:
-                    # Fallbacks: dict with "output" as string, or direct string
-                    if isinstance(raw_output, str):
-                        text = raw_output
-                    elif isinstance(out, dict) and "action_input" in out:
-                        text = out["action_input"]
-                    else:
-                        text = str(raw_output)
-
+                # For a JSON agent, the final "Final Answer" content often ends up here:
+                text = (
+                    out.get("output")
+                    or out.get("action_input")
+                    or getattr(out, "content", str(out))
+                )
                 tools = out.get("result_steps", []) if isinstance(out, dict) else []
             except GraphRecursionError:
                 text, tools = "Too many iterations. Try splitting task.", []
@@ -303,5 +429,5 @@ Produce the FULL revised text, not a diff, and do NOT mention these instructions
                 "iteration_count": idx + 1,
             }
 
-
         return run
+

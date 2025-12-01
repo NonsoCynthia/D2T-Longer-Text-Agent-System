@@ -10,16 +10,12 @@ Description:
 
 import re
 from typing import Dict, List, Text, Any, Union, Optional
-from langchain.agents import AgentExecutor
+from langchain_classic.agents import AgentExecutor
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
 from agents.utilities.agent_utils import summarize_agent_steps
 from agents.agent_prompts import (ORCHESTRATOR_PROMPT, 
-                                  ORCHESTRATOR_INPUT,
-                                #   CONTENT_SELECTION_PROMPT,     
-                                  CONTENT_ORDERING_PROMPT, 
-                                  TEXT_STRUCTURING_PROMPT, 
-                                  SURFACE_REALIZATION_PROMPT)
+                                  ORCHESTRATOR_INPUT,)
 
 class TaskOrchestrator:
     @classmethod
@@ -27,11 +23,6 @@ class TaskOrchestrator:
         conf = model_name.get(provider.lower(), {}).copy()
         conf["temperature"] = 0.0
         return UnifiedModel(provider=provider, **conf).model_(ORCHESTRATOR_PROMPT)
-            # ORCHESTRATOR_PROMPT.format(
-            #                         #    CS=CONTENT_SELECTION_PROMPT,
-            #                            CO=CONTENT_ORDERING_PROMPT,
-            #                            TS=TEXT_STRUCTURING_PROMPT,
-            #                            SR=SURFACE_REALIZATION_PROMPT))
 
     @classmethod
     def execute(cls, executor: AgentExecutor):
