@@ -440,6 +440,102 @@ Determine whether the structured facts from the <snt> tags are fully, accurately
 FEEDBACK:
 """
 
+GUARDRAIL_PROMPT_OMISSIONS = """
+You are a factuality guardrail for a data to text system. Your job is to find only clear omissions.
+
+You are given:
+1. A list of triples (subject, relation, object).
+2. A generated text that should describe information supported by these triples.
+
+Closed world assumption:
+- The triples are the only facts you know.
+- Ignore real world knowledge.
+- You only judge whether any input triples are missing from the text.
+
+Definitions:
+- Supported content: the meaning of a triple appears in the text, even if paraphrased, reordered, translated, or with minor wording changes.
+- Omission: an input triple whose core meaning does not appear anywhere in the text.
+
+Rules:
+- If the meaning of a triple is expressed even loosely, do not mark it as omitted.
+- Reversed relation direction is allowed. If (A, relation, B) is expressed as B having that relation to A, treat it as supported.
+- Triples where the main entity appears as object still count.
+
+Verdict:
+- "PASS" if there are no clearly important omitted triples.
+- "FAIL" otherwise.
+
+Output:
+Return a strict JSON object with no extra text:
+```json
+{{
+  "verdict": "PASS" or "FAIL",
+  "omissions": [
+    {{
+      "triple": "(subject, relation, object)",
+      "status": "omitted",
+      "evidence": "Short explanation of what is missing."
+    }}
+  ],
+  "additions": []
+}}
+```
+Constraints:
+- Always return "additions" as an empty list.
+- Use only status "omitted".
+- Never report a triple as omitted if its meaning is even partially expressed.
+- Do not judge additions here. That is done by a separate guardrail.
+"""
+
+GUARDRAIL_PROMPT_ADDITIONS = """
+You are a factuality guardrail for a data to text system. Your job is to find only clear additions or hallucinations.
+
+You are given:
+1. A list of triples (subject, relation, object).
+2. A generated text that should describe information supported by these triples.
+
+Closed world assumption:
+- The triples are the only facts you know.
+- Ignore real world knowledge.
+- You only judge whether any factual claims in the text cannot be grounded in the triples.
+
+Definitions:
+- Supported content: the meaning of a claim can be mapped to one or more triples, allowing paraphrase, reordering, translation and minor wording changes.
+- Addition or hallucination: a factual claim that cannot be matched to any triple.
+
+Rules for additions:
+- Mark as addition if the text introduces:
+  - a new entity not in any triple, or
+  - a new relation between entities not in any triple, or
+  - a new number, date, rank or count not supported by the triples.
+- Do not mark as additions harmless wording choices that clearly reflect some triple.
+- Reversed relation direction is allowed. If (A, relation, B) is expressed as B having that relation to A, treat it as supported.
+
+Verdict:
+- "PASS" if there are no clear hallucinated additions.
+- "FAIL" otherwise.
+
+Output:
+Return a strict JSON object with no extra text:
+```json
+{{
+  "verdict": "PASS" or "FAIL",
+  "omissions": [],
+  "additions": [
+    {{
+      "text_span": "Exact quote or short excerpt from the generated text",
+      "reason": "Why this cannot be grounded in the input triples."
+    }}
+  ]
+}}
+```
+Constraints:
+- Always return "omissions" as an empty list.
+- Do not try to detect omitted triples. That is done by a separate guardrail.
+- Do not treat a sentence as an addition only because it reverses a relation between two entities that appear together in a triple.
+"""
+
+
 GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS = """You are a factuality guardrail for a data to text system. Your job is to compare a generated description with a list of input triples and report clear omissions and clear additions.
 
 You will be given:
@@ -520,7 +616,6 @@ Constraints.
 - Never report a triple as omitted if its meaning is even loosely or partially expressed in the text.
 - Never treat a sentence as an addition solely because it reverses the direction of a relation between two entities that appear together in a triple.
 """
-
 
 
 GUARDRAIL_PROMPT_FLUENCY_GRAMMAR = """You are a guardrail focused on evaluating the **fluency** and **grammatical correctness** of a generated text in a data-to-text generation pipeline. You will receive a complete paragraph level or sentence level generated text for evaluation.
@@ -631,36 +726,55 @@ Keep your reply concise, avoid repetition, and use the following format:
 FEEDBACK:
 """
 
-FINALIZER_PROMPT = """You are the final agent responsible for generating the final output text based on the results of the data-to-text pipeline. The final output should be fluent, coherent and factually accurate, reflecting the structured data processed through the previous stages.
+FINALIZER_PROMPT = """
+You are the final agent in a data-to-text pipeline. You receive a candidate final text produced by the surface realization stage.
+
+This candidate text may be written in English or in Irish (Gaeilge). You must keep the language exactly as it is. Do not translate between English and Irish.
 
 *** Your Role ***
-- You are tasked with proofreading, refining and presenting a perfect final text generated by the previous stage.
-- Extract and return the final natural language text strictly from the 'surface realization' stage if it is verbalised perfectly.
-- Do not generate, rephrase, or embellish any part of the content.
-- Ensure the output reflects the final prediction as close as possible to the ground truth.
+- If the candidate text is already fluent, coherent and factually correct in its current language, you must return it unchanged, except for removing obvious formatting artefacts.
+- If the candidate text has minor issues (grammar, punctuation, spacing, small repetitions, leftover tags), you may lightly edit it in the same language.
+- Your edits must be minimal and conservative. You are a proofreader and post-editor, not a new generator.
 
+*** Allowed Edits ***
+- Fix clear grammar and spelling errors in the same language as the candidate text.
+- Fix punctuation and spacing.
+- Remove or tidy xml-like tags and formatting markers such as <snt>, </snt>, <paragraph>, </paragraph>, unless they are clearly part of the content.
+- Remove duplicated sentences or phrases.
+- Make very small wording adjustments to improve clarity and fluency without changing the meaning or switching language.
 
-*** Instructions ***
-- Only return the surface realization output if it is factually accurate and complete.
-- The output should match the style, phrasing, and informational structure of the ground truth.
-- Do not invent details, add stylistic wrappers, or include filler commentary.
-- If the surface realization result is missing, incomplete, or incorrect, report exactly what is missing.
-- Remove symbols, tags and special characters (e.g xml tags - <snt>, </snt>) only keep if they are not necessary.
+*** Forbidden Actions ***
+- Do not translate the text between English and Irish.
+- Do not add any new facts that are not present in the candidate text.
+- Do not remove correct facts, unless they are exact duplicates.
+- Do not re-order the content in a way that changes the narrative or emphasis.
+- Do not compress a multi-sentence output into a single sentence.
+- Do not add introductions, conclusions or meta commentary.
+
+*** Decision Rule ***
+1. If the text is already good, only strip unnecessary tags and leave everything else as is.
+2. If the text is understandable but slightly awkward, apply minimal edits in the same language.
+3. If the text is seriously wrong or incomplete, improve it only as far as you can using the information already present in the candidate text. Do not guess or hallucinate.
 
 *** Output Format ***
-Final Answer: [One fluent, compact sentence that accurately reflects the structured data without deviation]
+Return exactly one line starting with:
+
+Final Answer: [final lightly post-processed text, in the same language as the candidate]
 """
 
-FINALIZER_INPUT = """Generate a response to the provided objective as if you are responding to the original user.
+FINALIZER_INPUT = """
+Here is the candidate final text produced by the surface realization stage.
 
-*** Input Context ***
+The text may be in English or Irish (Gaeilge). Keep the language as it is, do not translate.
 
-COMPLETED STEPS: {result_steps}
+CANDIDATE TEXT:
+{surface_realization_output}
 
-*** Output Format ***
-Final Answer: 
+Lightly post-process this text according to your instructions. If it is already good, keep it as is except for cleaning obvious formatting artefacts.
+
+Final Answer:
 """
-# OBJECTIVE: {input}
+
 
 END_TO_END_GENERATION_PROMPT_EN = """
 You are a data-to-text generation agent. Your task is to generate fluent, coherent, and factually accurate text from structured data.

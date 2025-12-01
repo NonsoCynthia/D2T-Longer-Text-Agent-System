@@ -1,3 +1,4 @@
+import json
 from collections import defaultdict
 import xml.etree.ElementTree as ET
 
@@ -63,3 +64,38 @@ def extract_modified_triplesets_from_file(path):
             all_triplesets.append(tripleset)
 
     return all_triplesets
+
+
+def save_result_to_json(state: dict, dataset_folder= "", filename: str = "result.json", directory: str = "results") -> None:
+    """
+    Saves the given agent workflow state to a JSON file in a specified directory.
+    """
+    # Ensure full directory path exists
+    if dataset_folder != "":
+        full_directory = os.path.join(directory, dataset_folder)
+    else:
+        full_directory = directory
+
+    os.makedirs(full_directory, exist_ok=True)
+
+    file_path = os.path.join(full_directory, filename)
+
+    if os.path.isdir(file_path):
+        raise IsADirectoryError(f"Cannot write to '{file_path}' because it is a directory.")
+
+    def make_serializable(obj):
+        if isinstance(obj, list):
+            return [make_serializable(x) for x in obj]
+        elif hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        elif isinstance(obj, dict):
+            return {k: make_serializable(v) for k, v in obj.items()}
+        else:
+            return obj
+
+    serializable_state = make_serializable(dict(state))
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(serializable_state, f, indent=4)
+
+    print(f"[SAVED] Agent result saved to: {file_path}")

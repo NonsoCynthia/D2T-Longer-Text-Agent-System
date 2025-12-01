@@ -7,9 +7,7 @@ Description:
     Utility functions for agent workflows, including variable substitution and step summarization in a uniquely formatted template.
 """
 
-import os
 import re
-import json
 from typing import List, Text, Union, Dict
 from agents.utilities.utils import AgentStepOutput
 
@@ -114,72 +112,3 @@ def summarize_agent_steps(step_log: List[AgentStepOutput]) -> List[Text]:
         step_counter += 1
 
     return summary
-
-
-def save_result_to_json(state: dict, dataset_folder= "", filename: str = "result.json", directory: str = "results") -> None:
-    """
-    Saves the given agent workflow state to a JSON file in a specified directory.
-    """
-    # Ensure full directory path exists
-    if dataset_folder != "":
-        full_directory = os.path.join(directory, dataset_folder)
-    else:
-        full_directory = directory
-
-    os.makedirs(full_directory, exist_ok=True)
-
-    file_path = os.path.join(full_directory, filename)
-
-    if os.path.isdir(file_path):
-        raise IsADirectoryError(f"Cannot write to '{file_path}' because it is a directory.")
-
-    def make_serializable(obj):
-        if isinstance(obj, list):
-            return [make_serializable(x) for x in obj]
-        elif hasattr(obj, "model_dump"):
-            return obj.model_dump()
-        elif isinstance(obj, dict):
-            return {k: make_serializable(v) for k, v in obj.items()}
-        else:
-            return obj
-
-    serializable_state = make_serializable(dict(state))
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(serializable_state, f, indent=4)
-
-    print(f"[SAVED] Agent result saved to: {file_path}")
-
-
-
-# import torch
-# from comet import download_model, load_from_checkpoint
-# Configure precision
-# torch.set_float32_matmul_precision("high")
-# _comet_instance = None
-
-# def score_comet_quality(source_text: str, prediction_text: str, use_gpu=False):
-#     global _comet_instance
-
-#     if _comet_instance is None:
-#         model_path = download_model("Unbabel/wmt22-cometkiwi-da")
-#         _comet_instance = load_from_checkpoint(model_path)
-
-#     torch.cuda.empty_cache()
-#     run_on_gpu = 1 if use_gpu and torch.cuda.is_available() else 0
-
-#     source = str(source_text).strip()
-#     mt = str(prediction_text).strip()
-
-#     try:
-#         result = _comet_instance.predict(
-#             [{'src': source, 'mt': mt}],
-#             gpus=run_on_gpu,
-#             num_workers=1  # avoids multiprocessing_context error
-#         )
-#         return f"Metric Evaluation Result: {round(result.system_score, 3)}"
-#     except Exception as e:
-#         print(f"Metric Evaluation Result: Metric Evaluation Failed: {e}")
-#         return ""
-
-

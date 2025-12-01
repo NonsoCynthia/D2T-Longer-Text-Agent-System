@@ -11,43 +11,66 @@ from langchain_classic.agents import AgentExecutor
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
 from agents.agent_prompts import FINALIZER_PROMPT, FINALIZER_INPUT
-from agents.utilities.agent_utils import summarize_agent_steps
+
 
 class TaskFinalizer:
     @classmethod
     def init(cls, provider: str = "ollama") -> AgentExecutor:
-        cfg = model_name.get(provider.lower())
+        """
+        Initialise the finalizer with a conservative configuration
+        so it only performs light post processing.
+        """
+        cfg = model_name.get(provider.lower(), {})
+        cfg = {**cfg, "temperature": 0.0}
         return UnifiedModel(provider=provider, **cfg).model_(FINALIZER_PROMPT)
 
     @classmethod
     def compile(cls, executor: AgentExecutor):
         def run(state: ExecutionState):
-            # prompt = state.get('user_prompt', '') # User input
             history = state.get("history_of_steps", [])
-            step_log = "\n\n".join(summarize_agent_steps(history)[-2:]) or "No result steps." # Last 2 agent interactions formated
-            # filtered_steps = [t for t in history if getattr(t, "agent_name", "").lower() not in ["orchestrator", "guardrail"]][-2:]
-            # step_log = "\n\n".join(summarize_agent_steps(filtered_steps)) or "No result steps."
+
+            # Find the last surface realization step
+            sr_steps = [
+                step
+                for step in history
+                if getattr(step, "agent_name", "").strip().lower() == "surface realization"
+            ]
+
+            if sr_steps:
+                candidate = sr_steps[-1].agent_output
+            else:
+                candidate = "NO SURFACE REALIZATION OUTPUT AVAILABLE."
 
             final_input = FINALIZER_INPUT.format(
-                                                #  input=prompt, 
-                                                 result_steps=step_log
-                                                 )
+                surface_realization_output=candidate
+            )
 
             if state.get("response") == "incomplete":
-                reply = "I couldn't provide an answer because the maximum number of iterations was reached. Please try breaking the instruction into smaller questions by looking at the intermediate steps."
+                reply = (
+                    "Final Answer: The system reached the maximum number of iterations "
+                    "and no stable final output could be produced."
+                )
             else:
-                reply = executor.invoke({"input": final_input}).content.replace("Final Answer:", "").strip()
-                
-            # print(f"\n\nFINALIZER INPUT: {final_input}")
-            # print(f"\n\nFINALIZER OUTPUT: {reply}")
+                raw = executor.invoke({"input": final_input})
+                content = getattr(raw, "content", raw)
+                reply = str(content).strip()
 
-            history.append(AgentStepOutput(
-                                        agent_name="finalizer",
-                                        agent_input=final_input,
-                                        agent_output=reply
-                                    ))
+                # Normalise in case the model omits the prefix
+                if not reply.lower().startswith("final answer:"):
+                    reply = "Final Answer: " + reply
 
-            return {"final_response": reply, 
-                    "history_of_steps": history
-                    }
+            history.append(
+                AgentStepOutput(
+                    agent_name="finalizer",
+                    agent_input=final_input,
+                    agent_output=reply,
+                )
+            )
+
+            return {
+                "final_response": reply,
+                "history_of_steps": history,
+            }
+
         return run
+

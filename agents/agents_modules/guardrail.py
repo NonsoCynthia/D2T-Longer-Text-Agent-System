@@ -17,8 +17,9 @@ from agents.agent_prompts import (
                         GUARDRAIL_INPUT,
                         GUARDRAIL_PROMPT_CONTENT_ORDERING,
                         GUARDRAIL_PROMPT_TEXT_STRUCTURING,
-                        # GUARDRAIL_PROMPT_SURFACE_REALIZATION,
-                        GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS,
+                        # GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS,  # no longer needed, kept here for reference but commented
+                        GUARDRAIL_PROMPT_OMISSIONS,
+                        GUARDRAIL_PROMPT_ADDITIONS,
                         GUARDRAIL_PROMPT_FLUENCY_GRAMMAR,
                         GUARDRAIL_PROMPT_FAITHFUL_ADEQUACY,
                         GUARDRAIL_PROMPT_COHERENT_NATURAL,
@@ -58,11 +59,7 @@ class TaskGuardrail:
                 output = worker.agent_output
 
             # Common context used by the generic guardrail and the fluency, faithfulness, coherence checks
-            base_context = f"""Orchestrator Thought: {rationale}
-
-Worker Input: {task_input}
-
-Worker Output: {output}"""
+            base_context = f"""Orchestrator Thought: {rationale}\nWorker Input: {task_input}\nWorker Output: {output}"""
 
             prompt = GUARDRAIL_INPUT.format(input=base_context)
 
@@ -74,7 +71,11 @@ Worker Output: {output}"""
                 fluency_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_FLUENCY_GRAMMAR)
                 faithful_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_FAITHFUL_ADEQUACY)
                 coherence_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_COHERENT_NATURAL)
-                add_omission_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS)
+
+                # add_omission_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS)
+                # New, separate guards for omissions and additions
+                omission_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_OMISSIONS)
+                addition_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_ADDITIONS)
 
                 # Use the orchestrator, worker context for style, coherence style checks
                 fluency_result = fluency_guard.invoke({"input": prompt}).content.strip().split("FEEDBACK:")[-1].strip()
@@ -88,25 +89,44 @@ Worker Output: {output}"""
                     triples_text = "\n".join(str(t) for t in data_input)
 
                 ao_context = f"""INPUT TRIPLES:\n{triples_text}\n\nGENERATED TEXT:\n{output}"""
-
                 ao_prompt = GUARDRAIL_INPUT.format(input=ao_context)
 
-                add_omission_result = add_omission_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-
+                # add_omission_result = add_omission_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
+                
+                omissions_raw = omission_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
+                additions_raw = addition_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
+                
                 # Extract verdict from the additions and omissions JSON
                 add_omission_verdict = ""
+                omissions_verdict = ""
+                additions_verdict = ""
+                # try:
+                #     ao_obj = json.loads(add_omission_result)
+                #     add_omission_verdict = ao_obj.get("verdict", "").strip().upper()
+                # except Exception:
+                #     # Fallback, in case the model did not return valid JSON
+                #     add_omission_verdict = add_omission_result.strip().upper()
+
                 try:
-                    ao_obj = json.loads(add_omission_result)
-                    add_omission_verdict = ao_obj.get("verdict", "").strip().upper()
+                    om_obj = json.loads(omissions_raw)
+                    omissions_verdict = om_obj.get("verdict", "").strip().upper()
                 except Exception:
-                    # Fallback, in case the model did not return valid JSON
-                    add_omission_verdict = add_omission_result.strip().upper()
+                    omissions_verdict = omissions_raw.strip().upper()
+
+                try:
+                    ad_obj = json.loads(additions_raw)
+                    additions_verdict = ad_obj.get("verdict", "").strip().upper()
+                except Exception:
+                    additions_verdict = additions_raw.strip().upper()
 
                 flu_ok = fluency_result.strip().upper() == "CORRECT"
                 faith_ok = faith_result.strip().upper() == "CORRECT"
                 coh_ok = coherence_result.strip().upper() == "CORRECT"
-                ao_ok = add_omission_verdict in {"PASS", "CORRECT", ""}
+                # ao_ok = add_omission_verdict in {"PASS", "CORRECT", ""}
+                om_ok = omissions_verdict in {"PASS", "CORRECT", ""}
+                ad_ok = additions_verdict in {"PASS", "CORRECT", ""}
 
+                ao_ok = om_ok and ad_ok  # Both omissions and additions must be okay
                 all_ok = flu_ok and faith_ok and coh_ok and ao_ok
                 overall_status = "CORRECT" if all_ok else f"Rerun {task} with feedback"
 
@@ -115,7 +135,9 @@ Worker Output: {output}"""
                     f"[Fluency & Grammar]: {fluency_result}\n"
                     f"[Faithfulness & Adequacy]: {faith_result}\n"
                     f"[Coherence & Naturalness]: {coherence_result}\n"
-                    f"[Additions & Omissions]: {add_omission_result}\n"
+                    # f"[Additions & Omissions]: {add_omission_result}\n"
+                    f"[Omissions]: {omissions_raw}\n"
+                    f"[Additions]: {additions_raw}\n"
                     f"OVERALL: {overall_status}"
                 )
                 final_verdict = review_message
@@ -138,12 +160,14 @@ Worker Output: {output}"""
             
             print(f"\n\nGUARDRAIL OUTPUT: {final_verdict}")
 
-            history.append(AgentStepOutput(
-                agent_name="guardrail",
-                agent_input=prompt,
-                agent_output=final_verdict,
-                rationale="Evaluation of worker output."
-            ))
+            history.append(
+                AgentStepOutput(
+                    agent_name="guardrail",
+                    agent_input=prompt,
+                    agent_output=final_verdict,
+                    rationale="Evaluation of worker output."
+                )
+            )
 
             # Prefer the OVERALL line if present
             overall_match = re.search(r"OVERALL:\s*(.+)$", final_verdict, re.MULTILINE)
@@ -161,3 +185,4 @@ Worker Output: {output}"""
             }
 
         return run
+
