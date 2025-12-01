@@ -109,9 +109,14 @@ def guardrail_routing(state: ExecutionState) -> Literal["orchestrator", "finaliz
     # 3. Otherwise keep orchestrating
     return "orchestrator"
 
-def build_agent_workflow(provider: str = "ollama") -> StateGraph:
+def build_agent_workflow(provider: str = "ollama", language: LanguageCode = "en",) -> StateGraph:
     flow = StateGraph(ExecutionState)
-    workers = list(WORKER_ROLES.keys())
+
+    # workers = list(WORKER_ROLES.keys())
+    
+    # Pick language specific worker prompts
+    worker_roles = get_worker_roles(language)
+    workers = list(worker_roles.keys())
 
     flow.add_edge(START, "orchestrator")
     flow.set_entry_point("orchestrator")

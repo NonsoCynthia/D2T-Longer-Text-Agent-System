@@ -7,7 +7,7 @@ from IPython.display import Image, display
 # from langchain_core.runnables.graph import RunnableGraph
 from langchain_core.runnables.graph_mermaid import MermaidDrawMethod
 
-from agents.llm_model import UnifiedModel
+from agents.llm_model import UnifiedModel, model_name
 
 from load_data import (
     extract_modified_triplesets_from_file,
@@ -85,7 +85,10 @@ class D2TAgentExperimentRunner:
         workflows: Dict[WorkflowName, Any] = {}
 
         # Default architecture
-        workflows["default"] = build_agent_workflow(provider=self.provider)
+        workflows["default"] = build_agent_workflow(
+            provider=self.provider,
+            language=self.language,
+            )
 
         # Ablations
         workflows["single_module"] = build_agent_workflow_single_module(
@@ -219,6 +222,66 @@ class D2TAgentExperimentRunner:
             print(f"Saved state to {save_path}.")
 
         return state
+    
+    def run_end_to_end(
+        self,
+        sample_id: int,
+        provider: Optional[str] = None,
+        temperature: float = 0.0,
+        extra_model_kwargs: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        """
+        Run a single end to end data to text generation using a single LLM
+        with the END_TO_END_GENERATION_PROMPT in the configured language.
+
+        Returns a dict with:
+          - "generated_text": final text from the model
+          - "query": the textual prompt given to the model
+          - "data": the raw triples for this sample
+          - "raw_output": the full object returned by the LLM
+        """
+        if sample_id < 1 or sample_id > len(self.triplesets):
+            raise IndexError(
+                f"sample_id {sample_id} is out of range. "
+                f"Valid range is 1 to {len(self.triplesets)}."
+            )
+
+        index = sample_id - 1
+        data = self.triplesets[index]
+
+        # Build the textual input that will be fed as {input} to the LLM
+        query = self.build_query(data=data)
+
+        # Choose provider and model config
+        provider = provider or self.provider
+        base_conf = model_name.get(provider.lower(), {}).copy()
+        base_conf["temperature"] = temperature
+        if extra_model_kwargs:
+            base_conf.update(extra_model_kwargs)
+
+        # Pick the correct end to end prompt based on language
+        if self.language == "ga":
+            system_prompt = END_TO_END_GENERATION_PROMPT_GA
+        else:
+            system_prompt = END_TO_END_GENERATION_PROMPT_EN
+
+        # Build the chat model with the chosen system prompt
+        llm = UnifiedModel(provider=provider, **base_conf).model_(system_prompt)
+
+        # Invoke the model
+        raw_output = llm.invoke({"input": query})
+        try:
+            generated_text = raw_output.content.strip()
+        except AttributeError:
+            generated_text = str(raw_output).strip()
+
+        return {
+            "generated_text": generated_text,
+            "query": query,
+            "data": data,
+            "raw_output": raw_output,
+        }
+
 
     def show_workflow_graph(
         self,
@@ -238,7 +301,8 @@ class D2TAgentExperimentRunner:
 
 
 # if __name__ == "__main__":
-
+# model_provider = "openai" #ollama, openai, hf, aixplain
+# language = "en"
 # runner = D2TAgentExperimentRunner(
 #     provider="openai",
 #     language="en",

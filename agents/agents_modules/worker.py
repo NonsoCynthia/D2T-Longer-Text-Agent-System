@@ -175,23 +175,12 @@ class TaskWorker:
                     if guardrail_feedback_str else ""
                 )
 
-                # OPTIMIZED REVISION INSTRUCTIONS (Cost-effective & fixes underscores)
-                revision_instructions = """
-*** REVISION RULES ***
-1. REMOVE UNDERSCORES: Convert "Berlin_Germany" -> "Berlin German". Only keep underscores in strict technical codes (e.g., ISO_3166).
-2. ACCURACY: Express every input triple. Do not omit facts.
-3. NO HALLUCINATION: Do not add promotional words ("major", "famous") or infer roles not in the data.
-4. CORRECTION: If guardrail reports "additions", remove them. If "omissions", add them using exact values (minus underscores).
-5. FORMAT: Return the full revised text only.
-"""
-
                 return (
                     f"Worker: surface realization\n"
                     f"INSTRUCTION: {orch_instruction}\n"
                     f"TEXT INPUT: {structuring_output}"
                     f"{previous_block}"
                     f"{feedback_block}"
-                    # f"\n{revision_instructions}"
                 ).strip()
 
             return orch_instruction
