@@ -13,21 +13,15 @@ from langchain_classic.agents import AgentExecutor
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
 from agents.agent_prompts import (
-                        GUARDRAIL_PROMPT, 
-                        GUARDRAIL_INPUT,
-                        GUARDRAIL_PROMPT_CONTENT_ORDERING,
-                        GUARDRAIL_PROMPT_TEXT_STRUCTURING,
-                        # GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS,  # no longer needed, kept here for reference but commented
-                        GUARDRAIL_PROMPT_OMISSIONS,
-                        GUARDRAIL_PROMPT_ADDITIONS,
-                        GUARDRAIL_PROMPT_FLUENCY_GRAMMAR,
-                        GUARDRAIL_PROMPT_FAITHFUL_ADEQUACY,
-                        GUARDRAIL_PROMPT_COHERENT_NATURAL,
-                    )
-
+    GUARDRAIL_PROMPT,
+    GUARDRAIL_INPUT,
+    GUARDRAIL_PROMPT_CONTENT_ORDERING,
+    GUARDRAIL_PROMPT_TEXT_STRUCTURING,
+    GUARDRAIL_PROMPT_SURFACE_REALIZATION, # Imported the new unified prompt
+)
 
 class TaskGuardrail:
-    provider = "openai"  # default
+    provider = "openai"
 
     @classmethod
     def init(cls, provider: str = "ollama") -> AgentExecutor:
@@ -43,9 +37,9 @@ class TaskGuardrail:
             idx = state.get("iteration_count", 0)
             max_iter = state.get("max_iteration", 50)
             user_input = state.get("user_prompt", "")
-            data_input = state.get("data_input", "")  # <-- triples live here
+            data_input = state.get("data_input", "")
 
-            # Find the most recent orchestrator step and worker step
+            # Identify agents
             orch = next((s for s in reversed(history) if s.agent_name == "orchestrator"), None)
             worker = next((s for s in reversed(history) if s.agent_name not in ["orchestrator", "guardrail"]), None)
             
@@ -58,102 +52,76 @@ class TaskGuardrail:
             if worker:
                 output = worker.agent_output
 
-            # Common context used by the generic guardrail and the fluency, faithfulness, coherence checks
+            # Prepare base context
             base_context = f"""Orchestrator Thought: {rationale}\nWorker Input: {task_input}\nWorker Output: {output}"""
-
             prompt = GUARDRAIL_INPUT.format(input=base_context)
-
             final_verdict = ""
-
-            # According to the task, supply the guardrail prompt
+            
+            # --- SURFACE REALIZATION (OPTIMIZED: 1 CALL) ---
             if task == "surface realization":
                 conf = model_name.get(cls.provider)
-                fluency_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_FLUENCY_GRAMMAR)
-                faithful_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_FAITHFUL_ADEQUACY)
-                coherence_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_COHERENT_NATURAL)
+                unified_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_SURFACE_REALIZATION)
 
-                # add_omission_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_ADDITIONS_OMISSIONS)
-                # New, separate guards for omissions and additions
-                omission_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_OMISSIONS)
-                addition_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_ADDITIONS)
-
-                # Use the orchestrator, worker context for style, coherence style checks
-                fluency_result = fluency_guard.invoke({"input": prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-                faith_result = faithful_guard.invoke({"input": prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-                coherence_result = coherence_guard.invoke({"input": prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-
-                # For additions and omissions, we MUST give the raw triples and the generated text
+                # Prepare Triples + Text context
                 triples_text = data_input
-                # If data_input is a list of triples, make it readable
                 if isinstance(data_input, list):
                     triples_text = "\n".join(str(t) for t in data_input)
 
-                ao_context = f"""INPUT TRIPLES:\n{triples_text}\n\nGENERATED TEXT:\n{output}"""
-                ao_prompt = GUARDRAIL_INPUT.format(input=ao_context)
+                unified_context = f"""INPUT TRIPLES:\n{triples_text}\n\nGENERATED TEXT:\n{output}"""
+                unified_prompt = GUARDRAIL_INPUT.format(input=unified_context)
 
-                # add_omission_result = add_omission_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
+                # Single LLM Call
+                raw_response = unified_guard.invoke({"input": unified_prompt}).content.strip()
                 
-                omissions_raw = omission_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-                additions_raw = addition_guard.invoke({"input": ao_prompt}).content.strip().split("FEEDBACK:")[-1].strip()
-                
-                # Extract verdict from the additions and omissions JSON
-                add_omission_verdict = ""
-                omissions_verdict = ""
-                additions_verdict = ""
-                # try:
-                #     ao_obj = json.loads(add_omission_result)
-                #     add_omission_verdict = ao_obj.get("verdict", "").strip().upper()
-                # except Exception:
-                #     # Fallback, in case the model did not return valid JSON
-                #     add_omission_verdict = add_omission_result.strip().upper()
+                # Cleanup potential markdown wrapper from LLM (e.g., ```json ... ```)
+                clean_json = raw_response.replace("FEEDBACK:", "").strip()
+                if "```" in clean_json:
+                    clean_json = clean_json.split("```")[1].replace("json", "").strip()
 
                 try:
-                    om_obj = json.loads(omissions_raw)
-                    omissions_verdict = om_obj.get("verdict", "").strip().upper()
-                except Exception:
-                    omissions_verdict = omissions_raw.strip().upper()
+                    eval_data = json.loads(clean_json)
+                    
+                    overall_status = eval_data.get("overall_verdict", "FAIL").upper()
+                    ling_score = eval_data.get("linguistic_score", "FAIL")
+                    ling_feed = eval_data.get("linguistic_feedback", "")
+                    omissions = eval_data.get("omissions", [])
+                    additions = eval_data.get("additions", [])
 
-                try:
-                    ad_obj = json.loads(additions_raw)
-                    additions_verdict = ad_obj.get("verdict", "").strip().upper()
-                except Exception:
-                    additions_verdict = additions_raw.strip().upper()
+                    # Construct readable feedback for the Orchestrator
+                    review_parts = [
+                        "=== GUARDRAIL REVIEW (Unified) ===",
+                        f"[Linguistic Quality]: {ling_score} - {ling_feed}",
+                        f"[Factuality]: {eval_data.get('factuality_verdict', 'FAIL')}",
+                    ]
+                    if omissions:
+                        review_parts.append(f"  - Omissions: {omissions}")
+                    if additions:
+                        review_parts.append(f"  - Additions/Hallucinations: {additions}")
+                    
+                    review_parts.append(f"OVERALL: {overall_status}")
+                    
+                    final_verdict = "\n".join(review_parts)
 
-                flu_ok = fluency_result.strip().upper() == "CORRECT"
-                faith_ok = faith_result.strip().upper() == "CORRECT"
-                coh_ok = coherence_result.strip().upper() == "CORRECT"
-                # ao_ok = add_omission_verdict in {"PASS", "CORRECT", ""}
-                om_ok = omissions_verdict in {"PASS", "CORRECT", ""}
-                ad_ok = additions_verdict in {"PASS", "CORRECT", ""}
+                except json.JSONDecodeError:
+                    # Fallback if JSON fails
+                    print(f"JSON Parse Error. Raw: {raw_response}")
+                    final_verdict = f"GUARDRAIL ERROR: Could not parse evaluation.\nRaw output: {raw_response}\nOVERALL: FAIL"
 
-                ao_ok = om_ok and ad_ok  # Both omissions and additions must be okay
-                all_ok = flu_ok and faith_ok and coh_ok and ao_ok
-                overall_status = "CORRECT" if all_ok else f"Rerun {task} with feedback"
-
-                review_message = (
-                    "=== GUARDRAIL REVIEW (surface realization) ===\n"
-                    f"[Fluency & Grammar]: {fluency_result}\n"
-                    f"[Faithfulness & Adequacy]: {faith_result}\n"
-                    f"[Coherence & Naturalness]: {coherence_result}\n"
-                    # f"[Additions & Omissions]: {add_omission_result}\n"
-                    f"[Omissions]: {omissions_raw}\n"
-                    f"[Additions]: {additions_raw}\n"
-                    f"OVERALL: {overall_status}"
-                )
-                final_verdict = review_message
-
+            # --- CONTENT ORDERING ---
             elif task == "content ordering":
                 conf = model_name.get(cls.provider)
                 ordering_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_CONTENT_ORDERING)
                 result = ordering_guard.invoke({"input": prompt}).content.strip()
                 final_verdict = result.split("FEEDBACK:")[-1].strip()
 
+            # --- TEXT STRUCTURING ---
             elif task == "text structuring":
                 conf = model_name.get(cls.provider)
                 structuring_guard = UnifiedModel(cls.provider, **conf).model_(GUARDRAIL_PROMPT_TEXT_STRUCTURING)
                 result = structuring_guard.invoke({"input": prompt}).content.strip()
                 final_verdict = result.split("FEEDBACK:")[-1].strip()
 
+            # --- DEFAULT ---
             else:
                 response = agent.invoke({"input": prompt}).content.strip()
                 final_verdict = response.split("FEEDBACK:")[-1].strip()
@@ -169,10 +137,12 @@ class TaskGuardrail:
                 )
             )
 
-            # Prefer the OVERALL line if present
+            # Check for "OVERALL: CORRECT" or just "CORRECT"
             overall_match = re.search(r"OVERALL:\s*(.+)$", final_verdict, re.MULTILINE)
             overall_status = overall_match.group(1).strip().upper() if overall_match else final_verdict.strip().upper()
-            done = overall_status == "CORRECT"
+            
+            # Allow pass if status is CORRECT or if it's a simple "CORRECT" string
+            done = "CORRECT" in overall_status
 
             return {
                 "next_agent": "finalizer" if done else "orchestrator",
@@ -185,4 +155,3 @@ class TaskGuardrail:
             }
 
         return run
-

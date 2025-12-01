@@ -109,21 +109,15 @@ class D2TAgentExperimentRunner:
         return workflows
 
     @property
-    def triple_lengths(self) -> List[Dict[int, int]]:
-        """
-        Returns a list of dicts like [{1: len(tripleset1)}, {2: len(tripleset2)}, ...]
-        so you can inspect how many triples each sample has.
-        """
-        return [{i: len(j)} for i, j in enumerate(self.triplesets, start=1)]
-
-    @property
-    def num_samples(self) -> int:
-        return len(self.triplesets)
+    def inspect_data(self):
+        data = self.triplesets
+        num_samples = len(self.triplesets)
+        triple_lengths = [{i: len(j)} for i, j in enumerate(self.triplesets, start=1)]
+        return data, num_samples, triple_lengths
 
     def build_query(
         self,
         data: Any,
-        dataset_name: str = "webnlg",
         custom_prefix: Optional[str] = None,
     ) -> str:
         """
@@ -131,15 +125,11 @@ class D2TAgentExperimentRunner:
 
         Uses the global input_prompt template:
 
-            Dataset: {dataset_name}
             Data: {data}
         """
         template = custom_prefix if custom_prefix is not None else input_prompt
 
-        query = template.format(
-            dataset_name=dataset_name,
-            data=data,
-        )
+        query = template.format(data=data,)
         return query
 
     def build_initial_state(self, data: Any, query: str) -> Dict[str, Any]:
@@ -172,7 +162,6 @@ class D2TAgentExperimentRunner:
         self,
         sample_id: int,
         workflow: WorkflowName = "default",
-        dataset_name: str = "webnlg",
         save: bool = True,
         save_prefix: Optional[str] = None,
     ) -> Dict[str, Any]:
@@ -185,8 +174,6 @@ class D2TAgentExperimentRunner:
             1 based sample id (sample 1, sample 2, etc).
         workflow:
             Which architecture to use, for example "default" or "no_orchestrator".
-        dataset_name:
-            Used only in the query text for documentation.
         save:
             Whether to save the full state as JSON.
         save_prefix:
@@ -207,7 +194,7 @@ class D2TAgentExperimentRunner:
         data = self.triplesets[index]
         print(f"Running workflow='{workflow}' on sample_id={sample_id} (index={index}).")
 
-        query = self.build_query(data=data, dataset_name=dataset_name)
+        query = self.build_query(data=data)
         initial_state = self.build_initial_state(data=data, query=query)
 
         graph = self.get_workflow(workflow)
@@ -217,17 +204,21 @@ class D2TAgentExperimentRunner:
             config={"recursion_limit": initial_state["max_iteration"]},
         )
 
-        generated_text= state.get("final_response", "")
-
         if save:
             if save_prefix is None:
                 save_prefix = workflow
             filename = f"{save_prefix}_sample{sample_id}.json"
+            # directory=self.output_dir ensures files go under "results_debug"
+            save_result_to_json(
+                state,
+                dataset_folder="",          # or something like "webnlg" if you want subfolders
+                filename=filename,
+                directory=self.output_dir,
+            )
             save_path = os.path.join(self.output_dir, filename)
-            save_result_to_json(state, filename=save_path)
             print(f"Saved state to {save_path}.")
 
-        return state, generated_text
+        return state
 
     def show_workflow_graph(
         self,

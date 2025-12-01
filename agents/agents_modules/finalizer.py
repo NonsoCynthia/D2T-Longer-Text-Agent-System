@@ -57,7 +57,7 @@ class TaskFinalizer:
 
                 # Normalise in case the model omits the prefix
                 if not reply.lower().startswith("final answer:"):
-                    reply = "Final Answer: " + reply
+                    reply = reply
 
             history.append(
                 AgentStepOutput(

@@ -13,7 +13,7 @@ import re
 
 from langchain_classic.agents import AgentExecutor, create_json_chat_agent
 from langchain_core.prompts import MessagesPlaceholder, ChatPromptTemplate
-from langchain_core.exceptions import OutputParserException #TRoublesome
+from langchain_core.exceptions import OutputParserException
 
 from langgraph.errors import GraphRecursionError
 
@@ -59,44 +59,32 @@ class TaskWorker:
         def _handle_parsing_errors(e: OutputParserException) -> str:
             """
             Make the JSON agent tolerant of extra text around the JSON.
-
-            Strategy:
-            - Pull the raw llm_output
-            - Extract the largest {...} or [...] block
-            - Drop `//` comments
-            - If we can parse that as JSON, wrap it as:
-              {"action": "Final Answer", "action_input": <that-json>}
-            - Otherwise return a minimal valid Final Answer
             """
             raw = getattr(e, "llm_output", "") or ""
-            # Fallback if we have nothing at all
             if not raw.strip():
                 return json.dumps(
                     {"action": "Final Answer", "action_input": "PARSING_ERROR"}
                 )
 
-            # Remove backtick fences and any leading "Action:" noise
-            cleaned = raw
-            cleaned = cleaned.replace("```json", "```")
-            cleaned = cleaned.replace("```", "")
+            # Cleanup raw output
+            cleaned = raw.replace("```json", "```").replace("```", "")
             cleaned = re.sub(r"^\s*Action\s*:\s*", "", cleaned, flags=re.IGNORECASE)
 
-            # Keep only from first { or [ onwards
+            # Extract content starting from the first JSON bracket
             idxs = [i for i in [cleaned.find("{"), cleaned.find("[")] if i != -1]
             if idxs:
                 cleaned = cleaned[min(idxs) :]
 
-            # Drop comment lines
+            # Drop comment lines to prevent parse errors
             cleaned_no_comments = "\n".join(
                 line for line in cleaned.splitlines()
                 if not line.lstrip().startswith("//")
             ).strip()
 
-            # Try to parse the inner JSON
             try:
                 parsed_inner = json.loads(cleaned_no_comments)
             except Exception:
-                # As a last resort, treat the whole raw output as plain text
+                # Fallback: treat whole output as the final answer string
                 return json.dumps(
                     {
                         "action": "Final Answer",
@@ -104,11 +92,11 @@ class TaskWorker:
                     }
                 )
 
-            # If inner JSON already has "action" and "action_input", just use it
+            # If inner JSON is already an action object, use it
             if isinstance(parsed_inner, dict) and "action" in parsed_inner and "action_input" in parsed_inner:
                 return json.dumps(parsed_inner)
 
-            # Otherwise wrap it as the action_input payload
+            # Otherwise wrap the content
             return json.dumps(
                 {
                     "action": "Final Answer",
@@ -125,8 +113,6 @@ class TaskWorker:
             return_result_steps=True,
         )
 
-
-
     @classmethod
     def execute(cls, agent: AgentExecutor, role: str):
         role = role.strip().lower()
@@ -139,7 +125,6 @@ class TaskWorker:
             return ""
 
         def normalise_feedback(raw: Any) -> Text:
-            """Turn review/guardrail feedback into a clean JSON string if possible."""
             if not raw:
                 return ""
             if isinstance(raw, (dict, list)):
@@ -150,41 +135,23 @@ class TaskWorker:
             return str(raw)
 
         def build_worker_input(state: ExecutionState) -> Text:
-            """
-            Compose the worker input based on the role and the current state.
-
-            - content ordering: orchestrator instruction + raw data_input
-            - text structuring: orchestrator instruction + latest content ordering output
-            - surface realization:
-                - orchestrator instruction
-                - latest text structuring output
-                - previous surface realization output (if any)
-                - guardrail feedback, with very explicit revision instructions
-            """
-
             orch_instruction = state.get("next_agent_payload", "").strip()
             history = state.get("history_of_steps", []) or []
 
             if role == "content ordering":
                 data_input = state.get("data_input", "")
                 return (
-                    "Worker: content ordering\n\n"
-                    "Worker Input:\n"
-                    "ORCHESTRATOR INSTRUCTION:\n"
-                    f"{orch_instruction}\n\n"
-                    "DATA INPUT:\n"
-                    f"{data_input}"
+                    f"Worker: content ordering\n"
+                    f"INSTRUCTION: {orch_instruction}\n"
+                    f"DATA: {data_input}"
                 ).strip()
 
             if role == "text structuring":
                 ordering_output = latest_output_for(history, "content ordering")
                 return (
-                    "Worker: text structuring\n\n"
-                    "Worker Input:\n"
-                    "ORCHESTRATOR INSTRUCTION:\n"
-                    f"{orch_instruction}\n\n"
-                    "ORDERING OUTPUT:\n"
-                    f"{ordering_output}"
+                    f"Worker: text structuring\n"
+                    f"INSTRUCTION: {orch_instruction}\n"
+                    f"ORDERING OUTPUT: {ordering_output}"
                 ).strip()
 
             if role == "surface realization":
@@ -200,66 +167,33 @@ class TaskWorker:
                 guardrail_feedback_str = normalise_feedback(raw_feedback)
 
                 previous_block = (
-                    "\n\nPREVIOUS SURFACE REALIZATION OUTPUT:\n"
-                    f"{previous_sr_output}"
-                    if previous_sr_output
-                    else ""
+                    f"\nPREV OUTPUT: {previous_sr_output}" if previous_sr_output else ""
                 )
-
+                
                 feedback_block = (
-                    "\n\nGUARDRAIL FEEDBACK (JSON OR TEXT):\n"
-                    f"{guardrail_feedback_str}"
-                    if guardrail_feedback_str
-                    else "\n\nGUARDRAIL FEEDBACK: (none provided)"
+                    f"\nGUARDRAIL FEEDBACK: {guardrail_feedback_str}"
+                    if guardrail_feedback_str else ""
                 )
 
-                # Strong instructions to stop over abstract additions and to obey feedback
+                # OPTIMIZED REVISION INSTRUCTIONS (Cost-effective & fixes underscores)
                 revision_instructions = """
-REVISION INSTRUCTIONS:
-
-You are revising the surface realization output based on the guardrail feedback.
-
-1. Your goal is to produce a version that the guardrail will accept.
-2. You MUST:
-   - Ensure every triple from the structured input is expressed somewhere in the text.
-   - For sensitive string attributes such as mottos, names, types, codes, and numeric values,
-     copy the value EXACTLY as given in the triples, including parentheses, quotes, signs,
-     and numbers. Do NOT paraphrase these fields.
-   - If the guardrail lists triples under "omissions" with status "partially_expressed"
-     or "missing", explicitly state those triples in the revised text using the exact
-     subject, relation, and object strings.
-
-3. You MUST NOT:
-   - Add high level evaluative or promotional phrases that are not directly in the triples.
-     Avoid words like "major", "important", "key", "vibrant", "hub", "center",
-     "significant", "famous", "historic" unless those exact words appear in the data.
-   - Infer roles that are not literally present in the triples, such as "represents",
-     "is known as", "is a transportation hub", "is an economic center", unless you can
-     quote a triple that literally encodes that relation.
-   - Introduce any new facts that are not supported by the triples.
-
-4. If the guardrail feedback lists "additions", REMOVE or REWRITE the corresponding text
-   so that it is purely factual and directly grounded in the triples.
-
-5. It is acceptable if the resulting text is slightly repetitive or less natural, as long
-   as it is grammatical and fully faithful to the triples without unsupported additions.
-
-Produce the FULL revised text, not a diff, and do NOT mention these instructions or the word "guardrail" in your answer.
+*** REVISION RULES ***
+1. REMOVE UNDERSCORES: Convert "Berlin_Germany" -> "Berlin German". Only keep underscores in strict technical codes (e.g., ISO_3166).
+2. ACCURACY: Express every input triple. Do not omit facts.
+3. NO HALLUCINATION: Do not add promotional words ("major", "famous") or infer roles not in the data.
+4. CORRECTION: If guardrail reports "additions", remove them. If "omissions", add them using exact values (minus underscores).
+5. FORMAT: Return the full revised text only.
 """
 
                 return (
-                    "Worker: surface realization\n\n"
-                    "Worker Input:\n"
-                    "ORCHESTRATOR INSTRUCTION:\n"
-                    f"{orch_instruction}\n\n"
-                    "TEXT STRUCTURING OUTPUT:\n"
-                    f"{structuring_output}"
+                    f"Worker: surface realization\n"
+                    f"INSTRUCTION: {orch_instruction}\n"
+                    f"TEXT INPUT: {structuring_output}"
                     f"{previous_block}"
                     f"{feedback_block}"
-                    f"\n\n{revision_instructions.strip()}\n"
+                    # f"\n{revision_instructions}"
                 ).strip()
 
-            # Fallback for future roles
             return orch_instruction
 
         def run(state: ExecutionState):
@@ -271,11 +205,9 @@ Produce the FULL revised text, not a diff, and do NOT mention these instructions
                 out = agent.invoke({"input": inputs})
                 raw_output = out.get("output", out)
 
-                # If output is of the form {"action": "...", "action_input": ...}
                 if isinstance(raw_output, dict) and "action_input" in raw_output:
                     text = raw_output["action_input"]
                 else:
-                    # Fallbacks: dict with "output" as string, or direct string
                     if isinstance(raw_output, str):
                         text = raw_output
                     elif isinstance(out, dict) and "action_input" in out:
@@ -302,6 +234,5 @@ Produce the FULL revised text, not a diff, and do NOT mention these instructions
                 "history_of_steps": history,
                 "iteration_count": idx + 1,
             }
-
 
         return run

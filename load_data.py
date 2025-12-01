@@ -1,3 +1,4 @@
+import os
 import json
 from collections import defaultdict
 import xml.etree.ElementTree as ET
@@ -99,3 +100,11 @@ def save_result_to_json(state: dict, dataset_folder= "", filename: str = "result
         json.dump(serializable_state, f, indent=4)
 
     print(f"[SAVED] Agent result saved to: {file_path}")
+
+
+# %pip install -U "openai>=1.60.0" \
+#               "langchain>=0.3.19" \
+#               "langchain-openai>=0.3.33"\
+# %pip install -U openai langchain langchain-openai
+# %pip install -U "langchain-classic>=0.1.0"
+# %pip install tf-keras
