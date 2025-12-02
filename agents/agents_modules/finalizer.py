@@ -1,4 +1,4 @@
-__author__='chinonsocynthiaosuji'
+__author__ = "chinonsocynthiaosuji"
 
 """
 Author: Chinonso Cynthia Osuji
@@ -27,22 +27,31 @@ class TaskFinalizer:
     @classmethod
     def compile(cls, executor: AgentExecutor):
         def run(state: ExecutionState):
-            history = state.get("history_of_steps", [])
+            history = state.get("history_of_steps", []) or []
 
-            # Find the last surface realization step
-            sr_steps = [
-                step
-                for step in history
-                if getattr(step, "agent_name", "").strip().lower() == "surface realization"
-            ]
+            def latest_output_for(agent_name: str):
+                target = agent_name.strip().lower()
+                for step in reversed(history):
+                    if getattr(step, "agent_name", "").strip().lower() == target:
+                        return getattr(step, "agent_output", "")
+                return ""
 
-            if sr_steps:
-                candidate = sr_steps[-1].agent_output
+            # Last surface realization text
+            sr_output = latest_output_for("surface realization")
+            # Last guardrail review, if any
+            gd_output = latest_output_for("guardrail")
+
+            if not sr_output:
+                sr_output = "NO SURFACE REALIZATION OUTPUT AVAILABLE."
+
+            # Attach guardrail feedback only if present
+            if gd_output:
+                combined = f"{sr_output}\n\nGUARDRAIL FEEDBACK:\n{gd_output}"
             else:
-                candidate = "NO SURFACE REALIZATION OUTPUT AVAILABLE."
+                combined = sr_output
 
             final_input = FINALIZER_INPUT.format(
-                surface_realization_output=candidate
+                surface_realization_output=combined
             )
 
             if state.get("response") == "incomplete":
@@ -55,9 +64,10 @@ class TaskFinalizer:
                 content = getattr(raw, "content", raw)
                 reply = str(content).strip()
 
-                # Normalise in case the model omits the prefix
-                if not reply.lower().startswith("final answer:"):
-                    reply = reply
+                # Normalise in case the model includes a prefix
+                prefix = "final answer:"
+                if reply.lower().startswith(prefix):
+                    reply = reply[len(prefix):].lstrip()
 
             history.append(
                 AgentStepOutput(
@@ -73,4 +83,3 @@ class TaskFinalizer:
             }
 
         return run
-

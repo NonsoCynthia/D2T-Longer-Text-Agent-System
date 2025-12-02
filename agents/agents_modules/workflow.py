@@ -88,6 +88,27 @@ def add_workers(worker_prompts: Dict[str, str], graph: StateGraph, tools: List[A
     return added
 
 
+# def guardrail_routing(state: ExecutionState) -> Literal["orchestrator", "finalizer"]:
+#     expected = {"content ordering", "text structuring", "surface realization"}
+#     done = {
+#         step.agent_name.strip().lower()
+#         for step in state.get("history_of_steps", [])
+#         if getattr(step, "agent_name", None)
+#         and step.agent_name.strip().lower() in expected
+#     }
+#     review = state.get("review", "").strip().lower()
+
+#     # 1. Explicit rerun instructions always win
+#     if "rerun surface realization with feedback" in review:
+#         return "orchestrator"
+
+#     # 2. Finalize only if we are sure it is correct
+#     if expected.issubset(done) and "incorrect" not in review and "correct" in review:
+#         return "finalizer"
+
+#     # 3. Otherwise keep orchestrating
+#     return "orchestrator"
+
 def guardrail_routing(state: ExecutionState) -> Literal["orchestrator", "finalizer"]:
     expected = {"content ordering", "text structuring", "surface realization"}
     done = {
@@ -98,22 +119,42 @@ def guardrail_routing(state: ExecutionState) -> Literal["orchestrator", "finaliz
     }
     review = state.get("review", "").strip().lower()
 
-    # 1. Explicit rerun instructions always win
+    worker_attempts: Dict[str, int] = state.get("worker_attempts", {}) or {}
+    raw_limits = state.get("max_worker_attempts", 3)
+    last_worker = state.get("last_worker", "").strip().lower()
+
+    def limit_for(worker_name: str) -> int:
+        if isinstance(raw_limits, dict):
+            return int(raw_limits.get(worker_name, 3))
+        try:
+            return int(raw_limits)
+        except Exception:
+            return 3
+
+    # If the last worker has already hit its cap, stop looping.
+    if last_worker:
+        attempts = worker_attempts.get(last_worker, 0)
+        if attempts >= limit_for(last_worker):
+            return "finalizer"
+
+    # Explicit rerun instructions still win if we have not exhausted attempts
     if "rerun surface realization with feedback" in review:
         return "orchestrator"
 
-    # 2. Finalize only if we are sure it is correct
+    # Finalize only if all three workers have run and the review says correct
     if expected.issubset(done) and "incorrect" not in review and "correct" in review:
         return "finalizer"
 
-    # 3. Otherwise keep orchestrating
+    # Otherwise keep orchestrating
     return "orchestrator"
+
+
 
 def build_agent_workflow(provider: str = "ollama", language: LanguageCode = "en",) -> StateGraph:
     flow = StateGraph(ExecutionState)
 
     # workers = list(WORKER_ROLES.keys())
-    
+
     # Pick language specific worker prompts
     worker_roles = get_worker_roles(language)
     workers = list(worker_roles.keys())
@@ -127,7 +168,7 @@ def build_agent_workflow(provider: str = "ollama", language: LanguageCode = "en"
     # Workers
     tools = []
     user_prompt = ""
-    add_workers_(WORKER_ROLES, flow, tools, user_prompt, provider) #remove user prompt
+    add_workers_(worker_roles, flow, tools, user_prompt, provider) #remove user prompt
     # add_workers(WORKER_ROLES, flow, tools, provider) #Add user prompt
 
     # guardrail & Finalizer

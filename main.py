@@ -150,6 +150,15 @@ class D2TAgentExperimentRunner:
             "current_step": 0,
             "iteration_count": 0,
             "max_iteration": self.max_iteration,
+            # new fields
+            "worker_attempts": {},      # e.g. {"surface realization": 2, ...}
+            "last_worker": "",
+            # "max_worker_attempts": 3,        # global cap. 3 runs per worker"
+            "max_worker_attempts": {
+                        "content ordering": 2,
+                        "text structuring": 2,
+                        "surface realization": 3,
+                    },
         }
         return initial_state
 

@@ -20,10 +20,12 @@ class AgentStepOutput(BaseModel):
     agent_input: Union[Text, Dict[str, Any]]
     agent_output: Union[List, Dict, Text]
     rationale: Optional[Union[List, Dict, Text]] = None
+    tool_steps: Optional[List[Any]] = None 
 
     
 class ExecutionState(TypedDict, total=False):  # set total=False to make all keys optional
     """Holds evolving state across agent pipeline execution."""
+
     # Raw structured data to be verbalised, separated from the natural language user prompt
     data_input: Union[Text, List, Dict[str, Any]]
 
@@ -40,3 +42,7 @@ class ExecutionState(TypedDict, total=False):  # set total=False to make all key
     current_step: int                                           # Current step count
     history_of_steps: List[AgentStepOutput]                     # A list of all the agent interactions
 
+    # New fields for limiting iterations and guardrail calls
+    max_worker_attempts: Union[int, Dict[str, int]]  # global or per worker cap
+    worker_attempts: Dict[str, int]                   # Per worker attempt counters
+    last_worker: str                                  # Name of the last worker that ran

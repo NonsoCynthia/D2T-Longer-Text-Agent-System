@@ -84,7 +84,7 @@ class TaskWorker:
             try:
                 parsed_inner = json.loads(cleaned_no_comments)
             except Exception:
-                # Fallback: treat whole output as the final answer string
+                # Fallback. treat whole output as the final answer string
                 return json.dumps(
                     {
                         "action": "Final Answer",
@@ -186,27 +186,57 @@ class TaskWorker:
             return orch_instruction
 
         def run(state: ExecutionState):
+            # Global iteration counter
             idx = state.get("iteration_count", 0)
-            inputs = build_worker_input(state)
             history = state.get("history_of_steps", []) or []
+
+            # Per worker attempt bookkeeping
+            worker_attempts: Dict[str, int] = state.get("worker_attempts", {}) or {}
+            current_attempts = worker_attempts.get(role, 0)
+
+            # Resolve max attempts for this worker
+            max_cfg = state.get("max_worker_attempts", None)
+            max_for_role: Union[int, None] = None
+            if isinstance(max_cfg, int):
+                max_for_role = max_cfg
+            elif isinstance(max_cfg, dict):
+                # tolerate non int values
+                raw_val = max_cfg.get(role)
+                try:
+                    max_for_role = int(raw_val) if raw_val is not None else None
+                except (TypeError, ValueError):
+                    max_for_role = None
+
+            # If this worker has already used up its budget. do not call the LLM again
+            if max_for_role is not None and current_attempts >= max_for_role:
+                # No new step is added. we just pass state through and let guardrail or orchestrator decide
+                return {
+                    "next_agent": "guardrail",
+                    "history_of_steps": history,
+                    "iteration_count": idx,
+                    "worker_attempts": worker_attempts,
+                    "last_worker": role,
+                    "max_worker_attempts": max_cfg,
+                }
+
+            # Build input and run the worker LLM
+            inputs = build_worker_input(state)
 
             try:
                 out = agent.invoke({"input": inputs})
-                raw_output = out.get("output", out)
-
-                if isinstance(raw_output, dict) and "action_input" in raw_output:
-                    text = raw_output["action_input"]
-                else:
-                    if isinstance(raw_output, str):
-                        text = raw_output
-                    elif isinstance(out, dict) and "action_input" in out:
-                        text = out["action_input"]
-                    else:
-                        text = str(raw_output)
-
+                text = (
+                    out.get("output")
+                    or out.get("action_input")
+                    or getattr(out, "content", str(out))
+                )
                 tools = out.get("result_steps", []) if isinstance(out, dict) else []
             except GraphRecursionError:
                 text, tools = "Too many iterations. Try splitting task.", []
+
+            # Update attempts only when the worker actually ran
+            worker_attempts[role] = current_attempts + 1
+
+            print(f"[Worker: {role}] Attempt {worker_attempts[role]} / {max_for_role or 'unlimited'}")
 
             history.append(
                 AgentStepOutput(
@@ -222,6 +252,9 @@ class TaskWorker:
                 "next_agent": "guardrail",
                 "history_of_steps": history,
                 "iteration_count": idx + 1,
+                "worker_attempts": worker_attempts,
+                "last_worker": role,
+                "max_worker_attempts": max_cfg,
             }
 
         return run
