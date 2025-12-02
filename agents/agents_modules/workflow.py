@@ -14,6 +14,7 @@ from agents.agents_modules.orchestrator import TaskOrchestrator
 from agents.agents_modules.worker import TaskWorker
 from agents.agents_modules.guardrail import TaskGuardrail
 from agents.agents_modules.finalizer import TaskFinalizer
+from agents.agents_modules.task import UnifiedTaskWorker
 from agents.agent_prompts import (
     CONTENT_ORDERING_PROMPT,
     TEXT_STRUCTURING_PROMPT,
@@ -186,6 +187,58 @@ def build_agent_workflow(provider: str = "ollama", language: LanguageCode = "en"
     flow.add_edge("finalizer", END)
 
     return flow.compile()
+
+
+def build_agent_workflow_unified(
+    provider: str = "ollama",
+    language: LanguageCode = "en",
+):
+    """
+    Ablation: single unified worker that performs content ordering,
+    text structuring and surface realization using one prompt.
+
+    Architecture:
+      orchestrator + 1 unified worker node + guardrail + finalizer
+
+    The orchestrator still chooses between logical stages
+    ('content ordering', 'text structuring', 'surface realization'),
+    but all of them are routed to the same LangGraph node.
+    """
+    flow = StateGraph(ExecutionState)
+
+    worker_roles = get_worker_roles(language)
+    workers = list(worker_roles.keys())
+
+    # Orchestrator entry
+    flow.add_edge(START, "orchestrator")
+    flow.set_entry_point("orchestrator")
+    flow.add_node(
+        "orchestrator",
+        TaskOrchestrator.execute(TaskOrchestrator.init(provider)),
+    )
+
+    # Unified worker node
+    unified_model = UnifiedTaskWorker.init(
+        provider=provider,
+        language=language,
+    )
+    flow.add_node("task", UnifiedTaskWorker.execute(unified_model, language=language))
+
+    # Guardrail and finalizer
+    flow.add_node("guardrail", TaskGuardrail.evaluate(TaskGuardrail.init(provider)))
+    flow.add_node("finalizer", TaskFinalizer.compile(TaskFinalizer.init(provider)))
+
+    # Routing: all logical stages go to the same node "task"
+    routes = {name: "task" for name in workers}
+    routes.update({"finish": "finalizer"})
+    flow.add_conditional_edges("orchestrator", lambda state: state["next_agent"], routes)
+
+    flow.add_edge("task", "guardrail")
+    flow.add_conditional_edges("guardrail", guardrail_routing)
+    flow.add_edge("finalizer", END)
+
+    return flow.compile()
+
 
 
 def build_agent_workflow_single_module(provider: str = "ollama", language: LanguageCode = "en",):

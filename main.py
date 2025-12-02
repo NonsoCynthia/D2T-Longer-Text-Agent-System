@@ -24,6 +24,7 @@ from agents.agents_modules.workflow import (
     build_agent_workflow_no_guardrail,
     build_agent_workflow_no_finalizer,
     build_agent_workflow_no_orchestrator,
+    build_agent_workflow_unified,  
 )
 
 Language = Literal["en", "ga"]
@@ -33,6 +34,7 @@ WorkflowName = Literal[
     "no_guardrail",
     "no_finalizer",
     "no_orchestrator",
+    "unified_worker",
 ]
 
 
@@ -89,6 +91,12 @@ class D2TAgentExperimentRunner:
             provider=self.provider,
             language=self.language,
             )
+        
+        # New unified worker architecture
+        workflows["unified_worker"] = build_agent_workflow_unified(
+            provider=self.provider,
+            language=self.language,
+        )
 
         # Ablations
         workflows["single_module"] = build_agent_workflow_single_module(

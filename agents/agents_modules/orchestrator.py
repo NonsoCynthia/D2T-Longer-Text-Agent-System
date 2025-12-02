@@ -8,7 +8,7 @@ Description:
 """
 
 import re
-from typing import Dict, List, Text, Any, Union, Optional
+from typing import Dict, List, Text, Any, Union, Optional, Set
 from langchain_classic.agents import AgentExecutor
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
@@ -94,6 +94,28 @@ class TaskOrchestrator:
                 rationale, role, role_input, instruction = "parse error", "finish", output, None
 
             role = role.lower().strip("'\"").replace("_", " ")
+
+            # Enforce minimum pipeline progression
+            expected_order = ["content ordering", "text structuring", "surface realization"]
+            expected_set: Set[str] = set(expected_order)
+
+            done: Set[str] = {
+                step.agent_name.strip().lower()
+                for step in history or []
+                if getattr(step, "agent_name", None)
+                and step.agent_name.strip().lower() in expected_set
+            }
+
+            # If the orchestrator tries to FINISH early, force the next missing stage
+            if role in ("finish", "finalizer"):
+                if not expected_set.issubset(done):
+                    # choose the next missing stage in the canonical order
+                    if "content ordering" not in done:
+                        role = "content ordering"
+                    elif "text structuring" not in done:
+                        role = "text structuring"
+                    elif "surface realization" not in done:
+                        role = "surface realization"
 
             history.append(
                 AgentStepOutput(
