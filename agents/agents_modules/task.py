@@ -13,12 +13,17 @@ Description:
 from typing import Any, Dict, List, Text, Union
 import json
 
+from langchain_classic.agents import AgentExecutor, create_json_chat_agent
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+
 from agents.utilities.utils import ExecutionState, AgentStepOutput
+from agents.agent_prompts import WORKER_SYSTEM_PROMPT, WORKER_HUMAN_PROMPT
 from agents.llm_model import UnifiedModel, model_name
 from agents.agent_prompts import (
     UNIFIED_WORKER_PROMPT_EN,
     UNIFIED_WORKER_PROMPT_GA,
 )
+from agents.utilities.agent_utils import apply_variable_substitution, _handle_parsing_errors
 
 
 class UnifiedTaskWorker:
@@ -27,27 +32,56 @@ class UnifiedTaskWorker:
         cls,
         provider: str = "ollama",
         language: str = "en",
-    ):
+    ) -> AgentExecutor:
         """
-        Initialise a plain chat model with the unified worker prompt
-        for English or Irish.
+        Initialise a unified worker as a JSON agent:
+        - system message = unified worker spec + generic worker instructions
+        - human message = WORKER_HUMAN_PROMPT (which will receive {input})
         """
-        cfg = model_name.get(provider.lower(), {}).copy()
-        cfg["temperature"] = 0.0
+        params = model_name.get(provider.lower(), {}).copy()
+        params["temperature"] = 0.0
+        model = UnifiedModel(provider=provider, **params).raw_model()
 
-        if language.lower() == "ga":
-            system_prompt = UNIFIED_WORKER_PROMPT_GA
-        else:
-            system_prompt = UNIFIED_WORKER_PROMPT_EN
+        # Choose unified prompt for language
+        base_prompt = (
+            UNIFIED_WORKER_PROMPT_GA
+            if language.lower() == "ga"
+            else UNIFIED_WORKER_PROMPT_EN
+        )
 
-        return UnifiedModel(provider=provider, **cfg).model_(system_prompt)
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    (
+                        "AGENT DESCRIPTION:\n"
+                        f"{base_prompt}\n\n"
+                        "EXECUTION INSTRUCTION:\n"
+                        f"{WORKER_SYSTEM_PROMPT}"
+                    ),
+                ),
+                MessagesPlaceholder(variable_name="chat_history", optional=True),
+                ("human", WORKER_HUMAN_PROMPT),
+            ]
+        ).partial(output_format="text")
+
+        tools: List[Any] = []
+
+        return AgentExecutor(
+            agent=create_json_chat_agent(model, tools, prompt),
+            tools=tools,
+            verbose=True,
+            max_iterations=max(4, 4 * len(tools)),
+            handle_parsing_errors=_handle_parsing_errors,
+            return_result_steps=True,
+        )
 
     @classmethod
-    def execute(cls, model, language: str = "en"):
+    def execute(cls, agent: AgentExecutor, language: str = "en"):
         """
         Return a LangGraph node function that:
         - Builds a stage specific input for the unified worker
-        - Calls the model
+        - Calls the JSON agent
         - Logs the step into history_of_steps
         - Hands control back to the guardrail
         """
@@ -127,7 +161,7 @@ class UnifiedTaskWorker:
                 ).strip()
                 return task, payload
 
-            # Fallback. If somehow we get here, just pass through the payload.
+            # Fallback
             payload = f"Task: unknown\nINSTRUCTION: {orch_instruction}"
             return task or "unknown", payload
 
@@ -137,8 +171,19 @@ class UnifiedTaskWorker:
 
             task_name, worker_input = build_task_input(state)
 
-            raw = model.invoke({"input": worker_input})
-            text = getattr(raw, "content", str(raw))
+            out = agent.invoke({"input": worker_input})
+
+            # Extract the textual answer from JSON agent
+            raw_output = out.get("output", out)
+            if isinstance(raw_output, dict) and "action_input" in raw_output:
+                text = raw_output["action_input"]
+            else:
+                if isinstance(raw_output, str):
+                    text = raw_output
+                elif isinstance(out, dict) and "action_input" in out:
+                    text = out["action_input"]
+                else:
+                    text = str(raw_output)
 
             history.append(
                 AgentStepOutput(
@@ -146,10 +191,10 @@ class UnifiedTaskWorker:
                     agent_input=worker_input,
                     agent_output=text,
                     rationale=text,
+                    tool_steps=out.get("result_steps", []) if isinstance(out, dict) else [],
                 )
             )
 
-            # Update per task attempts so the orchestrator and guardrail can use it
             worker_attempts: Dict[str, int] = state.get("worker_attempts", {}) or {}
             if task_name:
                 worker_attempts[task_name] = worker_attempts.get(task_name, 0) + 1

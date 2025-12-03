@@ -7,9 +7,12 @@ Description:
     Utility functions for agent workflows, including variable substitution and step summarization in a uniquely formatted template.
 """
 
-import re
+import re, json
 from typing import List, Text, Union, Dict
 from agents.utilities.utils import AgentStepOutput
+from langchain_core.exceptions import OutputParserException
+
+
 
 def apply_variable_substitution(template: Text, substitutions: Union[Text, Dict[Text, Text]]) -> Text:
     """
@@ -112,3 +115,53 @@ def summarize_agent_steps(step_log: List[AgentStepOutput]) -> List[Text]:
         step_counter += 1
 
     return summary
+
+
+# custom parsing error handler
+def _handle_parsing_errors(e: OutputParserException) -> str:
+            """
+            Make the JSON agent tolerant of extra text around the JSON.
+            """
+            raw = getattr(e, "llm_output", "") or ""
+            if not raw.strip():
+                return json.dumps(
+                    {"action": "Final Answer", "action_input": "PARSING_ERROR"}
+                )
+
+            # Cleanup raw output
+            cleaned = raw.replace("```json", "```").replace("```", "")
+            cleaned = re.sub(r"^\s*Action\s*:\s*", "", cleaned, flags=re.IGNORECASE)
+
+            # Extract content starting from the first JSON bracket
+            idxs = [i for i in [cleaned.find("{"), cleaned.find("[")] if i != -1]
+            if idxs:
+                cleaned = cleaned[min(idxs) :]
+
+            # Drop comment lines to prevent parse errors
+            cleaned_no_comments = "\n".join(
+                line for line in cleaned.splitlines()
+                if not line.lstrip().startswith("//")
+            ).strip()
+
+            try:
+                parsed_inner = json.loads(cleaned_no_comments)
+            except Exception:
+                # Fallback. treat whole output as the final answer string
+                return json.dumps(
+                    {
+                        "action": "Final Answer",
+                        "action_input": raw.strip(),
+                    }
+                )
+
+            # If inner JSON is already an action object, use it
+            if isinstance(parsed_inner, dict) and "action" in parsed_inner and "action_input" in parsed_inner:
+                return json.dumps(parsed_inner)
+
+            # Otherwise wrap the content
+            return json.dumps(
+                {
+                    "action": "Final Answer",
+                    "action_input": parsed_inner,
+                }
+            )

@@ -219,9 +219,10 @@ def build_agent_workflow_unified(
 
     # Unified worker node
     unified_model = UnifiedTaskWorker.init(
-        provider=provider,
-        language=language,
-    )
+                            provider=provider,
+                            language=language,
+                        )
+
     flow.add_node("task", UnifiedTaskWorker.execute(unified_model, language=language))
 
     # Guardrail and finalizer

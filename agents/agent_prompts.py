@@ -651,8 +651,8 @@ General rules:
 - Never invent facts not supported by the data_input or previous stages.
 - You may paraphrase freely for fluency, but you must preserve all factual content.
 - Follow any additional instructions or quality constraints given in the input.
-- For surface realization in Irish, keep proper names as they appear in the input,
-  but use idiomatic Irish grammar, word order, and function words.
+- For surface realization in Irish, keep proper names as they appear in the input, but use idiomatic Irish grammar, word order, and function words.
+- Do not add introductory or concluding phrases that are not strictly supported by the input data.
 
 *** EXAMPLES ***
 

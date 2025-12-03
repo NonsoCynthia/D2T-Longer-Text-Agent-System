@@ -13,14 +13,12 @@ import re
 
 from langchain_classic.agents import AgentExecutor, create_json_chat_agent
 from langchain_core.prompts import MessagesPlaceholder, ChatPromptTemplate
-from langchain_core.exceptions import OutputParserException
-
 from langgraph.errors import GraphRecursionError
 
 from agents.utilities.utils import ExecutionState, AgentStepOutput
 from agents.llm_model import UnifiedModel, model_name
 from agents.agent_prompts import WORKER_SYSTEM_PROMPT, WORKER_HUMAN_PROMPT
-from agents.utilities.agent_utils import apply_variable_substitution
+from agents.utilities.agent_utils import apply_variable_substitution, _handle_parsing_errors
 
 
 class TaskWorker:
@@ -54,55 +52,6 @@ class TaskWorker:
                 ("human", WORKER_HUMAN_PROMPT),
             ]
         ).partial(output_format="text")
-
-        # custom parsing error handler
-        def _handle_parsing_errors(e: OutputParserException) -> str:
-            """
-            Make the JSON agent tolerant of extra text around the JSON.
-            """
-            raw = getattr(e, "llm_output", "") or ""
-            if not raw.strip():
-                return json.dumps(
-                    {"action": "Final Answer", "action_input": "PARSING_ERROR"}
-                )
-
-            # Cleanup raw output
-            cleaned = raw.replace("```json", "```").replace("```", "")
-            cleaned = re.sub(r"^\s*Action\s*:\s*", "", cleaned, flags=re.IGNORECASE)
-
-            # Extract content starting from the first JSON bracket
-            idxs = [i for i in [cleaned.find("{"), cleaned.find("[")] if i != -1]
-            if idxs:
-                cleaned = cleaned[min(idxs) :]
-
-            # Drop comment lines to prevent parse errors
-            cleaned_no_comments = "\n".join(
-                line for line in cleaned.splitlines()
-                if not line.lstrip().startswith("//")
-            ).strip()
-
-            try:
-                parsed_inner = json.loads(cleaned_no_comments)
-            except Exception:
-                # Fallback. treat whole output as the final answer string
-                return json.dumps(
-                    {
-                        "action": "Final Answer",
-                        "action_input": raw.strip(),
-                    }
-                )
-
-            # If inner JSON is already an action object, use it
-            if isinstance(parsed_inner, dict) and "action" in parsed_inner and "action_input" in parsed_inner:
-                return json.dumps(parsed_inner)
-
-            # Otherwise wrap the content
-            return json.dumps(
-                {
-                    "action": "Final Answer",
-                    "action_input": parsed_inner,
-                }
-            )
 
         return AgentExecutor(
             agent=create_json_chat_agent(model, tools, prompt),
@@ -243,7 +192,7 @@ class TaskWorker:
                     agent_name=role,
                     agent_input=inputs,
                     agent_output=text,
-                    rationale=text,
+                    rationale="",
                     tool_steps=tools,
                 )
             )
