@@ -1,38 +1,21 @@
 #!/usr/bin/env bash
 
-source /home/chinonso/anaconda3/etc/profile.d/conda.sh
-conda activate lang2
+# source /home/chinonso/anaconda3/etc/profile.d/conda.sh
+# conda activate agent
 
-set -e
+# Wrapper around run.py
+# Edit arguments as needed.
 
-PROVIDER="${1:-openai}"
-WORKFLOW="${2:-default}"
-LANGUAGE="${3:-en}"
-RUN_MODE="${4:-both}"
-DATASET_PATH="${5:-data/D2T-1-FA_same3to6_min50_max500_sample.xml}"
-OUTPUT_DIR="${6:-results_cli}"
-START_ID="${7:-1}"
-END_ID="${8:-}"
-
-CMD=(python run_d2t_experiments.py
-  --provider "$PROVIDER"
-  --workflow "$WORKFLOW"
-  --language "$LANGUAGE"
-  --run-mode "$RUN_MODE"
-  --dataset-path "$DATASET_PATH"
-  --output-dir "$OUTPUT_DIR"
-  --start-id "$START_ID"
-)
-
-if [ -n "$END_ID" ]; then
-  CMD+=(--end-id "$END_ID")
-fi
-
-echo "Running: ${CMD[*]}"
-"${CMD[@]}"
+python run.py \
+  --languages ga \
+  --systems unified_worker \
+  --dataset data/D2T-1-FA_same3to6_min8_max199.xml \
+  --provider openai \
+  --results-dir results \
+  --max-reruns 3
 
 
-
+  # --systems default unified_worker e2e \
 
 # # Make the shell script executable:
 # chmod +x run_d2t_experiments.sh

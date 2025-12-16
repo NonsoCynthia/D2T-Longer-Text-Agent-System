@@ -20,21 +20,21 @@ from agents.agent_prompts import (
 )
 from agents.agents_modules.workflow import (
     build_agent_workflow,
-    build_agent_workflow_single_module,
-    build_agent_workflow_no_guardrail,
-    build_agent_workflow_no_finalizer,
-    build_agent_workflow_no_orchestrator,
-    build_agent_workflow_unified,  
+    build_agent_workflow_unified,
+    # build_agent_workflow_single_module,
+    # build_agent_workflow_no_guardrail,
+    # build_agent_workflow_no_finalizer,
+    # build_agent_workflow_no_orchestrator,  
 )
 
 Language = Literal["en", "ga"]
 WorkflowName = Literal[
     "default",
-    "single_module",
-    "no_guardrail",
-    "no_finalizer",
-    "no_orchestrator",
     "unified_worker",
+    # "single_module",
+    # "no_guardrail",
+    # "no_finalizer",
+    # "no_orchestrator",
 ]
 
 
@@ -98,23 +98,23 @@ class D2TAgentExperimentRunner:
             language=self.language,
         )
 
-        # Ablations
-        workflows["single_module"] = build_agent_workflow_single_module(
-            provider=self.provider,
-            language=self.language,
-        )
-        workflows["no_guardrail"] = build_agent_workflow_no_guardrail(
-            provider=self.provider,
-            language=self.language,
-        )
-        workflows["no_finalizer"] = build_agent_workflow_no_finalizer(
-            provider=self.provider,
-            language=self.language,
-        )
-        workflows["no_orchestrator"] = build_agent_workflow_no_orchestrator(
-            provider=self.provider,
-            language=self.language,
-        )
+        # # Ablations
+        # workflows["single_module"] = build_agent_workflow_single_module(
+        #     provider=self.provider,
+        #     language=self.language,
+        # )
+        # workflows["no_guardrail"] = build_agent_workflow_no_guardrail(
+        #     provider=self.provider,
+        #     language=self.language,
+        # )
+        # workflows["no_finalizer"] = build_agent_workflow_no_finalizer(
+        #     provider=self.provider,
+        #     language=self.language,
+        # )
+        # workflows["no_orchestrator"] = build_agent_workflow_no_orchestrator(
+        #     provider=self.provider,
+        #     language=self.language,
+        # )
 
         print("Workflows built:", list(workflows.keys()))
         return workflows

@@ -327,6 +327,8 @@ Produce Irish text that fully realises every fact from the input in clear, well-
 - Adding information that is not present in the triples.
 - Producing one rigid sentence per triple.
 - Generating multiple alternative texts or drafts.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** OUTPUT REQUIREMENT ***
 - Produce exactly one continuous piece of Irish prose, possibly with multiple paragraphs, that is fully fluent and factually complete.
@@ -447,6 +449,8 @@ Produce text that fully realises every fact from the input in clear, well-formed
 - Adding information not present in the triples.
 - Producing one rigid sentence per triple.
 - Generating multiple alternative texts or drafts.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** OUTPUT REQUIREMENT ***
 - Produce exactly one continuous piece of prose, possibly with multiple paragraphs, that is fully fluent and factually complete.
@@ -533,6 +537,8 @@ General rules:
 - Never invent facts not supported by the data_input or previous stages.
 - You may paraphrase freely for fluency, but you must preserve all factual content.
 - Follow any additional instructions or quality constraints given in the input.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** EXAMPLES ***
 
@@ -652,7 +658,8 @@ General rules:
 - You may paraphrase freely for fluency, but you must preserve all factual content.
 - Follow any additional instructions or quality constraints given in the input.
 - For surface realization in Irish, keep proper names as they appear in the input, but use idiomatic Irish grammar, word order, and function words.
-- Do not add introductory or concluding phrases that are not strictly supported by the input data.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** EXAMPLES ***
 
@@ -1058,6 +1065,8 @@ Structured data may be presented as:
 - Adding or hallucinating information that is not present in the input.
 - Creating exactly one sentence per triple in a rigid, mechanical way.
 - Using headings, markup, or metadata in the output.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** OUTPUT REQUIREMENTS ***
 Return only the final generated text as continuous, fluent paragraph(s).
@@ -1194,6 +1203,8 @@ Labels and values in the input will normally be given in English. Your output mu
 - Writing one rigid sentence per triple without variation.
 - Using technical headings, metadata, or instructions in the output.
 - Summarising many specific facts with a vague general statement.
+- Do not add introductions, conclusions or meta commentary.
+- Do not summarize, verbalize all the information.
 
 *** OUTPUT REQUIREMENT ***
 Return only the final Irish text as fluent, continuous paragraphs.
