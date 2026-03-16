@@ -1,0 +1,17 @@
+# Core runtime dependencies for the default OpenAI-based workflow.
+ipython
+python-dotenv
+pydantic
+langchain-classic
+langchain-core
+langchain-openai
+langgraph
+
+# Optional provider integrations supported by agents/llm_model.py.
+# Uncomment the ones you plan to use.
+# aixplain
+# langchain-anthropic
+# langchain-groq
+# langchain-huggingface
+# langchain-ollama
+# pydantic>=2,<3
