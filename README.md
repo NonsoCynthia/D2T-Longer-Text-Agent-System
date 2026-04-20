@@ -1,6 +1,6 @@
 # D2T Longer Text Agent System
 
-![System architecture](images/system_architecture.png)
+![System architecture](images/image.png)
 
 This repository contains a multi agent data to text generation framework for producing longer, coherent descriptions from structured data such as triples and knowledge graph fragments.
 
